@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --font-poppins: var(--font-poppins);
   --color-verde: #6dd34a;
+  --color-gris: #1a1a1a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,11 +28,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 /* SWIPER SLIDER STYLES */
-.swiper-button-next, .swiper-button-prev {
-  color: #6dd34a !important
+.swiper-button-next,
+.swiper-button-prev {
+  color: #6dd34a !important;
 }
-.swiper-pagination-progressbar-fill{
+.swiper-pagination-progressbar-fill {
   background: #6dd34a !important;
+}
+/* .................. */
+.transparent-text {
+  color: inherit;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
 }

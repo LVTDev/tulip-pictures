@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/general UI/Footer";
 import Header from "@/components/general UI/Header";
+import LanguageSwitch from "@/components/EN/LanguageSwitch";
 
 
 const poppinsFont = Poppins({
@@ -29,7 +30,8 @@ export default function RootLayout({
         className={`${poppinsFont.variable}  antialiased`}
       >
         <Header />
-        <div className="max-w-[900px] mx-auto">{children}</div>
+        <div className="mx-auto">{children}</div>
+        <LanguageSwitch />
         <Footer />
       </body>
     </html>

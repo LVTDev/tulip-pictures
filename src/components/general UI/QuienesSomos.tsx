@@ -2,7 +2,7 @@ import React from "react";
 
 const QuienesSomos = () => {
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 mt-8">
       <div className="flex flex-col items-center w-1/2">
         <h2 className="text-center text-[48px] font-extrabold font-poppins">¿Quiénes Somos?</h2>
         <div className="mt-6">

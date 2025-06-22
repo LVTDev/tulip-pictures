@@ -6,16 +6,29 @@ import HomeSlider from "./HomeSlider";
 const DistribucionHome = async () => {
   const fetchedMovies = await fetchSanity("pelicula");
   return (
-    <div className="">
-      <h3 className="text-2xl">Distribución</h3>
-      <div>
-        <p>Adquisición y Compra de Derechos de Películas</p>
-        <p>
-          Estrategias de Distribución y Venta en México, Estados Unidos y LATAM
+    <div className="mt-10 font-poppins">
+      <h3 className="text-4xl font-bold mb-5">Distribución</h3>
+      <div className="mb-5">
+        <p className="">
+          <span className="text-verde font-medium mr-2">
+            Adquisición y Compra de Derechos de Películas
+          </span>
+          <span className="w-[8px] h-[8px] rounded-full bg-white inline-block mr-2 my-auto" />
+          <span className="mr-2">
+            Estrategias de Distribución y Venta en México, Estados Unidos y
+            LATAM
+          </span>
+          <span className="w-[8px] h-[8px] rounded-full bg-white inline-block mr-2 my-auto" />
+          <span className="text-verde font-medium mr-2">
+            Distribución VOD (Video on Demand)
+          </span>
+          <span className="w-[8px] h-[8px] rounded-full bg-white inline-block mr-2 my-auto" />
+          <span className="mr-2">Consultoría en Aplicación de Fondos</span>
+          <span className="w-[8px] h-[8px] rounded-full bg-white inline-block mr-2 my-auto" />
+          <span className="text-verde font-medium mr-2">
+            Consultoría en Rutas de Festivales
+          </span>
         </p>
-        <p>Distribución VOD (Video on Demand)</p>
-        <p>Consultoría en Aplicación de Fondos</p>
-        <p>Consultoría en Rutas de Festivales</p>
       </div>
       <div>
         <HomeSlider slideData={fetchedMovies} />

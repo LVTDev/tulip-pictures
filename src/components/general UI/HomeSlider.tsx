@@ -33,16 +33,17 @@ const HomeSlider = ({ slideData }: { slideData: SlideData[] }) => {
     >
       {slideData.map((slide, i) => (
         <SwiperSlide key={i}>
-          <div>
-            <div className="w-[250px]">
+          <div className="pb-5">
+            <div className="w-[250px] h-[400px]">
               <img
+              className="h-[380px]"
                 src={urlFor(slide.poster).url()}
                 alt={`${slide.title} Poster`}
               />
             </div>
-            <div>
-              <p>{slide.title}</p>
-              <p>{slide.director}</p>
+            <div className="mt-2">
+              <p className="font-medium">{slide.title}</p>
+              <p className="text-sm text-verde">{slide.director}</p>
               <p>{slide.category && slide.category}</p>
             </div>
           </div>

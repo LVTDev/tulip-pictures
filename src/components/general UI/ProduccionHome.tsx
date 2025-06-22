@@ -6,13 +6,23 @@ const ProduccionHome = async () => {
   const fetchedMovies = await fetchSanity("pelicula");
 
   return (
-    <div>
-      <h3 className="text-2xl">Producción</h3>
-      <div>
-        <p>Preproducción audiovisual</p>
-        <p>Producción audiovisual</p>
-        <p>Postproducción audiovisual</p>
-        <p>Renta de equipo cinematográfico</p>
+    <div className="mt-10 font-poppins">
+      <h3 className="text-4xl font-bold mb-5">Producción</h3>
+      <div className="mb-5">
+        <p>
+          <span className="text-verde font-medium mr-2">
+            Preproducción audiovisual
+          </span>
+          <span className="w-[8px] h-[8px] rounded-full bg-white inline-block mr-2 my-auto"/>
+
+          <span className="mr-2">Producción audiovisual</span>
+          <span className="w-[8px] h-[8px] rounded-full bg-white inline-block mr-2 my-auto"/>
+          <span className="text-verde font-medium mr-2">
+            Postproducción audiovisual
+          </span>
+          <span className="w-[8px] h-[8px] rounded-full bg-white inline-block mr-2 my-auto"/>
+          <span className="mr-2">Renta de equipo cinematográfico</span>
+        </p>
       </div>
       <div>
         <HomeSlider slideData={fetchedMovies} />
