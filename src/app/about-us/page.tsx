@@ -11,14 +11,14 @@ const page = () => {
         </h1>
       </div>
       <div className="max-w-[1200px] mx-auto">
-        <div className="flex py-6">
-          <div className="border-b pb-8 w-1/2 px-4">
-            <h3 className="text-4xl font-bold mb-8">
+        <div className="md:flex py-6">
+          <div className="border-b pb-8 md:w-1/2 px-4">
+            <h3 className="text-2xl md:text-4xl font-bold mb-8">
               Desde 2018 en <span className="text-verde">Tulip Pictures</span>{" "}
               estamos comprometidos con la adquisición y distribución de
               películas de alta calidad tanto mexicanas como internacionales.
             </h3>
-            <p className="text-[#d1d1d1] text-sm">
+            <p className="text-[#d1d1d1] md:text-sm text-[11px]">
               Además de la adquisición de películas, desarrollamos estrategias
               de distribución y venta a los mercados de México, Estados Unidos y
               América Latina para potencializar al máximo cada uno de nuestros
@@ -46,7 +46,7 @@ const page = () => {
               maximizar el potencial de los contenidos.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2 pt-5 md:pt-0">
             <p className="font-bold text-3xl mb-6">
               <span className="transparent-text mr-3">01</span>Adquisición de
               Contenidos

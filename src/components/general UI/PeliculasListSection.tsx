@@ -9,7 +9,7 @@ const PeliculasListSection = ({ lang }: { lang: string }) => {
     <div className="mt-10 uppercase font-medium text-sm">
       {lang === "es" && (
         <div>
-          <ul className="flex gap-7">
+          <ul className="flex flex-wrap gap-7">
             <li
               onClick={() => setSelectedCategory(null)}
               className={`${selectedCategory === null ? "opacity-100" : "opacity-60"} border-b border-dotted cursor-pointer w-max border-verde`}
@@ -51,7 +51,7 @@ const PeliculasListSection = ({ lang }: { lang: string }) => {
       )}
       {lang === "en" && (
         <div>
-          <ul className="flex gap-7">
+          <ul className="flex flex-wrap gap-7">
             <li
               onClick={() => setSelectedCategory(null)}
               className={`${selectedCategory === null ? "opacity-100" : "opacity-60"} border-b border-dotted cursor-pointer w-max border-verde`}

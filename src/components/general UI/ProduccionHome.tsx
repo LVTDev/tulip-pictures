@@ -9,7 +9,7 @@ const ProduccionHome = async () => {
     <div className="mt-10 font-poppins">
       <h3 className="text-4xl font-bold mb-5">Producción</h3>
       <div className="mb-5">
-        <p>
+        <p className="text-sm md:text-base">
           <span className="text-verde font-medium mr-2">
             Preproducción audiovisual
           </span>

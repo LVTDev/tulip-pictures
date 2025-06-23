@@ -2,17 +2,17 @@ import React from "react";
 
 const QuienesSomosEN = () => {
   return (
-    <div className="flex gap-6 mt-8">
-      <div className="flex flex-col items-center w-1/2">
-        <h2 className="text-center text-[48px] font-extrabold font-poppins">
+    <div className="flex gap-6 mt-8 flex-col md:flex-row">
+      <div className="flex flex-col items-center w-full md:w-1/2">
+        <h2 className="text-center text-[36px] md:text-[48px] font-extrabold font-poppins">
           About Us
         </h2>
         <div className="mt-6">
-          <img src="/flor-tulip.png" alt="Logo Tulip" />
+          <img  className="h-40 md:h-70" src="/flor-tulip.png" alt="Logo Tulip" />
         </div>
       </div>
-      <div className="w-1/2">
-        <h3 className="text-[24px] font-poppins font-bold mb-8">
+      <div className="w-full md:w-1/2">
+        <h3 className="text-[20px] md:text-[24px] font-poppins font-bold mb-8">
           Since 2018,<span className="text-verde">Tulip Pictures</span> has been
           entirely focused on the acquisition and distribution of{" "}
           <span className="text-verde">

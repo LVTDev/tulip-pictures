@@ -45,62 +45,29 @@ const Header = () => {
 
   return (
     <div
-      className="fixed top-0 left-1/2 -translate-x-1/2 bg-transparent p-2 z-50 w-screen  flex justify-between px-6 items-center"
+      className="fixed top-0 left-1/2 -translate-x-1/2 bg-transparent p-1 md:p-2 z-50 w-screen  flex justify-between px-1 md:px-6 items-center"
       ref={container}
     >
-      {pageLang === "es" && (
-        <div>
-          <Link className="relative w-6 h-8" href="/">
-            <Image
-              src={"/logo-tulip-blanco.png"}
-              width={130}
-              height={60}
-              alt="Logo Tulip"
-            />
-          </Link>
-        </div>
-      )}
-      {pageLang === "en" && (
-        <div>
-          <Link className="relative w-6 h-8" href="/en">
-            <Image
-              src={"/logo-tulip-blanco.png"}
-              width={130}
-              height={60}
-              alt="Logo Tulip"
-            />
-          </Link>
-        </div>
-      )}
-      {pageLang === "es" && (
-        <div className="flex justify-between gap-8 items-center">
-          <Link
-            className="text-xs font-poppins font-medium"
-            href={"/our-films"}
-          >
-            NUESTRAS PELÍCULAS
-          </Link>
-          <Link className="text-xs font-poppins font-medium" href={"/about-us"}>
-            ¿QUIÉNES SOMOS?
-          </Link>
-        </div>
-      )}
-      {pageLang === "en" && (
-        <div className="flex justify-between gap-8 items-center">
-          <Link
-            className="text-xs font-poppins font-medium"
-            href={"/en/our-films"}
-          >
-            OUR FILMS
-          </Link>
-          <Link
-            className="text-xs font-poppins font-medium"
-            href={"/en/about-us"}
-          >
-            ABOUT US
-          </Link>
-        </div>
-      )}
+      <div className="relative w-[100px] h-[38px]">
+        <Link href={`${pageLang === "es" ? "/" : "/en"}`}>
+          <Image src={"/logo-tulip-blanco.png"} fill alt="Logo Tulip" />
+        </Link>
+      </div>
+
+      <div className="w-max flex justify-between gap-4  md:gap-8 items-center">
+        <Link
+          className="w-min text-[9px] md:text-xs font-poppins font-medium"
+          href={`${pageLang === "es" ? "/our-films" : "/en/our-films"}`}
+        >
+          {`${pageLang === "es" ? "NUESTRAS PELÍCULAS" : "OUR FILMS"}`}
+        </Link>
+        <Link
+          className="w-min text-[9px] md:text-xs font-poppins font-medium"
+          href={"/about-us"}
+        >
+          {`${pageLang === "es" ? "¿QUIÉNES SOMOS?" : "ABOUT US"}`}
+        </Link>
+      </div>
     </div>
   );
 };

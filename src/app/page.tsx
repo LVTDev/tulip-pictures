@@ -6,7 +6,7 @@ import QuienesSomos from "@/components/general UI/QuienesSomos";
 
 export default function Home() {
   return (
-    <div className=" mx-auto">
+    <div className="mx-auto px-2">
       <HomeHero />
       <QuienesSomos />
       <DistribucionHome />

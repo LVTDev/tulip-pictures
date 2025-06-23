@@ -32,7 +32,7 @@ const InfoSlider = ({ lang }: { lang: string }) => {
     fetchMovies();
   }, []);
   return (
-    <div className="flex">
+    <div className="flex ">
       <div className="mr-8 hidden md:block">
         {lang === "es" && (
           <p className="font-bold text-5xl mb-6">
@@ -42,7 +42,8 @@ const InfoSlider = ({ lang }: { lang: string }) => {
         )}
         {lang === "en" && (
           <p className="font-bold text-5xl mb-6">
-            In<br />
+            In
+            <br />
             <span className="transparent-text">cinemas</span>
           </p>
         )}
@@ -68,6 +69,17 @@ const InfoSlider = ({ lang }: { lang: string }) => {
             delay: 2500,
             disableOnInteraction: false,
           }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1, // For mobile (0px and up)
+            },
+            640: {
+              slidesPerView: 2, // Small tablets
+            },
+            1024: {
+              slidesPerView: 3, // Desktops
+            },
+          }}
           navigation
           pagination={{ clickable: true, type: "progressbar" }}
           spaceBetween={50}
@@ -84,7 +96,7 @@ const InfoSlider = ({ lang }: { lang: string }) => {
               return (
                 <SwiperSlide key={i}>
                   <div className="pb-5">
-                    <div className="w-[250px] h-[320px]">
+                    <div className="w-[250px] h-[320px] mx-auto">
                       <img
                         className="h-[280px]"
                         src={urlFor(slide.poster).url()}

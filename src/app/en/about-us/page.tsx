@@ -9,14 +9,14 @@ const page = () => {
         <h1 className="transparent-text text-6xl font-bold pl-6">About Us</h1>
       </div>
       <div className="max-w-[1200px] mx-auto">
-        <div className="flex py-6">
+        <div className="md:flex py-6">
           <div className="border-b pb-8 w-1/2 px-4">
-            <h3 className="text-4xl font-bold mb-8">
+            <h3 className="text-2xl md:text-4xl font-bold mb-8">
               Since 2018,<span className="text-verde">Tulip Pictures</span> has
               been entirely focused on the acquisition and distribution of
               Mexican and international high quality films.
             </h3>
-            <p className="text-[#d1d1d1] text-sm">
+            <p className="text-[#d1d1d1] md:text-sm text-[11px]">
               In addition to film acquisition, we also develop distribution and
               sales strategies for the Mexican, U.S. and Latin American markets
               in order to maximize the potential for each one of our titles.

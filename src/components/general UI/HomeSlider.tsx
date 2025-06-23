@@ -1,7 +1,13 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import {
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -18,14 +24,26 @@ export type SlideData = {
 const HomeSlider = ({ slideData }: { slideData: SlideData[] }) => {
   return (
     <Swiper
-      modules={[Autoplay,Navigation, Pagination, Scrollbar, A11y]}
+    
+      modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
       scrollbar={{ draggable: true }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
+      breakpoints={{
+        0: {
+          slidesPerView: 1, // For mobile (0px and up)
+        },
+        640: {
+          slidesPerView: 2, // Small tablets
+        },
+        1024: {
+          slidesPerView: 3, // Desktops
+        },
+      }}
       navigation
-      pagination={{ clickable: true , type: "progressbar"}}
+      pagination={{ clickable: true, type: "progressbar" }}
       spaceBetween={50}
       slidesPerView={3}
       onSlideChange={() => console.log("slide change")}
@@ -33,15 +51,15 @@ const HomeSlider = ({ slideData }: { slideData: SlideData[] }) => {
     >
       {slideData.map((slide, i) => (
         <SwiperSlide key={i}>
-          <div className="pb-5">
-            <div className="w-[250px] h-[400px]">
+          <div className="pb-3">
+            <div className="w-[250px] h-[380px] mx-auto">
               <img
-              className="h-[380px]"
+                className="h-[380px]"
                 src={urlFor(slide.poster).url()}
                 alt={`${slide.title} Poster`}
               />
             </div>
-            <div className="mt-2">
+            <div className="mt-2 pl-4">
               <p className="font-medium">{slide.title}</p>
               <p className="text-sm text-verde">{slide.director}</p>
               <p>{slide.category && slide.category}</p>

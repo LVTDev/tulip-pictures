@@ -55,14 +55,14 @@ const PeliculasList = ({ category }: { category: string | null }) => {
     { dependencies: [filteredMovies] }
   );
   return (
-    <div ref={container} className="grid grid-cols-2 sm:grid-cols-3  gap-6 p-6">
+    <div ref={container} className="grid grid-cols-1 sm:grid-cols-3  gap-6 p-6">
       {filteredMovies &&
         filteredMovies.map((movie: Movie) => (
           <div
             className="grid-animate-item -translate-x-16 opacity-0"
             key={movie._id}
           >
-            <div className="relative w-[200px] h-[300px] md:h-[350] md:w-[250]">
+            <div className="relative w-[200px] h-[300px] mx-auto md:h-[350] md:w-[250]">
               <Image
                 fill
                 src={urlFor(movie.poster).url()}

@@ -5,8 +5,8 @@ import { Facebook, Instagram, Mail, Twitter, Youtube } from "react-feather";
 const Footer = () => {
   return (
     <div className="bg-gris py-10 mt-16 font-poppins">
-      <div className="max-w-[900px] mx-auto flex">
-        <div className="w-1/2">
+      <div className="max-w-[900px] mx-auto flex flex-col md:flex-row">
+        <div className="md:w-1/2 mx-auto">
           <div className="w-12">
             <img src="/logo-tulip-blanco.png" alt="Logo Tulip" />
           </div>
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           <p className="mt-6 text-[#7c7c7c] text-xs">© 2020 Tulip Pictures</p>
         </div>
-        <div className="w-1/2">
+        <div className="md:w-1/2 mt-10 md:mt-0 mx-auto">
           <p className="text-[18px] uppercase font-extrabold mb-12">Contacto</p>
 
           <div>

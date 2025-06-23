@@ -6,7 +6,7 @@ const HomeHero = () => {
     <div className="relative h-screen w-full ">
       <video
         data-testid="video"
-        className="h-full w-full absolute object-cover"
+        className="h-full w-full absolute object-contain md:object-cover"
         // width="100%"
         // height="80%"
         muted
