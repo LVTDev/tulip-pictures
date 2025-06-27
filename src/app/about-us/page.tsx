@@ -7,7 +7,7 @@ const page = () => {
       <div className="bg-[url(/HeaderNosotrosTulip.jpeg)] h-[380px] bg-cover flex items-center">
         {/* <img src="" alt="" /> */}
         <h1 className="transparent-text text-6xl font-bold pl-6">
-          ¿Quénes Somos
+          ¿Quiénes Somos
         </h1>
       </div>
       <div className="max-w-[1200px] mx-auto">

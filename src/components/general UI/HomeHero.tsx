@@ -13,6 +13,7 @@ const HomeHero = () => {
         autoPlay={true}
         aria-label="Video player"
         loop
+        playsInline
       >
         <source
           src="https://cdn.sanity.io/files/yj63f9tw/production/a9b15ef6d0de21f23dbc43df0498fca6921436ad.mp4"

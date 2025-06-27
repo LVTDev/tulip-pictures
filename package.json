@@ -14,6 +14,7 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.92.0",
     "gsap": "^3.13.0",
+    "mongoose": "^8.16.0",
     "next": "15.3.3",
     "next-sanity": "^9.12.0",
     "react": "^19.0.0",

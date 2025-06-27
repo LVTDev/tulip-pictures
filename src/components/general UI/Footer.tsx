@@ -10,6 +10,16 @@ const Footer = () => {
           <div className="w-12">
             <img src="/logo-tulip-blanco.png" alt="Logo Tulip" />
           </div>
+          <div className="my-3">
+            <div>
+              <p className="text-lg font-medium">CDMX, Mèxico</p>
+              <p className="italic">Direccion Pendiente</p>
+            </div>
+            <div>
+              <p className="text-lg font-medium">Los Ángeles, USA</p>
+              <p className="italic">Direccion Pendiente</p>
+            </div>
+          </div>
           <p className="text-sm text-[#d1d1d1] mt-8">
             Visita nuestras redes sociales
           </p>
@@ -64,7 +74,7 @@ const Footer = () => {
               </a>
             </p>
           </div>
-          <div>
+          <div className="my-8">
             <p className="text-[#d1d1d1] font-bold">Gerente de Programación</p>
             <p>Frida Picazo Gayosso</p>
             <p className="flex gap-2 items-end">
@@ -75,6 +85,54 @@ const Footer = () => {
                 className="text-verde mt-6"
               >
                 frida@tulip-pictures.com
+              </a>
+            </p>
+          </div>
+
+          <div className="my-8">
+            <p className="text-[#d1d1d1] font-bold">Directora de Producción</p>
+            <p>Paloma Cabrera </p>
+            <p className="flex gap-2 items-end">
+              <Mail className="w-4" />
+              <a
+                href="mailto:paloma@grupolvt.com"
+                data-magic-cursor="link-small"
+                className="text-verde mt-6"
+              >
+                paloma@grupolvt.com
+              </a>
+            </p>
+          </div>
+
+          <div className="my-8">
+            <p className="text-[#d1d1d1] font-bold">
+              Coordinadora de Producción
+            </p>
+            <p>Aranza Miranda</p>
+            <p className="flex gap-2 items-end">
+              <Mail className="w-4" />
+              <a
+                href="mailto:aranza@grupolvt.com"
+                data-magic-cursor="link-small"
+                className="text-verde mt-6"
+              >
+                aranza@grupolvt.com
+              </a>
+            </p>
+          </div>
+          <div className="my-8">
+            <p className="text-[#d1d1d1] font-bold">
+              Coordinadora de Post Producción
+            </p>
+            <p>Lulú Huerta</p>
+            <p className="flex gap-2 items-end">
+              <Mail className="w-4" />
+              <a
+                href="mailto:lulu@grupolvt.com"
+                data-magic-cursor="link-small"
+                className="text-verde mt-6"
+              >
+                lulu@grupolvt.com
               </a>
             </p>
           </div>

@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 const PeliculasList = ({ category }: { category: string | null }) => {
@@ -58,7 +59,8 @@ const PeliculasList = ({ category }: { category: string | null }) => {
     <div ref={container} className="grid grid-cols-1 sm:grid-cols-3  gap-6 p-6">
       {filteredMovies &&
         filteredMovies.map((movie: Movie) => (
-          <div
+          <Link
+          href={`/our-films/${movie.title}`}
             className="grid-animate-item -translate-x-16 opacity-0"
             key={movie._id}
           >
@@ -79,7 +81,7 @@ const PeliculasList = ({ category }: { category: string | null }) => {
                 {movie.categories.map((cat) => cat.title).join(", ")}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
     </div>
   );
