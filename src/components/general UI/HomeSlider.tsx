@@ -19,12 +19,33 @@ export type SlideData = {
   title: string;
   director: string;
   category?: string;
+  distribucionProduccion: string;
 };
 
-const HomeSlider = ({ slideData }: { slideData: SlideData[] }) => {
+const HomeSlider = ({
+  slideData,
+  category,
+}: {
+  slideData: SlideData[];
+  category: string;
+}) => {
+  // category="distribution"
+  // console.log("slideData", slideData);
+  const filterData = () => {
+    if (category === "distribution") {
+      return slideData.filter(
+        (elem) => elem.distribucionProduccion === "distribucion"
+      );
+    } else if (category === "production") {
+        return slideData.filter(
+        (elem) => elem.distribucionProduccion === "produccion"
+      );
+    }
+  };
+
+  const filteredData = filterData()
   return (
     <Swiper
-    
       modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
       scrollbar={{ draggable: true }}
       autoplay={{
@@ -49,7 +70,7 @@ const HomeSlider = ({ slideData }: { slideData: SlideData[] }) => {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {slideData.map((slide, i) => (
+      {filteredData && filteredData.map((slide, i) => (
         <SwiperSlide key={i}>
           <div className="pb-3">
             <div className="w-[250px] h-[380px] mx-auto">

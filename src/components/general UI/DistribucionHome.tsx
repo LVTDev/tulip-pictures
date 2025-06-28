@@ -31,7 +31,7 @@ const DistribucionHome = async () => {
         </p>
       </div>
       <div>
-        <HomeSlider slideData={fetchedMovies} />
+        <HomeSlider category="distribution" slideData={fetchedMovies} />
       </div>
     </div>
   );
