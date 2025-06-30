@@ -110,7 +110,7 @@ const InfoSlider = ({ lang }: { lang: string }) => {
                       <p className="font-medium">{slide.title}</p>
                       <p className="text-[9px] text-verde">
                         {" "}
-                        {slide.categories.map((cat) => cat.title).join(", ")}
+                        {slide.categories &&  slide.categories.map((cat) => cat.title).join(", ")}
                       </p>{" "}
                     </div>
                   </div>

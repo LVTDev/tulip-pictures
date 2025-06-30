@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div className="pt-16">
+      <h1>Términos y Condiciones de Uso</h1>
+      <div>
 
-export default page
+      </div>
+    </div>
+  );
+};
+
+export default page;

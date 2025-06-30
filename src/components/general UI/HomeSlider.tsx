@@ -29,8 +29,7 @@ const HomeSlider = ({
   slideData: SlideData[];
   category: string;
 }) => {
-  // category="distribution"
-  // console.log("slideData", slideData);
+
   const filterData = () => {
     if (category === "distribution") {
       return slideData.filter(

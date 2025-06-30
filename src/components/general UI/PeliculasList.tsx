@@ -78,7 +78,7 @@ const PeliculasList = ({ category }: { category: string | null }) => {
               <p className="text-xl leading-[1.3]">{movie.title}</p>
               <p className="text-[9px] text-verde">
                 {" "}
-                {movie.categories.map((cat) => cat.title).join(", ")}
+                {movie.categories && movie.categories.map((cat) => cat.title).join(", ")}
               </p>
             </div>
           </Link>
