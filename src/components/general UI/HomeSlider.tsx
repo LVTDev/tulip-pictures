@@ -48,7 +48,7 @@ const HomeSlider = ({
       modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
       scrollbar={{ draggable: true }}
       autoplay={{
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: false,
       }}
       breakpoints={{

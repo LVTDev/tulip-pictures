@@ -54,7 +54,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="w-max flex justify-between gap-4  md:gap-8 items-center">
+      {/* <div className="w-max flex justify-between gap-4  md:gap-8 items-center">
         <Link
           className="w-min hover:text-verde transition-all text-[9px] md:text-xs font-poppins font-medium"
           href={`${pageLang === "es" ? "/our-films" : "/en/our-films"}`}
@@ -67,7 +67,7 @@ const Header = () => {
         >
           {`${pageLang === "es" ? "¿QUIÉNES SOMOS?" : "ABOUT US"}`}
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
