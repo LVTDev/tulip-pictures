@@ -10,7 +10,7 @@ export const fetchSanity = async (fetchSection: string) => {
   }
     }`;
 
-  const fetchedData = await client.fetch(query);
+  const fetchedData = await client.fetch(query, {}, {cache: "no-store"});
   console.log("FETCHED DATA",fetchedData)
   return fetchedData;
 };

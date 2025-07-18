@@ -17,10 +17,10 @@ const Footer = () => {
           </div>
           <div className="mt-3">
             <h3 className="mt-3 mb-5 text-2xl font-bold uppercase">
-              {isEnglish ? "Locations" : "Direcciones"}
+              {isEnglish ? "Locations" : "Ubicaciones"}
             </h3>
             <div>
-              <p className="text-lg font-medium">CDMX, Mèxico</p>
+              <p className="text-lg font-medium">CDMX, México</p>
             </div>
             <div>
               <p className="text-lg font-medium">Los Ángeles, USA</p>
