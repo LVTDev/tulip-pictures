@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/general UI/Footer";
-import Header from "@/components/general UI/Header";
-import LanguageSwitch from "@/components/EN/LanguageSwitch";
+import SidebarMenu from "@/components/general UI/Sidebar";
+
 
 
 const poppinsFont = Poppins({
@@ -29,10 +28,11 @@ export default function RootLayout({
       <body
         className={`${poppinsFont.variable}  antialiased`}
       >
-        <Header />
-        <div className="mx-auto">{children}</div>
-        <LanguageSwitch />
-        <Footer />
+        <div className="flex">
+
+        <SidebarMenu />
+        {children}
+        </div>
       </body>
     </html>
   );
