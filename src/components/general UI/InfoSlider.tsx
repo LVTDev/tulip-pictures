@@ -15,6 +15,7 @@ import "swiper/css/scrollbar";
 import { urlFor } from "@/sanity/lib/image";
 import { fetchSanity } from "@/utils/sanityFetch";
 import { Movie } from "@/utils/types";
+import Image from "next/image";
 
 const InfoSlider = ({ lang }: { lang: string }) => {
   const [fetchedMovies, setFetchedMovies] = useState<Movie[]>([]);
@@ -31,23 +32,32 @@ const InfoSlider = ({ lang }: { lang: string }) => {
     };
     fetchMovies();
   }, []);
+  console.log(fetchedMovies);
   return (
-    <div className="flex ">
-      <div className="mr-8 hidden md:block">
+    <div className="flex pl-8 mt-20">
+      <div className="mr-8 hidden md:block text-black my-auto w-1/3">
         {lang === "es" && (
-          <p className="font-bold text-5xl mb-6">
-            Sólo en <br />
-            <span className="transparent-text">cines</span>
-          </p>
+          <>
+            <p className="font-bold text-4xl uppercase mb-6">
+              Portafolio <br />
+              de proyectos
+            </p>
+            <p>
+              En nuestro portafolio se encuentran proyectos de alto perfil como:<br />
+              <span className="font-bold">The intruder, Memoria, Blondi, Annette y Jockey.</span>
+            </p>
+          </>
         )}
         {lang === "en" && (
-          <p className="font-bold text-5xl mb-6">
-            In
-            <br />
-            <span className="transparent-text">cinemas</span>
-          </p>
+          <>
+            <p className="font-bold text-5xl mb-6">Portfolio</p>
+            <p>
+              In our portfolio we find projects of high profile like:
+              <span>The intruder, Memoria, Blondi, Annette y Jockey.</span>
+            </p>
+          </>
         )}
-        <div>
+        {/* <div>
           <p className="text-[14px]  mb-6">
             <span className="text-lg font-medium">
               {currentIndex + 1 < 10
@@ -59,12 +69,12 @@ const InfoSlider = ({ lang }: { lang: string }) => {
           <p className="line-clamp-6 opacity-80 text-sm">
             {fetchedMovies[currentIndex]?.description}
           </p>
-        </div>
+        </div> */}
       </div>
-      <div className="max-w-[75vw]">
+      <div className="max-w-[70vw]">
         <Swiper
           modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-          scrollbar={{ draggable: true }}
+          // scrollbar={{ draggable: true }}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -73,17 +83,14 @@ const InfoSlider = ({ lang }: { lang: string }) => {
             0: {
               slidesPerView: 1, // For mobile (0px and up)
             },
-            640: {
-              slidesPerView: 2, // Small tablets
-            },
+        
             1024: {
               slidesPerView: 3, // Desktops
             },
           }}
           navigation
-          pagination={{ clickable: true, type: "progressbar" }}
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={2}
           onSlideChange={() => {
             if (currentIndex > 13) setCurrentIndex(0);
             else setCurrentIndex((prev) => prev + 1);
@@ -94,24 +101,26 @@ const InfoSlider = ({ lang }: { lang: string }) => {
           {fetchedMovies.map((slide, i) => {
             if (i < 14)
               return (
-                <SwiperSlide key={i}>
-                  <div className="pb-5">
-                    <div className="w-[250px] h-[320px] mx-auto">
-                      <img
-                        className="h-[280px]"
+                <SwiperSlide className="" key={i}>
+                  <div className="w-[280px]">
+                    <div className=" h-[380px] mx-auto">
+                      <Image
                         src={urlFor(slide.poster).url()}
                         alt={`${slide.title} Poster`}
+                        className="h-[380px] w-[280px] object-cover"
+                        width={280}
+                        height={380}
                       />
                     </div>
-                    <div className="mt-2">
-                      <p className="text-[14px] text-verde font-medium">
-                        {slide.index! < 10 ? `0${slide.index}` : slide.index}
+                    <div className=" bg-[#30383a] py-3 text-sm text-white">
+                      <p className="font-medium text-center uppercase">
+                        <span>{slide.title}</span>
+                        <span className="opacity-80">
+
+                        {slide.year &&  `, ${slide.year}`}
+                        </span>
                       </p>
-                      <p className="font-medium">{slide.title}</p>
-                      <p className="text-[9px] text-verde">
-                        {" "}
-                        {slide.categories &&  slide.categories.map((cat) => cat.title).join(", ")}
-                      </p>{" "}
+                      <p className="text-center opacity-80">{slide.director}</p>
                     </div>
                   </div>
                 </SwiperSlide>

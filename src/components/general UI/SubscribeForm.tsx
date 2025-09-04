@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 const SubscribeForm = () => {
@@ -19,9 +20,20 @@ const SubscribeForm = () => {
             type="text"
             placeholder="E-mail"
           />
-          <button type="submit" className="bg-[#30383a] py-2 px-4">Enviar</button>
+          <button type="submit" className="bg-[#30383a] py-2 px-4">
+            Enviar
+          </button>
         </div>
       </form>
+      <div className="flex flex-col gap-2 mt-10 uppercase">
+        <Link className="text-white font-bold" href={"/avisoDePrivacidad"}>
+          Notice of Privacy
+        </Link>
+        <Link className="text-white font-bold" href={"/terminos"}>
+          Terms and Conditions
+        </Link>
+        <p className="text-white text-xs opacity-70">&copy; 2025 TULIP PICTURES</p>
+      </div>
     </div>
   );
 };

@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import SidebarMenu from "@/components/general UI/Sidebar";
-
-
 
 const poppinsFont = Poppins({
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
-
-
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-ibm-plex-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Tulip Pictures",
@@ -26,12 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppinsFont.variable}  antialiased`}
+        className={`${poppinsFont.variable} ${ibmPlexMono.variable} ${ibmPlexSans.variable}  antialiased`}
       >
         <div className="flex">
-
-        <SidebarMenu />
-        {children}
+          <SidebarMenu />
+          <div className="">{children}</div>
         </div>
       </body>
     </html>

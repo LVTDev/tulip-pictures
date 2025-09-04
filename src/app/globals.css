@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --foreground: #ffffff;
-  --background: #171717;
+  /* --foreground: #ffffff;
+  --background: #171717; */
   /* --primary: #6dd34a; */
 }
 
@@ -12,18 +12,20 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-poppins: var(--font-poppins);
+  --font-ibm-plex-mono: var(--font-ibm-plex-mono);
+  --font-ibm-plex-sans: var(--font-ibm-plex-sans);
   --color-verde: #6dd34a;
   --color-gris: #1a1a1a;
 }
 /* *{
   border: 1px solid red
-} */
+}  */
 
 
 body {
   /* background: var(--background); */
-  color: var(--foreground);
-  font-family: Poppins;
+  /* color: var(--foreground); */
+  font-family: var(--font-ibm-plex-sans);
    margin: 0;
   min-height: 100vh;
   padding: 0;
@@ -33,7 +35,12 @@ body {
 /* SWIPER SLIDER STYLES */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #6dd34a !important;
+  padding: 4px;
+  width: 50px !important;
+  height: 50px !important;
+  color: gray !important;
+  border: 1px solid gray;
+  z-index: 10;
 }
 .swiper-pagination-progressbar-fill {
   background: #6dd34a !important;
@@ -66,32 +73,18 @@ body {
 }
 
 .sidebar  aside {
-  background-color: #1E2327;
   height: 100vh;
-  padding: 2em 6em 2em 2em;
   transform: translateX(-100%)
 }
-.sidebar  aside h3 {
-  color: #fff;
-  margin: 0 0 2em;
-}
+
 .sidebar aside ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.sidebar aside ul a {
-  color: #91AEC5;
-  text-decoration: none;
-  display: block;
-  padding: 0.3em 0;
-}
-.sidebar aside ul a:hover {
-  color: white;
-}
-
-.sidebar main {
-  padding: 2em;
+.sidebar .main {
+  padding-top: 1.2em;
+  padding-left: .5em;
   transform: translateX(-200%);
   height: max-content;
 }
