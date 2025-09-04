@@ -58,13 +58,13 @@ const SidebarMenu = () => {
             <Link href="/">
               <Image
                 src="https://cdn.sanity.io/images/yj63f9tw/production/3603d8ee1bb8cd86cb0bffa5caf14d4ec7ea8433-170x67.png"
-                width={170}
-                height={67}
+                width={170 / 2}
+                height={67 / 2}
                 alt={"Tulip Logo"}
               />
             </Link>
-            <nav>
-              <ul className="text-black uppercase mt-10">
+            <nav className="mt-4">
+              <ul className="text-black flex flex-col gap-3 uppercase text-lg font-medium">
                 {/* <Link href="/quienesSomos" className="my-4">
                   <div className="mask overflow-hidden">
                     <p>Quiénes Somos</p>
@@ -72,18 +72,18 @@ const SidebarMenu = () => {
                 </Link> */}
                 <Link href="/produccion">
                   <div className="mask overflow-hidden ">
-                    <p>Produccion</p>
+                    <p className={`${url.startsWith("/produccion") &&  "underline"}`}>Produccion</p>
                   </div>
                 </Link>
                 <Link href="/distribucion">
                   <div className="mask overflow-hidden">
-                    <p>Distribución</p>
+                    <p className={`${url.startsWith("/distribucion") &&  "underline"}`}>Distribución</p>
                   </div>
                 </Link>
               </ul>
             </nav>
           </div>
-          <div className="flex flex-col gap-2 mt-10">
+          <div className="flex flex-col gap-2 my-10 p-3">
             <Link className="text-[#8aaf69]" href={"/avisoDePrivacidad"}>
               Notice of Privacy
             </Link>
