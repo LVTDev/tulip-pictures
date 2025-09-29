@@ -25,9 +25,9 @@ const Page = () => {
   }, []);
   console.log(selectedProject);
   return (
-    <div className="bg-[#ebf5e2]">
+    <div className="bg-[#ebf5e2] min-w-screen">
       <AnnouncementBar />
-      <h1 className="text-center uppercase text-lg md:text-9xl my-5">
+      <h1 className="text-center uppercase text-lg md:text-7xl my-5">
         Próximos Estrneos
       </h1>
 
@@ -66,11 +66,11 @@ const Page = () => {
                 </div>
               </div>
               <div className="w-1/2">
-                <p>{selectedProject.title}</p>
-                <p>
+                <p className="text-xl font-bold uppercase mb-4">{selectedProject.title}</p>
+                <p className="text-lg  mb-4">
                   {selectedProject.director}, {selectedProject.year}
                 </p>
-                <p>{selectedProject.description}</p>
+                <p className="text-sm">{selectedProject.description}</p>
                 <p className="uppercase">
                   {selectedProject.fechaEstreno &&
                     new Date(selectedProject.fechaEstreno).toLocaleDateString(
@@ -81,7 +81,7 @@ const Page = () => {
                       }
                     )}
                 </p>
-                <Link href={`/pelicula/${selectedProject.slug.current}`}>Ver ficha tecnica completa</Link>
+                <Link href={`/pelicula/${selectedProject.slug.current}`} className="bg-white text-black uppercase font-bold px-4 py-2 mt-5">Ver ficha tecnica completa</Link>
               </div>
             </div>
           )}
