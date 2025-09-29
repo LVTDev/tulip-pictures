@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="">
-      <AnnouncementBar color="light" />
+      <AnnouncementBar />
 
       <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/e1f43d89c399abf43c9a114b6da8a67821aa1b52-1248x702.png")] bg-cover bg-no-repeat   pt-40 pr-20 text-white'>
         <p className="w-1/2 ml-auto -40">
@@ -38,6 +38,8 @@ const page = () => {
           />
         </div>
       </div>
+      <div className="bg-[#4affff] h-[1px]" />
+
       <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/bab15f969ff54881132c0a3dcd58d92f32679ab2-1248x702.png")] bg-cover bg-no-repeat   py-40 pr-20 text-white'>
         <div className="w-2/3 pl-30 ml-auto">
           <p className="uppercase text-7xl font-bold opacity-50 font-poppins">

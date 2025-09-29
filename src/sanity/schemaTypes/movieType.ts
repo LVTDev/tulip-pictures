@@ -68,13 +68,50 @@ export const movieType = defineType({
       },
     }),
     defineField({
+      name: "premios",
+      type: "array",
+      //   of: [defineArrayMember({ type: "reference", to: { type: "category" } })],
+      of: [defineArrayMember({ type: "reference", to: { type: "premio" } })],
+    }),
+    defineField({
       name: "sortPosition",
       type: "number",
+    }),
+    defineField({
+      name: "genero",
+      type: "string",
+    }),
+ 
+    defineField({
+      name: "enlaceTrailer",
+      type: "string",
+    }),
+    defineField({
+      name: "pressKit",
+      type: "file",
+      options: {
+        accept: "application/pdf",
+      },
+    }),
+    defineField({
+      name: "fechaEstreno",
+      type: "date",
     }),
     defineField({
       name: "publishedAt",
       type: "datetime",
     }),
+    defineField({
+      name: "proximosEstrenos",
+      type: "boolean",
+    }),
+    defineField({
+      name: "imagenes",
+      title: "Imagenes",
+      type: "array",
+      of: [{ type: "image" }],
+    }),
+
     // defineField({
     //   name: "body",
     //   type: "blockContent",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import SidebarMenu from "@/components/general UI/Sidebar";
+import Footer from "@/components/general UI/Footer";
 
 const poppinsFont = Poppins({
   variable: "--font-poppins",
@@ -38,6 +39,7 @@ export default function RootLayout({
           <SidebarMenu />
           <div className="">{children}</div>
         </div>
+        <Footer />
       </body>
     </html>
   );

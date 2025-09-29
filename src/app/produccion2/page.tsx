@@ -1,21 +1,3 @@
-// import AnnouncementBar from "@/components/general UI/AnnouncementBar";
-// import InfiniteHorizontaltext from "@/components/general UI/InfiniteHorizontaltext";
-// import InfoSlider from "@/components/general UI/InfoSlider";
-// import React from "react";
-
-// const page = () => {
-//   return (
-//     <div className="bg-[#ebf5e2] min-h-screen">
-//       <AnnouncementBar />
-
-//       <InfiniteHorizontaltext />
-//       <InfoSlider lang="es" />
-//     </div>
-//   );
-// };
-
-// export default page;
-
 import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 import React from "react";
 
@@ -26,9 +8,7 @@ const page = () => {
 
       <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/959a984996e64259c0115a4d9fad72875c0215b1-1630x1080.jpg")] bg-cover bg-no-repeat   py-40 pr-20 text-white'>
         <div className="w-1/2 ml-auto pb-15">
-          <h3 className="uppercase text-7xl font-bold opacity-50 font-poppins mb-5">
-            PRODUCCIÓN
-          </h3>
+          <h3 className="uppercase text-7xl font-bold opacity-50 font-poppins mb-5">PRODUCCIÓN</h3>
           <p>
             En Tulip Pictures hacemos cine porque creemos en el poder de contar
             historias.
@@ -46,9 +26,10 @@ const page = () => {
             audiencias diversas.
           </p>
         </div>
-      </div>
-      <div className="bg-[#4affff] h-[1px]" />
 
+   
+
+      </div>
       <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/df4374f0c57511226f8af0da92164b5d9513ff2c-1902x1080.jpg")] bg-cover bg-no-repeat   py-40 pr-20 text-white'>
         <div className="w-2/3 pl-30">
           <p className="uppercase text-7xl mb-5 font-bold opacity-50 font-poppins">

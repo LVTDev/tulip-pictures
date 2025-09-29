@@ -16,6 +16,9 @@ _createdAt: string
     title: string,
     year: number
     index ?: number
+    distribucionProduccion: string
+    proximosEstrenos ?: boolean
+    fechaEstreno?: Date
 }
 
 type Category = {
