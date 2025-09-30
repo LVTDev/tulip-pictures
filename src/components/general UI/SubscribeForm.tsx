@@ -3,7 +3,7 @@ import React from "react";
 
 const SubscribeForm = () => {
   return (
-    <div className="max-w-[600px] mx-auto text-white">
+    <div className="md:max-w-[600px] mx-auto text-white">
       <p className="bg-[#30383a] text-center py-2">SUSCRIBETE</p>
       <form action="" className="bg-[#707873]  p-5">
         <p className="text-white">
@@ -13,7 +13,7 @@ const SubscribeForm = () => {
           Recibe ofertas especiales, invitaciones a premieres y nuestra
           cartelera directamente en tu correo.
         </p>
-        <div className="mt-8 mb-5 w-full flex">
+        <div className="mt-8 mb-5 w-full md:flex">
           <input
             className=" h-full py-2 px-4 placeholder:text-black text-black placeholder:bg-[#c1cabc] bg-[#c1cabc]"
             type="text"

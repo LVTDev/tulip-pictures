@@ -1,10 +1,10 @@
-import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 import SubscribeForm from "@/components/general UI/SubscribeForm";
 import { urlFor } from "@/sanity/lib/image";
 import { fetchSanityIndividualMovie } from "@/utils/sanityFetch";
 import { Movie } from "@/utils/types";
 import Image from "next/image";
 import React from "react";
+import { PlayCircle } from "react-feather";
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
@@ -12,14 +12,13 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const result = await fetchSanityIndividualMovie("pelicula", id);
   const pelicula: Movie = result[0];
   console.log(pelicula);
-  if (result.length > 1) return <p>Loading</p>;
+  if (result.length > 1)
+    return <p className="bg-[#ebf5e2] text-black">Loading</p>;
   return (
     <div className="w-screen bg-[#ebf5e2]">
-        <AnnouncementBar />
       <div className="w-[90vw] mx-auto pt-5">
-        
-        <div className="flex">
-          <div className="w-1/2">
+        <div className="md:flex gap-10">
+          <div className="w-max">
             <div className=" h-[380px] mx-auto">
               <Image
                 src={urlFor(pelicula.poster).url()}
@@ -29,17 +28,28 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 height={380}
               />
             </div>
-            <div>
-              <p>Ver Trailler</p>
-            </div>
-            <div>
-              <p>Descargar presskit</p>
-            </div>
+            {pelicula.enlaceTrailer && (
+              <div className="bg-[#30383a] text-white uppercase font-bold text-center my-5 py-1">
+                <div className="flex justify-center gap-3">
+                  Ver Trailler
+                  <span className="inline-block">
+                    <PlayCircle />
+                  </span>
+                </div>
+              </div>
+            )}
+            {pelicula.pressKit && (
+              <div  className="bg-[#30383a] text-white uppercase font-bold text-center my-5 py-1">
+                <p>Descargar presskit</p>
+              </div>
+            )}
           </div>
-          <div className="w-1/2">
-            <h1 className="uppercase font-bold text-2xl mb-4">{pelicula.title}</h1>
+          <div className=" flex-1">
+            <h1 className="uppercase font-bold text-2xl mb-4">
+              {pelicula.title}
+            </h1>
             <div className="flex">
-              <p className="font-bold">Dirección y Guion: </p>
+              <p className="font-bold">Dirección: </p>
               <p>{pelicula.director}</p>
             </div>
             <div className="flex">
@@ -61,7 +71,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           </div>
         </div>
         <div></div>
-        <div className="mx-auto my-7">
+        <div className="mx-auto mt-7 pb-7">
           <SubscribeForm />
         </div>
       </div>

@@ -1,4 +1,6 @@
 export type Movie = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  pressKit: any
 _createdAt: string
     _id: string
     _rev: string
@@ -19,6 +21,7 @@ _createdAt: string
     distribucionProduccion: string
     proximosEstrenos ?: boolean
     fechaEstreno?: Date
+    enlaceTrailer?: string
 }
 
 type Category = {

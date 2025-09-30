@@ -1,35 +1,16 @@
-// import AnnouncementBar from "@/components/general UI/AnnouncementBar";
-// import InfiniteHorizontaltext from "@/components/general UI/InfiniteHorizontaltext";
-// import InfoSlider from "@/components/general UI/InfoSlider";
-// import React from "react";
 
-// const page = () => {
-//   return (
-//     <div className="bg-[#ebf5e2] min-h-screen">
-//       <AnnouncementBar />
-
-//       <InfiniteHorizontaltext />
-//       <InfoSlider lang="es" />
-//     </div>
-//   );
-// };
-
-// export default page;
-
-import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 import React from "react";
 
 const page = () => {
   return (
     <div className="">
-      <AnnouncementBar />
 
-      <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/959a984996e64259c0115a4d9fad72875c0215b1-1630x1080.jpg")] bg-cover bg-no-repeat   py-40 pr-20 text-white'>
-        <div className="w-1/2 ml-auto pb-15">
-          <h3 className="uppercase text-7xl font-bold opacity-50 font-poppins mb-5">
+      <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/53cb2828c1a8ca62f0522dd5e1604f013381acb9-1920x1272.jpg")] bg-center bg-cover bg-no-repeat   py-30 md:pr-20 text-white'>
+        <div className="md:w-1/2 md:ml-auto px-6 pb-15">
+          <h3 className="uppercase text-4xl md:text-7xl font-bold opacity-50 font-poppins mb-5">
             PRODUCCIÓN
           </h3>
-          <p>
+          <p className="text-sm md:text-base">
             En Tulip Pictures hacemos cine porque creemos en el poder de contar
             historias.
             <br />
@@ -49,9 +30,9 @@ const page = () => {
       </div>
       <div className="bg-[#4affff] h-[1px]" />
 
-      <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/df4374f0c57511226f8af0da92164b5d9513ff2c-1902x1080.jpg")] bg-cover bg-no-repeat   py-40 pr-20 text-white'>
-        <div className="w-2/3 pl-30">
-          <p className="uppercase text-7xl mb-5 font-bold opacity-50 font-poppins">
+        <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/a27b0ef7eeba275533ec10c0105fbf9a5d4d82ec-1920x1122.jpg")] bg-right bg-cover bg-no-repeat   py-40 md:pr-20 text-white'>
+        <div className="md:w-2/3 md:pl-30 px-6">
+          <p className="uppercase text-4xl md:text-7xl mb-5 font-bold opacity-50 font-poppins">
             servicios <br />
             de Producción
           </p>

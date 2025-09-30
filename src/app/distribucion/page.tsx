@@ -1,14 +1,12 @@
-import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 import Image from "next/image";
 import React from "react";
 
 const page = () => {
   return (
     <div className="">
-      <AnnouncementBar />
 
-      <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/e1f43d89c399abf43c9a114b6da8a67821aa1b52-1248x702.png")] bg-cover bg-no-repeat   pt-40 pr-20 text-white'>
-        <p className="w-1/2 ml-auto -40">
+      <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/e1f43d89c399abf43c9a114b6da8a67821aa1b52-1248x702.png")] flex flex-col-reverse md:flex-col bg-left bg-cover bg-no-repeat   py-30 md:pr-20 text-white'>
+        <p className="md:w-1/2 md:ml-auto px-6 pb-15">
           Desde 2018, Tulip Pictures se especializa en la adquisición y
           distribución de películas de alta calidad, incluyendo cine mexicano e
           internacional.
@@ -28,7 +26,7 @@ const page = () => {
         {/* <p className="w-full text-center  text-[140px] uppercase tracking-widest">
           Distribucion
         </p> */}
-        <div className=" relative h-[95px] w-[99vw]">
+        <div className=" relative h-[95px]">
           <Image
             src={"/distribución.png"}
             fill
@@ -40,9 +38,9 @@ const page = () => {
       </div>
       <div className="bg-[#4affff] h-[1px]" />
 
-      <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/bab15f969ff54881132c0a3dcd58d92f32679ab2-1248x702.png")] bg-cover bg-no-repeat   py-40 pr-20 text-white'>
-        <div className="w-2/3 pl-30 ml-auto">
-          <p className="uppercase text-7xl font-bold opacity-50 font-poppins">
+      <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/bab15f969ff54881132c0a3dcd58d92f32679ab2-1248x702.png")] bg-cover bg-no-repeat   py-40 md:pr-20 text-white'>
+        <div className="md:w-2/3 md:pl-30 px-5 ml-auto">
+          <p className="uppercase text-4xl md:text-7xl font-bold opacity-50 font-poppins">
             servicios <br />
             de Distribución
           </p>

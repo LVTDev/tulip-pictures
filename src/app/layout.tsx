@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import SidebarMenu from "@/components/general UI/Sidebar";
+// import SidebarMenu from "@/components/general UI/Sidebar";
 import Footer from "@/components/general UI/Footer";
+import SideMenu from "@/components/general UI/SideMenu";
+import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 
 const poppinsFont = Poppins({
   variable: "--font-poppins",
@@ -35,9 +37,12 @@ export default function RootLayout({
       <body
         className={`${poppinsFont.variable} ${ibmPlexMono.variable} ${ibmPlexSans.variable}  antialiased`}
       >
-        <div className="flex">
-          <SidebarMenu />
-          <div className="">{children}</div>
+        <div className="flex ">
+          <SideMenu />
+          <div className="flex-1">
+            <AnnouncementBar />
+            {children}
+          </div>
         </div>
         <Footer />
       </body>

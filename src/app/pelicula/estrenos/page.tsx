@@ -1,5 +1,4 @@
 "use client";
-import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 import Modal from "@/components/general UI/Modal";
 import { urlFor } from "@/sanity/lib/image";
 import { fetchSanity } from "@/utils/sanityFetch";
@@ -25,13 +24,12 @@ const Page = () => {
   }, []);
   console.log(selectedProject);
   return (
-    <div className="bg-[#ebf5e2] min-w-screen">
-      <AnnouncementBar />
-      <h1 className="text-center uppercase text-lg md:text-7xl my-5">
+    <div className="bg-[#ebf5e2]">
+      <h1 className="text-center uppercase text-lg md:text-7xl pt-5 mb-5">
         Próximos Estrneos
       </h1>
 
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2   lg:grid-cols-3 xl:grid-cols-4 gap-5 max-w-[1440px] pt-8 mx-auto pb-5">
         {fetchedMovies.map((movie) => {
           return (
             <div key={movie._id} className=" h-[380px] mx-auto cursor-pointer">

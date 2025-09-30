@@ -3,6 +3,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { fetchSanity } from "@/utils/sanityFetch";
 import { Movie } from "@/utils/types";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const PortfolioList = ({ title }: { title: string }) => {
@@ -18,62 +19,42 @@ const PortfolioList = ({ title }: { title: string }) => {
     };
     fetchMovies();
   }, []);
+  console.log(fetchedMovies)
 
-if (fetchedMovies.length <1) return <p>Loading</p>
+  if (fetchedMovies.length < 1) return <p>Loading</p>;
   return (
-    <div className="bg-[#ebf5e2] w-[100vw]">
-      <div>
-        <div className="flex">
-          <div>
-            <h3>PORTAFOLIO DE PROYECTOS</h3>
-            <h4>{title}</h4>
-          </div>
-          <div className=" h-[380px] mx-auto">
-            <Image
-              src={urlFor(fetchedMovies[0].poster).url()}
-              alt={`${fetchedMovies[0].title} Poster`}
-              className="h-[380px] w-[280px] object-cover"
-              width={280}
-              height={380}
-            />
-          </div>
-          <div className=" h-[380px] mx-auto">
-            <Image
-              src={urlFor(fetchedMovies[1].poster).url()}
-              alt={`${fetchedMovies[1].title} Poster`}
-              className="h-[380px] w-[280px] object-cover"
-              width={280}
-              height={380}
-            />
-          </div>
-          {/* <div>
-              <Image src={fetchedMovies[0]} />
-            </div> */}{" "}
-        </div>
+    <div className="bg-[#ebf5e2] w-full">
+      <div className="max-w-[1440px] pt-8 mx-auto">
         <div>
-            <div className="grid grid-cols-4 gap-5">
-              {fetchedMovies.map((movie, i) => {
-                if (i < 2) return;
-                return (
-                  <div key={movie._id} className=" h-[380px] mx-auto">
-                    <Image
-                      src={urlFor(movie.poster).url()}
-                      alt={`${movie.title} Poster`}
-                      className="h-[380px] w-[280px] object-cover"
-                      width={280}
-                      height={380}
-                    />
-                  </div>
-                );
-              })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="text-3xl pl-4 sm:col-span-2 uppercase font-bold">
+              <h3>PORTAFOLIO DE PROYECTOS</h3>
+              <h4>{title}</h4>
             </div>
-            <div>
-                <p>Si tienes un proyecto que desafie, conmueva o inspire, <span className="font-bold">queremos escucharlo</span></p>
-                <div className="flex">
-                    <p className="font-bold">¡Escribenos!</p>
-                    <p>FORM</p>
-                </div>
+            {fetchedMovies.map((movie) => {
+              return (
+                <Link href={`/pelicula/${movie.slug.current}`} key={movie._id} className=" h-[380px] mx-auto">
+                  <Image
+                    src={urlFor(movie.poster).url()}
+                    alt={`${movie.title} Poster`}
+                    className="h-[380px] w-[280px] object-cover"
+                    width={280}
+                    height={380}
+                  />
+                </Link>
+              );
+            })}
+          </div>
+          <div className="mt-6 pb-6 px-3">
+            <p>
+              Si tienes un proyecto que desafie, conmueva o inspire,{" "}
+              <span className="font-bold">queremos escucharlo</span>
+            </p>
+            <div className="flex">
+              <p className="font-bold">¡Escribenos!</p>
+              <p>FORM</p>
             </div>
+          </div>
         </div>
       </div>
     </div>

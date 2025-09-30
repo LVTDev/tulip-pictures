@@ -5,7 +5,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "react-feather";
 
 function Footer() {
   return (
-    <div className="flex justify-between items-center bg-[#30383a] p-2 text-white">
+    <div className="md:flex justify-between items-center bg-[#30383a] py-5 px-2 text-white">
       <div>
         {" "}
         <div className="text-black flex justify-between">
