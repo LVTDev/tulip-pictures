@@ -2,27 +2,65 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Facebook, Instagram, Twitter, Youtube } from "react-feather";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const SideMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuTL = useRef<GSAPTimeline | null>(null);
+  const menuToggleRef = useRef<HTMLDivElement>(null);
+  const mainref = useRef<HTMLDivElement>(null);
+  const asideRef = useRef<HTMLDivElement>(null);
+  const { contextSafe } = useGSAP({ scope: mainref.current! });
 
+  useGSAP(() => {
+    menuTL.current = gsap.timeline({
+      defaults: { duration: 0.3, ease: "power4.inOut" },
+    });
+    menuTL.current
+      .to([asideRef.current], {
+        width: "230px",
+        opacity: 1,
+        stagger: 0.2,
+      })
+      .to([menuToggleRef.current], {
+        left: "250px",
+      });
+    menuTL.current.paused(true);
+  });
+
+  const handleTogglePlay = contextSafe(() => {
+    if (!menuTL.current) return;
+    if (!isOpen) {
+      menuTL.current.play();
+      setIsOpen(true);
+    } else {
+      menuTL.current.reverse();
+      setIsOpen(false);
+    }
+  });
   const handleButtonOpen = () => {
-    setIsOpen((prev) => !prev);
+    handleTogglePlay();
   };
   const url = usePathname();
   useEffect(() => {
-    setIsOpen(false)
-  },[url])
+    handleTogglePlay()
+    
+  }, [url]);
 
   return (
     <div className=" bg-blue-100 relative">
       <div
-        className={`fixed left-0 bg-amber-200 h-[100vh] ${isOpen ? "w-60" : "hidden"}  z-100`}
+        ref={mainref}
+        className={`fixed left-0 bg-amber-200 h-[100vh] w-0 z-100 `}
+        // className={`fixed left-0 bg-amber-200 h-[100vh]
+        //    ${isOpen ? "w-60" : "hidden"}
+        //      z-100`}
       >
         <div className="h-full">
-          <aside className="bg-[#ebf5e2] h-full flex flex-col justify-between">
+          <aside  ref={asideRef} className="bg-[#ebf5e2] h-full flex flex-col justify-between opacity-0 pr-3">
             <div className="m-6">
               <Link href="/">
                 <Image
@@ -34,7 +72,7 @@ const SideMenu = () => {
               </Link>
               <nav className="mt-4">
                 <ul className="text-black flex flex-col gap-3 uppercase text-lg font-medium">
-                  <Link href="/about-us" className="">
+                  <Link href="/about-us" className={`${url === "/about-us" && "underline"}`}>
                     <div className="mask overflow-hidden">
                       <p>Quiénes Somos</p>
                     </div>
@@ -119,8 +157,10 @@ const SideMenu = () => {
         </div>
       </div>
       <div
-        className={`fixed z-200 ${isOpen ? "left-40" : "left-4"}  bg-red-300 rounded-full`}
+        // className={`fixed z-200 ${isOpen ? "left-40" : "left-4"}  bg-red-300 rounded-full`}
+        className={`fixed z-200 top-2  left-4  bg-red-300 rounded-full`}
         onClick={handleButtonOpen}
+        ref={menuToggleRef}
       >
         {" "}
         <div>
