@@ -22,6 +22,7 @@ _createdAt: string
     proximosEstrenos ?: boolean
     fechaEstreno?: Date
     enlaceTrailer?: string
+    pressKitURL?: string
 }
 
 type Category = {

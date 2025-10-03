@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Facebook, Instagram, Twitter, Youtube } from "react-feather";
 
 const SideMenu = () => {
@@ -12,6 +12,9 @@ const SideMenu = () => {
     setIsOpen((prev) => !prev);
   };
   const url = usePathname();
+  useEffect(() => {
+    setIsOpen(false)
+  },[url])
 
   return (
     <div className=" bg-blue-100 relative">
@@ -31,11 +34,11 @@ const SideMenu = () => {
               </Link>
               <nav className="mt-4">
                 <ul className="text-black flex flex-col gap-3 uppercase text-lg font-medium">
-                  {/* <Link href="/quienesSomos" className="my-4">
-                  <div className="mask overflow-hidden">
-                    <p>Quiénes Somos</p>
-                  </div>
-                </Link> */}
+                  <Link href="/about-us" className="">
+                    <div className="mask overflow-hidden">
+                      <p>Quiénes Somos</p>
+                    </div>
+                  </Link>
                   <div>
                     <Link href="/produccion">
                       <div className="mask overflow-hidden ">

@@ -38,10 +38,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 </div>
               </div>
             )}
-            {pelicula.pressKit && (
-              <div  className="bg-[#30383a] text-white uppercase font-bold text-center my-5 py-1">
-                <p>Descargar presskit</p>
-              </div>
+            {pelicula.pressKitURL && (
+              <a href={`${pelicula.pressKitURL}`} target="_blank">
+                <p className="bg-[#30383a] text-white uppercase font-bold text-center my-5 py-1">Descargar presskit</p>
+              </a>
             )}
           </div>
           <div className=" flex-1">
