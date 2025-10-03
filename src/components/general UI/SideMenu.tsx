@@ -46,8 +46,7 @@ const SideMenu = () => {
   };
   const url = usePathname();
   useEffect(() => {
-    handleTogglePlay()
-    
+    if (isOpen) handleTogglePlay();
   }, [url]);
 
   return (
@@ -60,7 +59,10 @@ const SideMenu = () => {
         //      z-100`}
       >
         <div className="h-full">
-          <aside  ref={asideRef} className="bg-[#ebf5e2] h-full flex flex-col justify-between opacity-0 pr-3">
+          <aside
+            ref={asideRef}
+            className="bg-[#ebf5e2] h-full flex flex-col justify-between opacity-0 pr-3"
+          >
             <div className="m-6">
               <Link href="/">
                 <Image
@@ -72,7 +74,10 @@ const SideMenu = () => {
               </Link>
               <nav className="mt-4">
                 <ul className="text-black flex flex-col gap-3 uppercase text-lg font-medium">
-                  <Link href="/about-us" className={`${url === "/about-us" && "underline"}`}>
+                  <Link
+                    href="/about-us"
+                    className={`${url === "/about-us" && "underline"}`}
+                  >
                     <div className="mask overflow-hidden">
                       <p>Quiénes Somos</p>
                     </div>

@@ -47,7 +47,7 @@ const FooterForm = ({ lang }: { lang: string }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mx-auto p-6  space-y-4 font-poppins"
+      className="w-full mx-auto p-6  space-y-4 font-poppins bg-[#ebf5e2]"
     >
       {lang === "es" && (
         <div>
@@ -60,7 +60,7 @@ const FooterForm = ({ lang }: { lang: string }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-lg"
+              className="w-full p-3 border border-black rounded-lg"
             />
           </div>
           <div>
@@ -72,7 +72,7 @@ const FooterForm = ({ lang }: { lang: string }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-lg"
+              className="w-full p-3 border border-black rounded-lg"
             />
           </div>
           <div>
@@ -84,13 +84,13 @@ const FooterForm = ({ lang }: { lang: string }) => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-lg"
+              className="w-full p-3 border border-black rounded-lg"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="bg-verde text-white px-6 py-3 cursor-pointer transition uppercase text-xs font-bold"
+            className="bg-[#30383a] text-white px-6 py-3 cursor-pointer transition uppercase text-xs font-bold"
           >
             {loading ? "Sending..." : "Send"}
           </button>
@@ -112,7 +112,7 @@ const FooterForm = ({ lang }: { lang: string }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-lg"
+              className="w-full p-3 border border-black rounded-lg"
             />
           </div>
           <div>
@@ -124,7 +124,7 @@ const FooterForm = ({ lang }: { lang: string }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-lg"
+              className="w-full p-3 border border-black rounded-lg"
             />
           </div>
           <div>

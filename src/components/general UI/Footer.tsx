@@ -5,16 +5,16 @@ import { Facebook, Instagram, Twitter, Youtube } from "react-feather";
 
 function Footer() {
   return (
-    <div className="md:flex justify-between items-center bg-[#30383a] py-5 px-2 text-white">
+    <div className="md:flex justify-between items-center bg-[#30383a] py-5 px-2 md:px-9 text-white">
       <div>
         {" "}
         <div className="text-black flex justify-between">
-          <Facebook color="white" />
-          <Instagram color="white" />
-          <Twitter color="white" />
-          <Youtube color="white" />
+          <Facebook color="white" fill="white" />
+          <Instagram    color="white" />
+          <Twitter color="white" fill="white" />
+          <Youtube color="white"/>
         </div>
-        <p>SOMOSTULIPPICTURESMX</p>
+        <p className="font-bold">@SOMOSTULIPPICTURESMX</p>
       </div>
 
       <Link  href="/" className=" relative h-[55px] w-[40px]">
@@ -28,13 +28,13 @@ function Footer() {
       </Link>
       <div>
         <div className="flex flex-col gap-2">
-            <Link className="" href={"/avisoDePrivacidad"}>
+            <Link className="font-bold uppercase" href={"/avisoDePrivacidad"}>
             Notice of Privacy
           </Link>
-            <Link className="" href={"/terminos"}>
+            <Link className="font-bold uppercase" href={"/terminos"}>
             Terms and Conditions
           </Link>
-          <p className="text-white">&copy; 2025 TULIP PICTURES</p>
+          <p className="text-white opacity-80">&copy; 2025 TULIP PICTURES</p>
         </div>
       </div>
     </div>

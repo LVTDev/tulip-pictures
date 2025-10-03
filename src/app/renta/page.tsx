@@ -1,3 +1,4 @@
+import FooterForm from "@/components/general UI/FooterForm";
 import React from "react";
 
 const page = () => {
@@ -10,6 +11,7 @@ const page = () => {
         </h1>
         <p className="text-[#ebf5e27c] text-lg  font-poppins font-medium ml-auto mr-16">RENTAL <br /> CÁMARA ALEXA 35<br/>+ PRODUCTION SET</p>
       </div>
+      <FooterForm lang="es"/>
     </div>
   );
 };

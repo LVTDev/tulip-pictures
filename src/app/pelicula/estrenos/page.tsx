@@ -49,27 +49,27 @@ const Page = () => {
         isOpen={!!selectedProject}
         onClose={() => setSelectedProject(null)}
       >
-        <div className="">
+        <div className="pb-5">
           {selectedProject && (
-            <div className="md:flex text-white">
-              <div className="w-1/2">
-                <div className=" h-[380px] mx-auto">
+            <div className="md:flex text-white ">
+              <div className="md:w-1/2 w-full">
+                <div className="h-[190px] md:h-[380px] mx-auto relative">
                   <Image
                     src={urlFor(selectedProject.poster).url()}
                     alt={`${selectedProject.title} Poster`}
-                    className="h-[380px] w-[280px] object-cover"
+                    className="h-[190px] md:h-[380px] md:w-[280px] object-cover"
                     width={280}
                     height={380}
                   />
                 </div>
               </div>
-              <div className="w-1/2">
+              <div className="md:w-1/2 mb-10">
                 <p className="text-xl font-bold uppercase mb-4">{selectedProject.title}</p>
                 <p className="text-lg  mb-4">
                   {selectedProject.director}, {selectedProject.year}
                 </p>
                 <p className="text-sm">{selectedProject.description}</p>
-                <p className="uppercase">
+                <p className="uppercase mb-5">
                   {selectedProject.fechaEstreno &&
                     new Date(selectedProject.fechaEstreno).toLocaleDateString(
                       "es-MX",
@@ -79,7 +79,7 @@ const Page = () => {
                       }
                     )}
                 </p>
-                <Link href={`/pelicula/${selectedProject.slug.current}`} className="bg-white text-black uppercase font-bold px-4 py-2 mt-5">Ver ficha tecnica completa</Link>
+                <Link href={`/pelicula/${selectedProject.slug.current}`} className="bg-white text-black uppercase text-xs md:text-base font-bold px-4 py-2 mt-5">Ver ficha tecnica completa</Link>
               </div>
             </div>
           )}
