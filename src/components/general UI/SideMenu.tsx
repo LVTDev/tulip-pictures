@@ -3,7 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState, useRef } from "react";
-import { Facebook, Instagram, Twitter, Youtube } from "react-feather";
+import {
+  ChevronDown,
+  Facebook,
+  Instagram,
+  Menu,
+  Twitter,
+  Youtube,
+} from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -64,16 +71,18 @@ const SideMenu = () => {
             className="bg-[#ebf5e2] h-full flex flex-col justify-between opacity-0 pr-3"
           >
             <div className="m-6">
-              <Link href="/">
-                <Image
-                  src="https://cdn.sanity.io/images/yj63f9tw/production/3603d8ee1bb8cd86cb0bffa5caf14d4ec7ea8433-170x67.png"
-                  width={170 / 2}
-                  height={67 / 2}
-                  alt={"Tulip Logo"}
-                />
-              </Link>
+              <div className="mx-auto w-max">
+                <Link href="/" className="">
+                  <Image
+                    src="https://cdn.sanity.io/images/yj63f9tw/production/3603d8ee1bb8cd86cb0bffa5caf14d4ec7ea8433-170x67.png"
+                    width={170 / 2}
+                    height={67 / 2}
+                    alt={"Tulip Logo"}
+                  />
+                </Link>
+              </div>
               <nav className="mt-4">
-                <ul className="text-black flex flex-col gap-3 uppercase text-lg font-medium">
+                <ul className="text-black flex flex-col gap-3 uppercase text-base font-medium">
                   <Link
                     href="/about-us"
                     className={`${url === "/about-us" && "underline"}`}
@@ -82,45 +91,61 @@ const SideMenu = () => {
                       <p>Quiénes Somos</p>
                     </div>
                   </Link>
-                  <div>
-                    <Link href="/produccion">
-                      <div className="mask overflow-hidden ">
-                        <p
-                          className={`${url === "/produccion" && "underline"}`}
-                        >
-                          Produccion
-                        </p>
+                  <div className="group">
+                    <div className="hidden md:flex justify-between items-center">
+                      Produccion{" "}
+                      <div className="inline-block group-hover:rotate-180">
+                        <ChevronDown />
                       </div>
-                    </Link>
-                    <Link href="/produccion/portfolio">
-                      <div className="mask overflow-hidden text-sm">
-                        <p
-                          className={`${url.startsWith("/produccion/portfolio") && "underline"}`}
-                        >
-                          Produccion Portfolio
-                        </p>
-                      </div>
-                    </Link>
+                    </div>
+                    <div className="md:hidden md:group-hover:block">
+                      <Link href="/produccion">
+                        <div className="mask overflow-hidden text-xs my-2">
+                          <p
+                            className={`${url === "/produccion" && "underline"} `}
+                          >
+                            Servicios de Produccion
+                          </p>
+                        </div>
+                      </Link>
+                      <Link href="/produccion/portfolio">
+                        <div className="mask overflow-hidden text-xs">
+                          <p
+                            className={`${url.startsWith("/produccion/portfolio") && "underline"}`}
+                          >
+                            Produccion Portfolio
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                  <div>
-                    <Link href="/distribucion">
-                      <div className="mask overflow-hidden">
-                        <p
-                          className={`${url === "/distribucion" && "underline"}`}
-                        >
-                          Distribución
-                        </p>
+                  <div className="group">
+                        <div className="hidden md:flex justify-between items-center">
+                      Distribucion{" "}
+                      <div className="inline-block group-hover:rotate-180">
+                        <ChevronDown />
                       </div>
-                    </Link>
-                    <Link href="/distribucion/portfolio">
-                      <div className="mask overflow-hidden text-sm">
-                        <p
-                          className={`${url.startsWith("/distribucion/portfolio") && "underline"}`}
-                        >
-                          Distribución Portfolio
-                        </p>
-                      </div>
-                    </Link>
+                    </div>
+                    <div className="md:hidden md:group-hover:block border-b border-[#30383a]">
+                      <Link href="/distribucion">
+                        <div className="mask overflow-hidden text-xs my-2">
+                          <p
+                            className={`${url === "/distribucion" && "underline"}`}
+                          >
+                            Servicios de Distribución
+                          </p>
+                        </div>
+                      </Link>
+                      <Link href="/distribucion/portfolio">
+                        <div className="mask overflow-hidden text-xs">
+                          <p
+                            className={`${url.startsWith("/distribucion/portfolio") && "underline"}`}
+                          >
+                            Distribución Portfolio
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                   <Link href="/pelicula/estrenos">
                     <div className="mask overflow-hidden">
@@ -136,7 +161,7 @@ const SideMenu = () => {
                       <p
                         className={`${url.startsWith("/renta") && "underline"}`}
                       >
-                        RENTA
+                        RENTA DE EQUIPO
                       </p>
                     </div>
                   </Link>
@@ -163,12 +188,13 @@ const SideMenu = () => {
       </div>
       <div
         // className={`fixed z-200 ${isOpen ? "left-40" : "left-4"}  bg-red-300 rounded-full`}
-        className={`fixed z-200 top-2  left-4  bg-red-300 rounded-full`}
+        className={`fixed z-200 top-2 p-3 left-4 cursor-pointer bg-red-300 rounded-full`}
         onClick={handleButtonOpen}
         ref={menuToggleRef}
       >
         {" "}
-        <div>
+        <Menu color="white" />
+        {/* <div>
           <div className=" menu-toggle flex relative :hover:before:absolute z-100 w-max cursor-pointer">
             <svg
               className="open-menu w-[45px] h-[45px]"
@@ -181,7 +207,7 @@ const SideMenu = () => {
               />
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

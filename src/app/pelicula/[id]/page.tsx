@@ -19,13 +19,14 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <div className="w-[90vw] mx-auto pt-5">
         <div className="md:flex gap-10">
           <div className="w-max">
-            <div className=" h-[380px] mx-auto">
+            <div className=" mx-auto">
               <Image
                 src={urlFor(pelicula.poster).url()}
                 alt={`${pelicula.title} Poster`}
-                className="h-[380px] w-[280px] object-cover"
-                width={280}
-                height={380}
+                    className="h-[380px] w-[280px] object-contain"
+                    width={290}
+                    height={387}
+                
               />
             </div>
             {pelicula.enlaceTrailer && (

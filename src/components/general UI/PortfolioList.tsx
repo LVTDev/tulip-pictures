@@ -19,12 +19,11 @@ const PortfolioList = ({ title }: { title: string }) => {
     };
     fetchMovies();
   }, []);
-  console.log(fetchedMovies)
 
   if (fetchedMovies.length < 1) return <p>Loading</p>;
   return (
     <div className="bg-[#ebf5e2] w-full">
-      <div className="max-w-[1440px] pt-8 mx-auto">
+      <div className="max-w-[90vw] pt-8 mx-auto">
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <div className="text-3xl pl-4 sm:col-span-2 uppercase font-bold">
@@ -33,13 +32,17 @@ const PortfolioList = ({ title }: { title: string }) => {
             </div>
             {fetchedMovies.map((movie) => {
               return (
-                <Link href={`/pelicula/${movie.slug.current}`} key={movie._id} className=" h-[380px] mx-auto">
+                <Link
+                  href={`/pelicula/${movie.slug.current}`}
+                  key={movie._id}
+                  className="h-[387px] w-[290px] mx-auto"
+                >
                   <Image
                     src={urlFor(movie.poster).url()}
                     alt={`${movie.title} Poster`}
                     className="h-[380px] w-[280px] object-cover"
-                    width={280}
-                    height={380}
+                    width={290}
+                    height={387}
                   />
                 </Link>
               );

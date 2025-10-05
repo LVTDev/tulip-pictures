@@ -28,7 +28,6 @@ const page = () => {
           </p>
         </div>
       </div>
-      <div className="bg-[#4affff] h-[1px]" />
 
         <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/a27b0ef7eeba275533ec10c0105fbf9a5d4d82ec-1920x1122.jpg")] bg-right bg-cover bg-no-repeat   py-40 md:pr-20 text-white'>
         <div className="md:w-2/3 md:pl-30 px-6">

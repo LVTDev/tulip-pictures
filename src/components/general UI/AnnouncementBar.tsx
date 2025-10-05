@@ -6,7 +6,7 @@ import React from "react";
 
 const AnnouncementBar = () => {
   return (
-    <div className={`bg-[#30383a] uppercase text-white py-3 flex`}>
+    <div className={`bg-[#30383a] pt-8 md:pt-3 uppercase text-white py-3 flex relative `}>
       <div className="mx-auto">
         <p>
           el juicio de un perro{" "}
@@ -21,10 +21,11 @@ const AnnouncementBar = () => {
           </span>
         </p>
       </div>
-      <Link href="/" className=" relative h-[55px] w-[40px] ml-auto mr-4">
+      <Link href="/" className="absolute right-3 top-1/2 -translate-y-1/2 ml-auto mr-4">
         <Image
           src={"/TULIP_Isotipo.png"}
-          fill
+          height={385/9}
+          width={364/9}
           className="object-contain"
           priority
           alt={"Tulip Logo"}
