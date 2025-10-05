@@ -3,9 +3,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
-  Navigation,
-  Pagination,
-  Scrollbar,
   A11y,
 } from "swiper/modules";
 import "swiper/css";
@@ -45,14 +42,15 @@ const Page = () => {
     },
   ];
   return (
-    <div className="bg-[#30383a]">
-      <div className=" w-[98vw] mx-auto">
+    <div className="bg-[#30383a]  " >
+      <div className="w-[99vw]">
         <Swiper
-          modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Autoplay, A11y]}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
           }}
+          className="w-full"
           slidesPerView={1}
           //   onSlideChange={() => {
           //     if (currentIndex > 13) setCurrentIndex(0);
@@ -72,7 +70,7 @@ const Page = () => {
                     className="object-cover"
                     fill
                     />
-                  <div className="absolute w-full text-white bottom-0 ">
+                  <div className="absolute text-white bottom-0 ">
                     <p className="text-right font-bold text-xl opacity-90">
                       {slide.textTop}
                     </p>
