@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
   A11y,
+  Navigation
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -45,7 +46,8 @@ const Page = () => {
     <div className="bg-[#30383a]  " >
       <div className="w-[99vw]">
         <Swiper
-          modules={[Autoplay, A11y]}
+          modules={[Autoplay, A11y, Navigation]}
+          navigation
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
