@@ -6,7 +6,7 @@ import React from "react";
 
 const AnnouncementBar = () => {
   return (
-    <div className={`bg-[#30383a] py-8 md:pt-3 uppercase text-white flex relative `}>
+    <div className={`bg-[#30383a] py-8 md:py-5 uppercase text-white flex relative `}>
       <div className="mx-auto text-center">
         <p>
           el juicio de un perro{" "}

@@ -1,11 +1,41 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const SubscribeForm = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(email),
+      });
+
+      if (res.ok) {
+        setSuccess(true);
+        setEmail("");
+      } else {
+        console.error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="md:max-w-[600px] mx-auto text-white">
       <p className="bg-[#30383a] text-center py-2">SUSCRIBETE</p>
-      <form action="" className="bg-[#707873]  p-5">
+      <form onSubmit={handleSubmit} className="bg-[#707873]  p-5">
         <p className="text-white">
           Entérate de nuestros estrenos y nuevas producciones.
           <br />
@@ -18,13 +48,19 @@ const SubscribeForm = () => {
             className=" h-full py-2 px-4 placeholder:text-black text-black placeholder:bg-[#c1cabc] bg-[#c1cabc]"
             type="text"
             placeholder="E-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <button type="submit" className="bg-[#30383a] py-2 px-4">
-            Enviar
+          <button type="submit" disabled={loading || success} className="bg-[#30383a] py-2 px-4">
+             {loading ? "Enviando..." : "Enviar"}
           </button>
         </div>
+           {success && (
+            <p className="text-green-600 font-medium">
+              Message Enviado!
+            </p>
+          )}
       </form>
-
     </div>
   );
 };
