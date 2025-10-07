@@ -4,17 +4,17 @@ import SubscribeForm from "./SubscribeForm";
 import Link from "next/link";
 const HomeHero = () => {
   return (
-    <div className="text-[#a8af9f] relative pb-10  bg-no-repeat bg-cover bg-[url('/BackHome.jpg')]">
+    <div className="text-black relative pb-10  bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')]">
       <div className=" w-[90vw] mx-auto">
         <h3 className="uppercase text-4xl md:text-7xl font-bold opacity-90 pt-3 md:pt-10">
-          QUIENES SOMOS
+          QUIÉNES SOMOS
         </h3>
         <div className="md:flex items-center pt-6 md:pt-20 gap-10 ">
           <div className="md:w-1/2">
-            <p className="text-3xl md:text-5xl mb-3">EL CINE ESTÁ CAMBIANDO</p>
+            <p className="font-bold mb-3"></p>
             <p className="mb-7 pr-4">
-              Cambian las formas de hacerlo, de verlo y de compartilo. En Tulip
-              Pictures respondemos a esa transformacion con una visión amplia y
+              <span className="font-bold">El cine esta cambiando.</span> Cambian las formas de hacerlo, de verlo y de compartilo. En Tulip
+              Pictures respondemos a esa transformación con una visión amplia y
               contemporánea.
             </p>
             <p>
@@ -38,7 +38,7 @@ const HomeHero = () => {
           <div className="md:w-1/2 px-14">
             <Image
               src={
-                "https://cdn.sanity.io/images/yj63f9tw/production/6140a65e162d65e994bb489d9c14a531b54a3c5d-610x244.png"
+                "/Logotipo_negro.png"
               }
               width={610}
               height={244}
@@ -54,20 +54,20 @@ const HomeHero = () => {
             <SubscribeForm />
             <div className="flex flex-col gap-2 mt-10 uppercase">
               <Link
-                className="text-white font-bold"
+                className=" font-bold"
                 href={"/avisoDePrivacidad"}
               >
                 Notice of Privacy
               </Link>
-              <Link className="text-white font-bold" href={"/terminos"}>
+              <Link className="font-bold" href={"/terminos"}>
                 Terms and Conditions
               </Link>
-              <p className="text-white text-xs opacity-70">
+              <p className=" text-xs opacity-70">
                 &copy; 2025 TULIP PICTURES
               </p>
             </div>
           </div>
-          <div className="mt-15 md:mt-0 md:w-3/5 text-white ">
+          <div className="mt-15 md:mt-0 md:w-3/5 ">
             <p className="mb-4 uppercase text-center text-3xl font-bold">Los Ángeles - CDMX</p>
             <div className="md:flex justify-between">
               <div className="md:w-1/2">
@@ -86,7 +86,7 @@ const HomeHero = () => {
                 <p className="text-sm mb-1">Directora de Prooducción y Desarrollo</p>
                 <p className="text-sm mb-1 italic font-bold">Paloma Cabrera</p>
                 <p className="text-sm mb-6 italic">paloma@grupolvt.com</p>
-                <p className="text-sm mb-5">Coordinadora de Producción</p>
+                <p className="text-sm mb-1">Coordinadora de Producción</p>
                 <p className="text-sm italic font-bold">Aranza Miranda</p>
                 <p className="text-sm italic">aranza@letswoohoo.com</p>
               </div>

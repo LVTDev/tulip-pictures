@@ -6,20 +6,20 @@ import React from "react";
 
 const AnnouncementBar = () => {
   return (
-    <div className={`bg-[#30383a] pt-8 md:pt-3 uppercase text-white py-3 flex relative `}>
-      <div className="mx-auto">
+    <div className={`bg-[#30383a] py-8 md:pt-3 uppercase text-white flex relative `}>
+      <div className="mx-auto text-center">
         <p>
           el juicio de un perro{" "}
           <span className="text-xs block md:inline md:text-sm opacity-75 md:ml-2">
             7 de septiembre, consulta cartelera
           </span>
         </p>
-        <p>
+        {/* <p>
           bird{" "}
           <span className="text-xs md:text-sm block md:inline opacity-75 md:ml-2">
             ya en cines, consulta cartelera
           </span>
-        </p>
+        </p> */}
       </div>
       <Link href="/" className="absolute right-3 top-1/2 -translate-y-1/2 ml-auto mr-4">
         <Image

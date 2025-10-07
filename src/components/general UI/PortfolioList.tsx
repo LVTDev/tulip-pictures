@@ -26,9 +26,14 @@ const PortfolioList = ({ title }: { title: string }) => {
       <div className="max-w-[90vw] pt-8 mx-auto">
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="text-3xl pl-4 sm:col-span-2 uppercase font-bold">
-              <h3>PORTAFOLIO DE PROYECTOS</h3>
-              <h4>{title}</h4>
+            <div className=" pl-4 sm:col-span-2 ">
+              <h3 className="text-3xl  uppercase font-bold">PORTAFOLIO DE PROYECTOS</h3>
+              <h4 className="text-3xl uppercase font-bold">{title}</h4>
+              <p>
+                Si tienes un proyecto que desafie, conmueva o inspire,{" "}
+                <span className="font-bold">queremos escucharlo.</span>
+              </p>
+              <p className="font-bold">¡Escribenos!</p>
             </div>
             {fetchedMovies.map((movie) => {
               return (
@@ -49,12 +54,7 @@ const PortfolioList = ({ title }: { title: string }) => {
             })}
           </div>
           <div className="mt-6 pb-6 px-3">
-            <p>
-              Si tienes un proyecto que desafie, conmueva o inspire,{" "}
-              <span className="font-bold">queremos escucharlo</span>
-            </p>
             <div className="flex">
-              <p className="font-bold">¡Escribenos!</p>
               <p>FORM</p>
             </div>
           </div>

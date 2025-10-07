@@ -3,14 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState, useRef } from "react";
-import {
-  ChevronDown,
-  Facebook,
-  Instagram,
-  Menu,
-  Twitter,
-  Youtube,
-} from "react-feather";
+import { ChevronDown, Facebook, Instagram, Menu, Youtube } from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -28,12 +21,12 @@ const SideMenu = () => {
     });
     menuTL.current
       .to([asideRef.current], {
-        width: "230px",
+        width: "260px",
         opacity: 1,
         stagger: 0.2,
       })
       .to([menuToggleRef.current], {
-        left: "250px",
+        left: "270px",
       });
     menuTL.current.paused(true);
   });
@@ -82,7 +75,7 @@ const SideMenu = () => {
                 </Link>
               </div>
               <nav className="mt-4">
-                <ul className="text-black flex flex-col gap-3 uppercase text-base font-medium">
+                <ul className="text-black flex flex-col gap-3 uppercase text-[12px] font-medium">
                   <Link
                     href="/about-us"
                     className={`${url === "/about-us" && "underline"}`}
@@ -93,42 +86,42 @@ const SideMenu = () => {
                   </Link>
                   <div className="group">
                     <div className="hidden md:flex justify-between items-center">
-                      Produccion{" "}
+                      Producción{" "}
                       <div className="inline-block group-hover:rotate-180">
                         <ChevronDown />
                       </div>
                     </div>
                     <div className="md:hidden md:group-hover:block">
                       <Link href="/produccion">
-                        <div className="mask overflow-hidden text-xs my-2">
+                        <div className="mask overflow-hidden md:text-xs my-2">
                           <p
                             className={`${url === "/produccion" && "underline"} `}
                           >
-                            Servicios de Produccion
+                            Servicios de Producción
                           </p>
                         </div>
                       </Link>
                       <Link href="/produccion/portfolio">
-                        <div className="mask overflow-hidden text-xs">
+                        <div className="mask overflow-hidden md:text-xs">
                           <p
                             className={`${url.startsWith("/produccion/portfolio") && "underline"}`}
                           >
-                            Produccion Portfolio
+                            Portafolio de Producción
                           </p>
                         </div>
                       </Link>
                     </div>
                   </div>
                   <div className="group">
-                        <div className="hidden md:flex justify-between items-center">
-                      Distribucion{" "}
+                    <div className="hidden md:flex justify-between items-center">
+                      Distribución{" "}
                       <div className="inline-block group-hover:rotate-180">
                         <ChevronDown />
                       </div>
                     </div>
-                    <div className="md:hidden md:group-hover:block border-b border-[#30383a]">
+                    <div className="md:hidden md:group-hover:block">
                       <Link href="/distribucion">
-                        <div className="mask overflow-hidden text-xs my-2">
+                        <div className="mask overflow-hidden md:text-xs my-2">
                           <p
                             className={`${url === "/distribucion" && "underline"}`}
                           >
@@ -137,11 +130,11 @@ const SideMenu = () => {
                         </div>
                       </Link>
                       <Link href="/distribucion/portfolio">
-                        <div className="mask overflow-hidden text-xs">
+                        <div className="mask overflow-hidden md:text-xs">
                           <p
-                            className={`${url.startsWith("/distribucion/portfolio") && "underline"}`}
+                            className={`${url === "/distribucion/portfolio" && "underline"}`}
                           >
-                            Distribución Portfolio
+                            Portafolio de Distribución
                           </p>
                         </div>
                       </Link>
@@ -170,17 +163,40 @@ const SideMenu = () => {
             </div>
             <div className="flex flex-col gap-2 my-10 p-3">
               <Link className="text-[#8aaf69]" href={"/avisoDePrivacidad"}>
-                Notice of Privacy
+                Aviso de Privacidad
               </Link>
               <Link className="text-[#8aaf69]" href={"/terminos"}>
-                Terms and Conditions
+               Términos y Condiciones de Uso
               </Link>
               <p className="text-black">&copy; 2025 TULIP PICTURES</p>
               <div className="text-black flex justify-between">
-                <Facebook color="black" />
-                <Instagram color="black" />
-                <Twitter color="black" />
-                <Youtube color="black" />
+                <a href="https://www.instagram.com/tulippicturesmx/">
+                  <Instagram color="black" />
+                </a>
+                <a href="https://x.com/TulipPicturesmx" className="w-[24px]">
+                  <svg
+                    color="white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
+                  </svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UCVweWFFORo2PReDVUeXd15w">
+                  <Youtube color="black" />
+                </a>
+                <a href="https://www.tiktok.com/@tulippicturesmx" className="w-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path d="M544.5 273.9C500.5 274 457.5 260.3 421.7 234.7L421.7 413.4C421.7 446.5 411.6 478.8 392.7 506C373.8 533.2 347.1 554 316.1 565.6C285.1 577.2 251.3 579.1 219.2 570.9C187.1 562.7 158.3 545 136.5 520.1C114.7 495.2 101.2 464.1 97.5 431.2C93.8 398.3 100.4 365.1 116.1 336C131.8 306.9 156.1 283.3 185.7 268.3C215.3 253.3 248.6 247.8 281.4 252.3L281.4 342.2C266.4 337.5 250.3 337.6 235.4 342.6C220.5 347.6 207.5 357.2 198.4 369.9C189.3 382.6 184.4 398 184.5 413.8C184.6 429.6 189.7 444.8 199 457.5C208.3 470.2 221.4 479.6 236.4 484.4C251.4 489.2 267.5 489.2 282.4 484.3C297.3 479.4 310.4 469.9 319.6 457.2C328.8 444.5 333.8 429.1 333.8 413.4L333.8 64L421.8 64C421.7 71.4 422.4 78.9 423.7 86.2C426.8 102.5 433.1 118.1 442.4 131.9C451.7 145.7 463.7 157.5 477.6 166.5C497.5 179.6 520.8 186.6 544.6 186.6L544.6 274z" />
+                  </svg>
+                </a>
+
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/TulipPicturesMX/"
+                >
+                  <Facebook color="black" />{" "}
+                </a>
               </div>
             </div>
           </aside>
@@ -188,7 +204,7 @@ const SideMenu = () => {
       </div>
       <div
         // className={`fixed z-200 ${isOpen ? "left-40" : "left-4"}  bg-red-300 rounded-full`}
-        className={`fixed z-200 top-2 p-3 left-4 cursor-pointer bg-red-300 rounded-full`}
+        className={`fixed z-200 top-6 md:top-2 p-3 left-4 cursor-pointer bg-[#e249afbf] hover:bg-[#e249af] bg-opacity-[%68]   rounded-full`}
         onClick={handleButtonOpen}
         ref={menuToggleRef}
       >

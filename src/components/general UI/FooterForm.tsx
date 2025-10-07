@@ -5,6 +5,7 @@ const FooterForm = ({ lang }: { lang: string }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    company: "",
     message: "",
   });
 
@@ -33,7 +34,7 @@ const FooterForm = ({ lang }: { lang: string }) => {
 
       if (res.ok) {
         setSuccess(true);
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "", company: "" });
       } else {
         console.error("Failed to submit form");
       }
@@ -70,6 +71,18 @@ const FooterForm = ({ lang }: { lang: string }) => {
               name="email"
               id="email"
               value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-black rounded-lg"
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Empresa</label>
+            <input
+              type="company"
+              name="company"
+              id="company"
+              value={formData.company}
               onChange={handleChange}
               required
               className="w-full p-3 border border-black rounded-lg"
