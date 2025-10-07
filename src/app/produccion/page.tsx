@@ -1,59 +1,74 @@
+// import Image from "next/image";
+"use client";
+import FooterForm from "@/components/general UI/FooterForm";
+import React, { useState } from "react";
 
-import React from "react";
-
-const page = () => {
+const Page = () => {
+  const [openForm, setOpenForm] = useState(false);
   return (
-    <div className="">
-
-      <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/53cb2828c1a8ca62f0522dd5e1604f013381acb9-1920x1272.jpg")] bg-center bg-cover bg-no-repeat   py-30 md:pr-20 text-white'>
-        <div className="md:w-1/2 md:ml-auto px-6 pb-15">
-          <h3 className="uppercase text-4xl md:text-7xl font-bold opacity-50 font-poppins mb-5">
-            PRODUCCIÓN
-          </h3>
-          <p className="text-sm md:text-base">
-            En Tulip Pictures hacemos cine porque creemos en el poder de contar
-            historias.
-            <br />
-            <br />
-            Con experiencia en cine autoral y de alto perfil internacional,
-            brindamos soluciones integrales para la producción audiovisual:
-            desarrollo, preproducción, rodaje, postproducción, renta de equipo y
-            producción ejecutiva.
-            <br />
-            <br />
-            También entendemos la coproducción como un espacio de encuentro
-            creativo y estratégico. Nos interesan proyectos con una visión
-            única, proyección internacional y la capacidad de conectar con
-            audiencias diversas.
-          </p>
+    <div className="text-[#ffffffcb] bg-[url('/BackProduccion02.png')] bg-cover bg-no-repeat bg-bottom-left py-7 ">
+      <div className="max-w-[90vw] mx-auto">
+        <h1 className="text-6xl font-bold tracking-widest font-poppins">
+          PRODUCCIÓN
+        </h1>
+        <div className="flex mt-6 gap-6">
+          <div className="w-1/3">
+            {" "}
+            <p className="text-sm md:text-base">
+              En Tulip Pictures hacemos cine porque creemos en el poder de
+              contar historias.
+              <br />
+              <br />
+              Con experiencia en cine autoral y de alto perfil internacional,
+              brindamos soluciones integrales para la producción audiovisual:
+              desarrollo, preproducción, rodaje, postproducción, renta de equipo
+              y producción ejecutiva.
+              <br />
+              <br />
+              También entendemos la coproducción como un espacio de encuentro
+              creativo y estratégico. Nos interesan proyectos con una visión
+              única, proyección internacional y la capacidad de conectar con
+              audiencias diversas.
+            </p>
+          </div>
+          <div className="w-2/3">
+            <p className="uppercase text-3xl md:text-5xl font-bold font-poppins mb-6">
+              servicios de producción
+            </p>
+            <ul className="uppercase w-max">
+              <li className="mb-5 bg-[#30383a] text-[#ffffffcb] px-4 border py-1 rounded-lg">
+                Preproducción audiovisual
+              </li>
+              <li className="mb-5 bg-[#30383a] text-[#ffffffcb] px-4 border py-1 rounded-lg">
+                Producción audiovisual
+              </li>
+              <li className="mb-5 bg-[#30383a] text-[#ffffffcb] px-4 border py-1 rounded-lg">
+                Postproducción audiovisual
+              </li>
+              <li className="mb-5 bg-[#30383a] text-[#ffffffcb] px-4 border py-1 rounded-lg">
+                Renta de equipo cinematográfico
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-
-        <div className='bg-[url("https://cdn.sanity.io/images/yj63f9tw/production/a27b0ef7eeba275533ec10c0105fbf9a5d4d82ec-1920x1122.jpg")] bg-right bg-cover bg-no-repeat   py-40 md:pr-20 text-white'>
-        <div className="md:w-2/3 md:pl-30 px-6">
-          <p className="uppercase text-4xl md:text-7xl mb-5 font-bold opacity-50 font-poppins">
-            servicios <br />
-            de Producción
-          </p>
-          <ul className="uppercase">
-            <li className="mb-5 border border-[#ffffff60] px-4 py-1 rounded-lg">
-              Preproducción audiovisual
-            </li>
-            <li className="mb-5 border border-[#ffffff60] px-4 py-1 rounded-lg">
-              Producción audiovisual
-            </li>
-            <li className="mb-5 border border-[#ffffff60] px-4 py-1 rounded-lg">
-              Postproducción audiovisual
-            </li>
-
-            <li className="mb-5 border border-[#ffffff60] px-4 py-1 rounded-lg">
-              Renta de equipo cinematográfico
-            </li>
-          </ul>
+        <p className="text-center max-w-2/3 w-max mx-auto my-5 text-2xl">
+          Si tienes un proyecto que{" "}
+          <span className="font-bold">
+            desafie, conmueva o inspire. ¡Querémos escucharlo!
+          </span>
+        </p>
+        <div
+          onClick={() => setOpenForm((prev) => !prev)}
+          className="bg-[#30383a] px-2 py-1 text-[#ffffffcb] w-max mx-auto uppercase rounded cursor-pointer"
+        >
+          Llena el formulario
+        </div>
+        <div className={`${openForm ? "block" : "hidden"}`}>
+          <FooterForm lang="es" />
         </div>
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

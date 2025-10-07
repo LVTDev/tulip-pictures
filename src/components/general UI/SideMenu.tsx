@@ -24,6 +24,7 @@ const SideMenu = () => {
         width: "260px",
         opacity: 1,
         stagger: 0.2,
+        display: "flex"
       })
       .to([menuToggleRef.current], {
         left: "270px",
@@ -61,7 +62,7 @@ const SideMenu = () => {
         <div className="h-full">
           <aside
             ref={asideRef}
-            className="bg-[#ebf5e2] h-full flex flex-col justify-between opacity-0 pr-3"
+            className="bg-[#ebf5e2] h-full flex-col justify-between opacity-0 pr-3 hidden"
           >
             <div className="m-6">
               <div className="mx-auto w-max">

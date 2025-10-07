@@ -39,7 +39,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               <a
                 href={pelicula.enlaceTrailer}
                 target="_blank"
-                className="bg-[#30383a] text-white uppercase font-bold text-center my-5 py-1"
+                className="bg-[#30383a]!important text-white uppercase font-bold text-center my-5 py-1"
               >
                 <div className="flex justify-center gap-3">
                   Ver Trailler
