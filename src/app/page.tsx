@@ -47,6 +47,7 @@ const Page = () => {
         <Swiper
           modules={[Autoplay, A11y, Navigation]}
           navigation
+          loop
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,

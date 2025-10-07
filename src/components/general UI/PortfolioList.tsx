@@ -5,6 +5,7 @@ import { Movie } from "@/utils/types";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import FooterForm from "./FooterForm";
 
 const PortfolioList = ({ title }: { title: string }) => {
   const [fetchedMovies, setFetchedMovies] = useState<Movie[]>([]);
@@ -55,7 +56,7 @@ const PortfolioList = ({ title }: { title: string }) => {
           </div>
           <div className="mt-6 pb-6 px-3">
             <div className="flex">
-              <p>FORM</p>
+              <FooterForm lang="es" />
             </div>
           </div>
         </div>

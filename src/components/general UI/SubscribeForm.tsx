@@ -12,12 +12,12 @@ const SubscribeForm = () => {
     setSuccess(false);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/mailingList", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(email),
+        body: JSON.stringify({email}),
       });
 
       if (res.ok) {
@@ -51,12 +51,12 @@ const SubscribeForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button type="submit" disabled={loading || success} className="bg-[#30383a] py-2 px-4">
+          <button type="submit" disabled={loading || success} className="bg-[#30383a] py-2 px-4 cursor-pointer disabled:cursor-not-allowed">
              {loading ? "Enviando..." : "Enviar"}
           </button>
         </div>
            {success && (
-            <p className="text-green-600 font-medium">
+            <p className="text-white font-medium">
               Message Enviado!
             </p>
           )}
