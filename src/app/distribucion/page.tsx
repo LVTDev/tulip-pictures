@@ -36,7 +36,7 @@ const Page = () => {
             <p className="uppercase text-xl md:text-3xl font-bold font-poppins mb-6">
               servicios de Distribución
             </p>
-            <ul className="uppercase w-max">
+            <ul className="uppercase md:w-max text-sm md:text-base">
               <li className="mb-5 bg-[#30383a] text-white px-4 py-1 rounded-lg">
                 Adquisición y compra de derechos de películas
               </li>
