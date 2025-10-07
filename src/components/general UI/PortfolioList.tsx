@@ -31,10 +31,10 @@ const PortfolioList = ({ title }: { title: string }) => {
               <h3 className="text-3xl  uppercase font-bold">PORTAFOLIO DE PROYECTOS</h3>
               <h4 className="text-3xl uppercase font-bold">{title}</h4>
               <p>
-                Si tienes un proyecto que desafie, conmueva o inspire,{" "}
+                Si tienes un proyecto que desafíe, conmueva o inspire,{" "}
                 <span className="font-bold">queremos escucharlo.</span>
               </p>
-              <p className="font-bold">¡Escribenos!</p>
+              <p className="font-bold">¡Escríbenos!</p>
             </div>
             {fetchedMovies.map((movie) => {
               return (

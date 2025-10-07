@@ -8,11 +8,11 @@ const Page = () => {
   return (
     <div className="text-[#30383a] bg-[url('/BackDistribucion02.png')] bg-cover bg-no-repeat bg-left py-7 ">
       <div className="max-w-[90vw] mx-auto">
-        <h1 className="text-6xl font-bold tracking-widest font-poppins">
+        <h1 className="text-3xl  md:text-6xl font-bold tracking-widest font-poppins">
           DISTRIBUCIÓN
         </h1>
-        <div className="flex mt-6 gap-6">
-          <div className="w-1/3">
+        <div className="md:flex mt-6 gap-6">
+          <div className="md:w-1/3">
             {" "}
             <p className="pb-15">
               Desde 2018, Tulip Pictures se especializa en la adquisición y
@@ -32,8 +32,8 @@ const Page = () => {
               festivales y aplicación a fondos de cine.
             </p>
           </div>
-          <div className="w-2/3">
-            <p className="uppercase text-3xl md:text-5xl font-bold font-poppins mb-6">
+          <div className="md:w-2/3">
+            <p className="uppercase text-xl md:text-3xl font-bold font-poppins mb-6">
               servicios de Distribución
             </p>
             <ul className="uppercase w-max">
