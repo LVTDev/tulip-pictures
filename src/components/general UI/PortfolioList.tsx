@@ -29,7 +29,7 @@ const PortfolioList = ({ title }: { title: string }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <div className=" pl-4 sm:col-span-2 ">
               <h3 className="text-3xl  uppercase font-bold">PORTAFOLIO DE PROYECTOS</h3>
-              <h4 className="text-3xl uppercase font-bold">{title}</h4>
+              <h4 className="text-3xl uppercase font-bold">{title == "distribucion" ?   "Distribucion" :"Producción"}</h4>
               <p>
                 Si tienes un proyecto que desafíe, conmueva o inspire,{" "}
                 <span className="font-bold">queremos escucharlo.</span>
