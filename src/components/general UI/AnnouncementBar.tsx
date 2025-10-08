@@ -6,12 +6,12 @@ import React from "react";
 
 const AnnouncementBar = () => {
   return (
-    <div className={`bg-[#30383a] py-8 md:py-5 uppercase text-white flex relative `}>
+    <div className={`bg-black py-8 md:py-5 uppercase text-white flex relative `}>
       <div className="mx-auto text-center">
         <p>
-          el juicio de un perro{" "}
+          La Vida Es{" "}
           <span className="text-xs block md:inline md:text-sm opacity-75 md:ml-2">
-            7 de septiembre, consulta cartelera
+            En Cines Pronto, consulta cartelera
           </span>
         </p>
         {/* <p>
