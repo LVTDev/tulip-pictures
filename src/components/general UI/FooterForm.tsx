@@ -48,7 +48,7 @@ const FooterForm = ({ lang }: { lang: string }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full mx-auto p-6  space-y-4 font-poppins "
+      className="w-[50%] mx-auto p-6  space-y-4 font-poppins "
     >
       {lang === "es" && (
         <div>

@@ -54,7 +54,7 @@ const Page = () => {
         <p className="text-center max-w-2/3 w-max mx-auto my-5 text-2xl">
           Si tienes un proyecto que{" "}
           <span className="font-bold">
-            desafie, conmueva o inspire. ¡Querémos escucharlo!
+            desafié, conmueva o inspire. <br /> ¡Querémos escucharlo!
           </span>
         </p>
         <div

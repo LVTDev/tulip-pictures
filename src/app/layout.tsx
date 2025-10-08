@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppinsFont.variable} ${ibmPlexMono.variable} ${ibmPlexSans.variable}  antialiased`}
+        className={`${poppinsFont.variable} ${ibmPlexMono.variable} ${ibmPlexSans.variable} min-h-screen antialiased`}
       >
         <div className="flex ">
           <SideMenu />

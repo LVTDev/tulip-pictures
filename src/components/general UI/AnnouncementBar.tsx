@@ -11,7 +11,7 @@ const AnnouncementBar = () => {
         <p>
           La Vida Es{" "}
           <span className="text-xs block md:inline md:text-sm opacity-75 md:ml-2">
-            En Cines Pronto, consulta cartelera
+            En Cines Pronto
           </span>
         </p>
         {/* <p>
