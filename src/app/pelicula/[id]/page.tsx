@@ -1,3 +1,4 @@
+import SliderPeliculas from "@/components/general UI/SliderPeliculas";
 import SubscribeForm from "@/components/general UI/SubscribeForm";
 import { urlFor } from "@/sanity/lib/image";
 import { fetchSanityIndividualMovie } from "@/utils/sanityFetch";
@@ -7,11 +8,15 @@ import Link from "next/link";
 import React from "react";
 import { ArrowLeft, PlayCircle } from "react-feather";
 
+
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
 
   const result = await fetchSanityIndividualMovie("pelicula", id);
   const pelicula: Movie = result[0];
+  console.log(pelicula);
+  const enlacesImagenes = pelicula.imagenes && pelicula.imagenes.map((img) => urlFor(img).url());
+  console.log(enlacesImagenes);
   if (result.length > 1)
     return <p className="bg-[#ebf5e2] text-black">Loading</p>;
   return (
@@ -19,9 +24,21 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <div className="w-[90vw] mx-auto pt-5">
         <div className="bg-[#30383a] text-white px-2 py-3 w-max mb-4">
           {pelicula.distribucionProduccion === "distribucion" ? (
-            <Link href="/distribucion/portfolio" className="flex items-center gap-3"><ArrowLeft />Regresar</Link>
+            <Link
+              href="/distribucion/portfolio"
+              className="flex items-center gap-3"
+            >
+              <ArrowLeft />
+              Regresar
+            </Link>
           ) : (
-            <Link href="/produccion/portfolio" className="flex items-center gap-3"><ArrowLeft />Regresar</Link>
+            <Link
+              href="/produccion/portfolio"
+              className="flex items-center gap-3"
+            >
+              <ArrowLeft />
+              Regresar
+            </Link>
           )}
         </div>
         <div className="md:flex gap-10">
@@ -97,7 +114,11 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             )}
           </div>
         </div>
-        <div></div>
+        <div className="mt-6">
+          {enlacesImagenes && enlacesImagenes.length > 0 && (
+           <SliderPeliculas enlacesImagenes={enlacesImagenes} />
+          )}
+        </div>
         <div className="mx-auto mt-7 pb-7">
           <SubscribeForm />
         </div>

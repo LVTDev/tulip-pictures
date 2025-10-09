@@ -23,6 +23,7 @@ _createdAt: string
     fechaEstreno?: Date
     enlaceTrailer?: string
     pressKitURL?: string
+    imagenes?: []
 }
 
 type Category = {
