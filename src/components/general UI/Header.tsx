@@ -56,13 +56,13 @@ const Header = () => {
 
       {/* <div className="w-max flex justify-between gap-4  md:gap-8 items-center">
         <Link
-          className="w-min hover:text-verde transition-all text-[9px] md:text-xs font-poppins font-medium"
+          className="w-min hover:text-verde transition-all text-[9px] md:text-xs font-medium"
           href={`${pageLang === "es" ? "/our-films" : "/en/our-films"}`}
         >
           {`${pageLang === "es" ? "NUESTRAS PELÍCULAS" : "OUR FILMS"}`}
         </Link>
         <Link
-          className="w-min text-[9px] hover:text-verde transition-all md:text-xs font-poppins font-medium"
+          className="w-min text-[9px] hover:text-verde transition-all md:text-xss font-medium"
           href={"/about-us"}
         >
           {`${pageLang === "es" ? "¿QUIÉNES SOMOS?" : "ABOUT US"}`}

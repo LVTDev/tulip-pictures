@@ -12,10 +12,10 @@ const HomeHero = () => {
         <div className="md:flex items-center pt-6 md:pt-10 gap-10 ">
           <div className="md:w-1/2">
             <p className="mb-7 pr-4 text-justify">
-              <span className="font-bold">El cine esta cambiando.</span> Cambian
-              las formas de hacerlo, de verlo y de compartilo. En Tulip Pictures
-              respondemos a esa transformación con una visión amplia y
-              contemporánea.
+              <span className="font-bold">El cine está cambiando.</span>
+              El cine está cambiando. Cambian las formas de hacerlo, de verlo y
+              de compartirlo. En Tulip Pictures respondemos a esa transformación
+              con una visión amplia y contemporánea.
               <br />
               <br />
               Aquí producimos y distribuimos cine con identidad. impacto y
@@ -37,9 +37,7 @@ const HomeHero = () => {
           </div>
           <div className="md:w-1/2 px-14">
             <Image
-              src={
-                "https://cdn.sanity.io/images/yj63f9tw/production/556dbabd47db6a8f21b495c56c859a7002342ff1-1920x1080.gif"
-              }
+              src={"/Logotipo_negro.png"}
               width={1920 / 3}
               height={1080 / 3}
               alt={"Tulip Logo"}

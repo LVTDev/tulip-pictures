@@ -3,7 +3,7 @@ import FooterForm from "./FooterForm";
 
 const Contactanos = ({ lang }: { lang: string }) => {
   return (
-    <div className="flex flex-col md:flex-row font-poppins max-w-[900px] mx-auto mt-[70px] px-3">
+    <div className="flex flex-col md:flex-row max-w-[900px] mx-auto mt-[70px] px-3">
       <div className=" md:w-1/2">
         <p className="text-verde text-sm font-semibold">
           {lang === "en" ? "CONTACT US" : "CONTÁCTANOS"}{" "}

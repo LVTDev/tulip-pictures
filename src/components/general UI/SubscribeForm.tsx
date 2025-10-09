@@ -34,7 +34,7 @@ const SubscribeForm = () => {
   };
   return (
     <div className="md:max-w-[600px] mx-auto text-white rounded-lg overflow-hidden">
-      <p className="uppercase bg-black text-white py-2 px-3 text-xl font-bold">SUSCRIBETE</p>
+      <p className="uppercase bg-black text-white py-2 px-3 text-xl font-bold">SUSCRÍBETE</p>
       <form onSubmit={handleSubmit} className="text-black  p-5 ">
         <p className="">
           Entérate de nuestros estrenos y nuevas producciones.

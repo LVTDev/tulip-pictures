@@ -7,7 +7,7 @@ const Page = () => {
     <div className="">
       <div className='bg-[url("/rentaBG.jpg")] bg-cover bg-no-repeat  w-full '>
         <div className="w-[80%] md:w-[60%] mx-auto py-8">
-          <h1 className="text-4xl md:text-7xl text-white mb-8 tracking-widest font-bold  font-poppins w-max">
+          <h1 className="text-4xl md:text-7xl text-white mb-8 tracking-widest font-bold w-max">
             RENTA DE <br />
             EQUIPO
           </h1>

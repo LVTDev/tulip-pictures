@@ -19,9 +19,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <div className="w-[90vw] mx-auto pt-5">
         <div className="bg-[#30383a] text-white px-2 py-3 w-max mb-4">
           {pelicula.distribucionProduccion === "distribucion" ? (
-            <Link href="/distribucion/portfolio" className="flex items-center gap-3"><ArrowLeft />Regresar a peliculas</Link>
+            <Link href="/distribucion/portfolio" className="flex items-center gap-3"><ArrowLeft />Regresar</Link>
           ) : (
-            <Link href="/produccion/portfolio" className="flex items-center gap-3"><ArrowLeft />Regresar a peliculas</Link>
+            <Link href="/produccion/portfolio" className="flex items-center gap-3"><ArrowLeft />Regresar</Link>
           )}
         </div>
         <div className="md:flex gap-10">
@@ -85,13 +85,13 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             )}
             {pelicula.movieLength && (
               <div className="flex gap-1">
-                <p className="font-bold">Duracion: </p>
+                <p className="font-bold">Duración: </p>
                 <p>{pelicula.movieLength}</p>
               </div>
             )}
             {pelicula.description && (
               <div>
-                <p className="font-bold mt-4 mb-2">Sinopsis</p>
+                <p className="font-bold mt-4 mb-2">Sinópsis</p>
                 <p>{pelicula.description}</p>
               </div>
             )}

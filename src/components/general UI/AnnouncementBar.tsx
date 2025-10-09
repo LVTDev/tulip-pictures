@@ -8,10 +8,10 @@ const AnnouncementBar = () => {
   return (
     <div className={`bg-black py-8 md:py-5 uppercase text-white flex relative `}>
       <div className="mx-auto text-center">
-        <p>
+        <p className="text-sm md:text-base">
           Flamenco & Useful Ghost{" "}
           <span className="text-xs block md:inline md:text-sm opacity-75 md:ml-2">
-            Muy Pronto En Cines 
+            PRÓXIMAMENTE
           </span>
         </p>
       </div>

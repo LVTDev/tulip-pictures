@@ -16,13 +16,21 @@ const SideMenu = () => {
   const linkContRef = useRef<HTMLUListElement>(null);
   const { contextSafe } = useGSAP({ scope: mainref.current! });
 
+  const [openDropdown, setOpenDropdown] = useState<
+    "produccion" | "distribucion" | null
+  >(null);
+
+  const toggleDropdown = (name: "produccion" | "distribucion") => {
+    setOpenDropdown(openDropdown === name ? null : name);
+  };
+
   useGSAP(() => {
     menuTL.current = gsap.timeline({
       defaults: { duration: 0.3, ease: "power4.inOut" },
     });
     menuTL.current
       .to([linkContRef.current], {
-        width: "100%"
+        width: "100%",
       })
       .to([asideRef.current], {
         width: "260px",
@@ -80,7 +88,10 @@ const SideMenu = () => {
                 </Link>
               </div>
               <nav className="mt-4">
-                <ul ref={linkContRef}  className="w-0 text-black flex flex-col gap-3 uppercase text-[12px] font-medium">
+                <ul
+                  ref={linkContRef}
+                  className="w-0 text-black flex flex-col gap-3 uppercase text-[12px] font-medium"
+                >
                   <Link
                     href="/about-us"
                     className={`${url === "/about-us" && "underline"}`}
@@ -90,13 +101,49 @@ const SideMenu = () => {
                     </div>
                   </Link>
                   <div className="group">
-                    <div className="hidden md:flex justify-between items-center">
+                    <div
+                      onClick={() => toggleDropdown("produccion")}
+                      className="flex justify-between items-center"
+                    >
                       Producción{" "}
-                      <div className="inline-block group-hover:rotate-180">
+                      <div
+                        className={`inline-block transition-transform ${
+                          openDropdown === "produccion" ? "rotate-180" : ""
+                        } group-hover:rotate-180 md:group-hover:rotate-180`}
+                      >
                         <ChevronDown />
                       </div>
                     </div>
-                    <div className="md:hidden md:group-hover:block">
+                    <div
+                      className={`overflow-hidden transition-all duration-300 
+          ${openDropdown === "produccion" ? "max-h-40" : "max-h-0"} 
+          md:max-h-none md:hidden md:group-hover:block`}
+                    >
+                      <Link href="/produccion">
+                        <div className="mask overflow-hidden md:text-xs my-2">
+                          <p
+                            className={`${
+                              url === "/produccion" && "underline"
+                            } md:text-[#0000ff89]`}
+                          >
+                            Servicios de Producción
+                          </p>
+                        </div>
+                      </Link>
+                      <Link href="/produccion/portfolio">
+                        <div className="mask overflow-hidden md:text-xs">
+                          <p
+                            className={`${
+                              url.startsWith("/produccion/portfolio") &&
+                              "underline"
+                            } md:text-[#0000ff89]`}
+                          >
+                            Portafolio de Producción
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
+                    {/* <div className="md:hidden md:group-hover:block">
                       <Link href="/produccion">
                         <div className="mask overflow-hidden md:text-xs my-2">
                           <p
@@ -115,20 +162,33 @@ const SideMenu = () => {
                           </p>
                         </div>
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="group">
-                    <div className="hidden md:flex justify-between items-center">
+                    <div
+                      onClick={() => toggleDropdown("distribucion")}
+                      className="flex justify-between items-center"
+                    >
                       Distribución{" "}
-                      <div className="inline-block group-hover:rotate-180">
+                      <div
+                        className={`inline-block transition-transform ${
+                          openDropdown === "distribucion" ? "rotate-180" : ""
+                        } group-hover:rotate-180`}
+                      >
                         <ChevronDown />
                       </div>
                     </div>
-                    <div className="md:hidden md:group-hover:block">
+                    <div
+                      className={`overflow-hidden transition-all duration-300 
+          ${openDropdown === "distribucion" ? "max-h-40" : "max-h-0"} 
+          md:max-h-none md:hidden md:group-hover:block`}
+                    >
                       <Link href="/distribucion">
                         <div className="mask overflow-hidden md:text-xs my-2">
                           <p
-                            className={`${url === "/distribucion" && "underline"} md:text-[#0000ff89]`}
+                            className={`${
+                              url === "/distribucion" && "underline"
+                            } md:text-[#0000ff89]`}
                           >
                             Servicios de Distribución
                           </p>
@@ -137,7 +197,9 @@ const SideMenu = () => {
                       <Link href="/distribucion/portfolio">
                         <div className="mask overflow-hidden md:text-xs">
                           <p
-                            className={`${url === "/distribucion/portfolio" && "underline"} md:text-[#0000ff89]`}
+                            className={`${
+                              url === "/distribucion/portfolio" && "underline"
+                            } md:text-[#0000ff89]`}
                           >
                             Portafolio de Distribución
                           </p>

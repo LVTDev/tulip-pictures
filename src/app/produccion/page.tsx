@@ -16,31 +16,36 @@ const Page = () => {
               </p>
               <p>NATALIA META</p>
             </div>
-            <h1 className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest font-poppins">
+            <h1 className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest ">
               PRODUCCIÓN
             </h1>{" "}
-            <p className="pb-15 text-sm">
-              En Tulip Pictures hacemos cine porque creemos en el poder de
-              contar historias.
+            <div className="pb-15 text-sm">
+              En{" "}
+              <span className="font-bold">
+                Tulip Pictures hacemos cine porque creemos en el poder de contar
+                historias.
+              </span>
               <br />
               <br />
               Con experiencia en cine autoral y de alto perfil internacional,
               brindamos soluciones integrales para la producción audiovisual:
-              desarrollo, preproducción, rodaje, postproducción, renta de equipo
-              y producción ejecutiva.
+              <p className="font-bold">
+                desarrollo, preproducción, rodaje, postproducción, renta de
+                equipo y producción ejecutiva.
+              </p>
               <br />
               <br />
               También entendemos la coproducción como un espacio de encuentro
               creativo y estratégico. Nos interesan proyectos con una visión
               única, proyección internacional y la capacidad de conectar con
               audiencias diversas.
-            </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className=" bg-[url('/Produccion2.jpg')] bg-cover bg-no-repeat py-15 bg-center md:bg-left px-[5vw] relative">
+      <div className=" bg-[url('/Produccion02NEW.jpg')] bg-cover bg-no-repeat py-15 bg-center px-[5vw] relative">
         <div className="md:max-w-2/3">
-          <p className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest font-poppins uppercase">
+          <p className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest  uppercase">
             servicios <br /> de producción
           </p>
           <ul className=" md:w-max text-sm md:text-base">
@@ -52,7 +57,7 @@ const Page = () => {
             </li>
           </ul>
         </div>
-        <div className="absolute top-[60px] right-[5vw] w-max ml-auto text-xs">
+        <div className="absolute top-[20px] md:top-[60px] right-[5vw] w-max ml-auto text-xs">
           <p>
             <span>MEMORIA</span>, 2021
           </p>

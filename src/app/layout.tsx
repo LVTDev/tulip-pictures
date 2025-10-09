@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
-import { Poppins, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import {  Roboto} from "next/font/google";
 import "./globals.css";
 // import SidebarMenu from "@/components/general UI/Sidebar";
 import Footer from "@/components/general UI/Footer";
 import SideMenu from "@/components/general UI/SideMenu";
 import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 
-const poppinsFont = Poppins({
-  variable: "--font-poppins",
+const robotoFont = Roboto({
+  variable: "--font-roboto",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-});
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-});
-const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-ibm-plex-sans",
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -35,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppinsFont.variable} ${ibmPlexMono.variable} ${ibmPlexSans.variable} min-h-screen antialiased`}
+        className={`${robotoFont.variable}  min-h-screen antialiased`}
       >
         <div className="flex ">
           <SideMenu />

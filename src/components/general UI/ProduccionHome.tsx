@@ -6,7 +6,7 @@ const ProduccionHome = async () => {
   const fetchedMovies = await fetchSanity("pelicula");
 
   return (
-    <div className="mt-10 font-poppins">
+    <div className="mt-10">
       <h3 className="text-4xl font-bold mb-5">Producción</h3>
       <div className="mb-5">
         <p className="text-sm md:text-base">

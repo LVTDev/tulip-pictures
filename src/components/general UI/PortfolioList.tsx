@@ -29,10 +29,10 @@ const PortfolioList = ({ title }: { title: string }) => {
           <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[4vmin]">
             <div className=" pl-4 sm:col-span-2 ">
               <h3 className="text-3xl  uppercase font-bold">PORTAFOLIO DE PROYECTOS</h3>
-              <h4 className="text-3xl uppercase font-bold">{title == "distribucion" ?   "Distribucion" :"Producción"}</h4>
-              <p>
+              <h4 className="text-3xl uppercase font-bold">{title == "distribucion" ?   "Distribución" :"Producción"}</h4>
+              <p className="my-8">
                 Si tienes un proyecto que desafíe, conmueva o inspire,{" "}
-                <span className="font-bold">queremos escucharlo.</span>
+                <span className="font-bold ">queremos escucharlo.</span>
               </p>
               <p className="font-bold">¡Escríbenos!</p>
             </div>

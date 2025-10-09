@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="font-poppins">
+    <div className="">
       <div className="bg-[url(/HeaderNosotrosTulip.jpeg)] h-[380px] bg-cover flex items-center">
         {/* <img src="" alt="" /> */}
         <h1 className="transparent-text text-6xl font-bold pl-6">About Us</h1>
