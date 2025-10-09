@@ -5,11 +5,11 @@ import { Facebook, Instagram, Youtube } from "react-feather";
 
 function Footer() {
   return (
-    <footer className=" bg-[#30383a] py-5  text-white">
+    <footer className=" bg-black py-3  text-white">
       <div className="md:flex w-[90vw] mx-auto justify-between items-center">
-        <div>
+        <div className="md:flex gap-2">
           {" "}
-          <div className="text-black flex justify-between">
+          <div className="text-black flex justify-between gap-2">
             <a href="https://www.instagram.com/tulippicturesmx/">
               <Instagram color="white" />
             </a>
@@ -42,28 +42,22 @@ function Footer() {
               <Facebook color="white" fill="white" />
             </a>
           </div>
-          <p className="font-bold">@TULIPPICTURESMX</p>
-        </div>
-        <Link href="/" className=" relative">
-          <Image
-            src={"/TULIP_Isotipo.png"}
-            height={385 / 9}
-            width={364 / 9}
-            className="object-contain"
-            priority
-            alt={"Tulip Logo"}
-          />
-        </Link>
-        <div>
-          <div className="flex flex-col gap-2">
-            <Link className="font-bold uppercase" href={"/avisoDePrivacidad"}>
-              Aviso de Privacidad
-            </Link>
-            <Link className="font-bold uppercase" href={"/terminos"}>
-              Términos y Condiciones de Uso
-            </Link>
-            <p className="text-white opacity-80">&copy; 2025 TULIP PICTURES</p>
+          <div className="hidden md:block">
+            |
           </div>
+          <p className="font-bold text-sm w-max mx-auto md:mx-0">@TULIPPICTURESMX</p>
+        </div>
+        <div className=" md:mx-0 w-max mx-auto">
+          <Link href="/" className=" relative">
+            <Image
+              src={"/TULIP_Isotipo.png"}
+              height={385 / 14}
+              width={364 / 14}
+              className="object-contain"
+              priority
+              alt={"Tulip Logo"}
+            />
+          </Link>
         </div>
       </div>
     </footer>

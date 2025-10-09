@@ -1,43 +1,29 @@
 "use client";
 import FooterForm from "@/components/general UI/FooterForm";
-import React, { useState } from "react";
+import React from "react";
 
 const Page = () => {
-  const [openForm, setOpenForm] = useState(false);
-
   return (
     <div className="">
-      <div className='bg-[url("/rentaBG.jpg")] bg-cover bg-no-repeat h-[75vh] w-full flex flex-col items-center justify-center'>
-        <h1 className="text-[#ebf5e27c] text-6xl  font-poppins font-medium mx-auto w-max">
-          RENTA DE <br />
-          EQUIPO
-        </h1>
-        <p className="text-[#ebf5e27c] text-lg  font-poppins font-medium ml-auto mr-16">
-          RENTA DE EQUIPO <br /> CÁMARA ALEXA 35
-          <br />+ SET DE PRODUCCION
-        </p>
-        <a
-          className="bg-[#30383a] px-3 py-1  text-xl font-bold text-white"
-          href="https://cdn.sanity.io/files/yj63f9tw/production/11f95e02f3b1835279800e44d49bbed34e8d1853.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ver Catálogo
-        </a>
-      </div>
-      <div className="bg-[#ebf5e2] py-5">
-        {!openForm ? (
-          <div
-            onClick={() => setOpenForm((prev) => !prev)}
-            className="bg-[#30383a] text-white px-2 py-1 w-max mx-auto uppercase rounded cursor-pointer"
+      <div className='bg-[url("/rentaBG.jpg")] bg-cover bg-no-repeat  w-full '>
+        <div className="w-[80%] md:w-[60%] mx-auto py-8">
+          <h1 className="text-4xl md:text-7xl text-white mb-8 tracking-widest font-bold  font-poppins w-max">
+            RENTA DE <br />
+            EQUIPO
+          </h1>
+          <a
+            className="bg-white px-3 py-1 rounded-lg text-xl font-bold text-black"
+            href="https://cdn.sanity.io/files/yj63f9tw/production/11f95e02f3b1835279800e44d49bbed34e8d1853.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Llena el formulario
+            Ver Catálogo de Equipo
+          </a>
+          <div className="mt-8">
+
+          <FooterForm lang="es" />
           </div>
-        ) : (
-          <div className={`${openForm ? "block" : "hidden"} `}>
-            <FooterForm lang="es" />
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );

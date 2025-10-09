@@ -32,22 +32,24 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 alt={`${pelicula.title} Poster`}
                 className="h-[380px] w-[280px] object-contain"
                 width={290}
-                height={387}
+                height={380}
               />
             </div>
             {pelicula.enlaceTrailer && (
-              <a
-                href={pelicula.enlaceTrailer}
-                target="_blank"
-                className="bg-[#30383a]!important text-white uppercase font-bold text-center my-5 py-1"
-              >
-                <div className="flex justify-center gap-3">
-                  Ver Trailler
-                  <span className="inline-block">
-                    <PlayCircle />
-                  </span>
-                </div>
-              </a>
+              <div className="bg-[#30383a] py-2 mt-4 max-w-[290px]">
+                <a
+                  href={pelicula.enlaceTrailer}
+                  target="_blank"
+                  className=" text-white uppercase font-bold text-center my-5"
+                >
+                  <div className="flex justify-center gap-3">
+                    Ver Trailler
+                    <span className="inline-block">
+                      <PlayCircle />
+                    </span>
+                  </div>
+                </a>
+              </div>
             )}
             {pelicula.pressKitURL && (
               <a href={`${pelicula.pressKitURL}`} target="_blank">
@@ -64,25 +66,25 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               </h1>
             )}
             {pelicula.director && (
-              <div className="flex">
+              <div className="flex gap-1">
                 <p className="font-bold">Dirección: </p>
                 <p>{pelicula.director}</p>
               </div>
             )}
             {pelicula.year && (
-              <div className="flex">
+              <div className="flex gap-1">
                 <p className="font-bold">Año: </p>
                 <p>{pelicula.year}</p>
               </div>
             )}
             {pelicula.pais && (
-              <div className="flex">
+              <div className="flex gap-1">
                 <p className="font-bold">Pais: </p>
                 <p>{pelicula.pais}</p>
               </div>
             )}
             {pelicula.movieLength && (
-              <div className="flex">
+              <div className="flex gap-1">
                 <p className="font-bold">Duracion: </p>
                 <p>{pelicula.movieLength}</p>
               </div>

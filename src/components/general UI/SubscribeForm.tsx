@@ -33,25 +33,25 @@ const SubscribeForm = () => {
     }
   };
   return (
-    <div className="md:max-w-[600px] mx-auto text-white">
-      <p className="bg-[#30383a] text-center py-2">SUSCRIBETE</p>
-      <form onSubmit={handleSubmit} className="bg-[#707873]  p-5">
-        <p className="text-white">
+    <div className="md:max-w-[600px] mx-auto text-white rounded-lg overflow-hidden">
+      <p className="uppercase bg-black text-white py-2 px-3 text-xl font-bold">SUSCRIBETE</p>
+      <form onSubmit={handleSubmit} className="text-black  p-5 ">
+        <p className="">
           Entérate de nuestros estrenos y nuevas producciones.
           <br />
           <br />
           Recibe ofertas especiales, invitaciones a premieres y nuestra
           cartelera directamente en tu correo.
         </p>
-        <div className="mt-8 mb-5 w-full md:flex">
+        <div className="mt-8 mb-5 w-full md:flex border">
           <input
-            className=" h-full py-2 px-4 placeholder:text-black text-black placeholder:bg-[#c1cabc] bg-[#c1cabc]"
+            className=" w-full p-3  placeholder:text-black"
             type="text"
             placeholder="E-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button type="submit" disabled={loading || success} className="bg-[#30383a] py-2 px-4 cursor-pointer disabled:cursor-not-allowed">
+          <button type="submit" disabled={loading || success} className="bg-black py-2 px-4 text-white cursor-pointer disabled:cursor-not-allowed">
              {loading ? "Enviando..." : "Enviar"}
           </button>
         </div>

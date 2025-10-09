@@ -57,7 +57,7 @@ const Page = () => {
             })}
           </div>
           <div className="mt-6 pb-6 px-3">
-            <div className="flex">
+            <div className="md:w-[60%] mx-auto">
               <FooterForm lang="es" />
             </div>
           </div>

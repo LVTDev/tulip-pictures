@@ -54,10 +54,8 @@ const PortfolioList = ({ title }: { title: string }) => {
               );
             })}
           </div>
-          <div className="mt-6 pb-6 px-3">
-            <div className="flex">
+          <div className="mt-6 pb-6 px-3 md:w-[60%] mx-auto">
               <FooterForm lang="es" />
-            </div>
           </div>
         </div>
       </div>

@@ -37,9 +37,11 @@ const HomeHero = () => {
           </div>
           <div className="md:w-1/2 px-14">
             <Image
-              src={"https://cdn.sanity.io/images/yj63f9tw/production/556dbabd47db6a8f21b495c56c859a7002342ff1-1920x1080.gif"}
+              src={
+                "https://cdn.sanity.io/images/yj63f9tw/production/556dbabd47db6a8f21b495c56c859a7002342ff1-1920x1080.gif"
+              }
               width={1920 / 3}
-              height={1080   / 3}
+              height={1080 / 3}
               alt={"Tulip Logo"}
             />
           </div>
@@ -52,16 +54,16 @@ const HomeHero = () => {
             <SubscribeForm />
             <div className="flex flex-col gap-2 mt-10 uppercase">
               <Link className=" font-bold" href={"/avisoDePrivacidad"}>
-                Notice of Privacy
+                AVISO DE PRIVACIDAD
               </Link>
               <Link className="font-bold" href={"/terminos"}>
-                Terms and Conditions
+                TÉRMINOS Y CONDICIONES
               </Link>
               <p className=" text-xs opacity-70">&copy; 2025 TULIP PICTURES</p>
             </div>
           </div>
           <div className="mt-15 md:mt-0 md:w-3/5 ">
-            <p className="mb-4 uppercase text-center text-3xl font-bold">
+            <p className="mb-4 uppercase text-center text-xl md:text-3xl font-bold">
               Los Ángeles - CDMX
             </p>
             <div className="md:flex justify-between">
@@ -89,7 +91,7 @@ const HomeHero = () => {
               <div className="md:w-1/2 mt-10 md:mt-0 md:text-right">
                 <p className="uppercase font-bold mb-5">Producción</p>
                 <p className="text-sm mb-1">
-                  Directora de Prooducción y Desarrollo
+                  Directora de Producción y Desarrollo
                 </p>
                 <p className="text-sm mb-1 italic font-bold">Paloma Cabrera</p>
                 <p className="text-sm mb-6 italic">paloma@grupolvt.com</p>

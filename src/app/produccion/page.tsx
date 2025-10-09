@@ -1,20 +1,24 @@
 // import Image from "next/image";
 "use client";
-import FooterForm from "@/components/general UI/FooterForm";
-import React, { useState } from "react";
+import React from "react";
 
 const Page = () => {
-  const [openForm, setOpenForm] = useState(false);
+  // const [openForm, setOpenForm] = useState(false);
   return (
-    <div className="text-[#ffffffcb] bg-[url('/BackProduccion02.png')] bg-cover bg-no-repeat bg-bottom-left py-7 ">
-      <div className="max-w-[90vw] mx-auto">
-        <h1 className="text-3xl  md:text-6xl font-bold tracking-widest font-poppins">
-          PRODUCCIÓN
-        </h1>
-        <div className="md:flex mt-6 gap-6">
-          <div className="md:w-1/3">
-            {" "}
-            <p className="text-sm md:text-base">
+    <div className="text-white ">
+      <div className=" bg-[url('/Produccion1.jpg')] bg-cover bg-no-repeat py-15 bg-center md:bg-left px-[5vw]">
+        <div className="">
+          <div className="md:max-w-[40%] md:ml-auto">
+            <div className="mb-26 w-max ml-auto text-xs">
+              <p>
+                <span>EL PRÓFUGO</span>, 2020
+              </p>
+              <p>NATALIA META</p>
+            </div>
+            <h1 className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest font-poppins">
+              PRODUCCIÓN
+            </h1>{" "}
+            <p className="pb-15 text-sm">
               En Tulip Pictures hacemos cine porque creemos en el poder de
               contar historias.
               <br />
@@ -31,40 +35,27 @@ const Page = () => {
               audiencias diversas.
             </p>
           </div>
-          <div className="md:w-2/3">
-            <p className="uppercase text-xl md:text-3xl font-bold font-poppins mb-6">
-              servicios de producción
-            </p>
-            <ul className="uppercase w-max">
-              <li className="mb-5 bg-[#30383a] text-[#ffffffcb] px-4 border py-1 rounded-lg">
-                Preproducción audiovisual
-              </li>
-              <li className="mb-5 bg-[#30383a] text-[#ffffffcb] px-4 border py-1 rounded-lg">
-                Producción audiovisual
-              </li>
-              <li className="mb-5 bg-[#30383a] text-[#ffffffcb] px-4 border py-1 rounded-lg">
-                Postproducción audiovisual
-              </li>
-              <li className="mb-5 bg-[#30383a] text-[#ffffffcb] px-4 border py-1 rounded-lg">
-                Renta de equipo cinematográfico
-              </li>
-            </ul>
-          </div>
         </div>
-        <p className="text-center max-w-2/3 w-max mx-auto my-5 text-2xl">
-          Si tienes un proyecto que{" "}
-          <span className="font-bold">
-            desafié, conmueva o inspire. <br /> ¡Querémos escucharlo!
-          </span>
-        </p>
-        <div
-          onClick={() => setOpenForm((prev) => !prev)}
-          className="bg-[#30383a] px-2 py-1 text-[#ffffffcb] w-max mx-auto uppercase rounded cursor-pointer"
-        >
-          Llena el formulario
+      </div>
+      <div className=" bg-[url('/Produccion2.jpg')] bg-cover bg-no-repeat py-15 bg-center md:bg-left px-[5vw] relative">
+        <div className="md:max-w-2/3">
+          <p className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest font-poppins uppercase">
+            servicios <br /> de producción
+          </p>
+          <ul className=" md:w-max text-sm md:text-base">
+            <li className=" text-white  mb-8">Preproducción audiovisual</li>
+            <li className=" text-white  mb-8">Producción audiovisual</li>
+            <li className=" text-white  mb-8">Postproducción audiovisual</li>
+            <li className=" text-white  mb-8">
+              Renta de equipo cinematográfico
+            </li>
+          </ul>
         </div>
-        <div className={`${openForm ? "block" : "hidden"}`}>
-          <FooterForm lang="es" />
+        <div className="absolute top-[60px] right-[5vw] w-max ml-auto text-xs">
+          <p>
+            <span>MEMORIA</span>, 2021
+          </p>
+          <p className="uppercase">Apichatpong Weerasethakul</p>
         </div>
       </div>
     </div>
@@ -72,3 +63,5 @@ const Page = () => {
 };
 
 export default Page;
+
+

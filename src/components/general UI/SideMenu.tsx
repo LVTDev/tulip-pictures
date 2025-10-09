@@ -100,7 +100,7 @@ const SideMenu = () => {
                       <Link href="/produccion">
                         <div className="mask overflow-hidden md:text-xs my-2">
                           <p
-                            className={`${url === "/produccion" && "underline"} `}
+                            className={`${url === "/produccion" && "underline"} md:text-[#0000ff89] `}
                           >
                             Servicios de Producción
                           </p>
@@ -109,7 +109,7 @@ const SideMenu = () => {
                       <Link href="/produccion/portfolio">
                         <div className="mask overflow-hidden md:text-xs">
                           <p
-                            className={`${url.startsWith("/produccion/portfolio") && "underline"}`}
+                            className={`${url.startsWith("/produccion/portfolio") && "underline"} md:text-[#0000ff89]`}
                           >
                             Portafolio de Producción
                           </p>
@@ -128,7 +128,7 @@ const SideMenu = () => {
                       <Link href="/distribucion">
                         <div className="mask overflow-hidden md:text-xs my-2">
                           <p
-                            className={`${url === "/distribucion" && "underline"}`}
+                            className={`${url === "/distribucion" && "underline"} md:text-[#0000ff89]`}
                           >
                             Servicios de Distribución
                           </p>
@@ -137,7 +137,7 @@ const SideMenu = () => {
                       <Link href="/distribucion/portfolio">
                         <div className="mask overflow-hidden md:text-xs">
                           <p
-                            className={`${url === "/distribucion/portfolio" && "underline"}`}
+                            className={`${url === "/distribucion/portfolio" && "underline"} md:text-[#0000ff89]`}
                           >
                             Portafolio de Distribución
                           </p>
