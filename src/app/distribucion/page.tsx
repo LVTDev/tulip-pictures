@@ -38,7 +38,7 @@ const Page = () => {
               iTunes, Claro Video y Google Play.
               <br />
               <br />
-              Además, ofrecemos soluciones de
+              Además, ofrecemos soluciones de{" "}
               <span className="font-bold">
                 distribución a productores independientes, brindando nuestra
                 experiencia en rutas de festivales y aplicación a fondos de

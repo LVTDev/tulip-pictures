@@ -94,12 +94,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 <p>{pelicula.year}</p>
               </div>
             )}
-            {pelicula.pais && (
-              <div className="flex gap-1">
-                <p className="font-bold">Pais: </p>
-                <p>{pelicula.pais}</p>
-              </div>
-            )}
+      
             {pelicula.movieLength && (
               <div className="flex gap-1">
                 <p className="font-bold">Duración: </p>
