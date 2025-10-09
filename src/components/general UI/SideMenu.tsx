@@ -124,7 +124,7 @@ const SideMenu = () => {
                           <p
                             className={`${
                               url === "/produccion" && "underline"
-                            } md:text-[#0000ff89]`}
+                            } text-[#0000ff89]`}
                           >
                             Servicios
                           </p>
@@ -136,7 +136,7 @@ const SideMenu = () => {
                             className={`${
                               url.startsWith("/produccion/portfolio") &&
                               "underline"
-                            } md:text-[#0000ff89]`}
+                            } text-[#0000ff89]`}
                           >
                             Portafolio
                           </p>
@@ -188,7 +188,7 @@ const SideMenu = () => {
                           <p
                             className={`${
                               url === "/distribucion" && "underline"
-                            } md:text-[#0000ff89]`}
+                            } text-[#0000ff89]`}
                           >
                             Servicios
                           </p>
@@ -199,7 +199,7 @@ const SideMenu = () => {
                           <p
                             className={`${
                               url === "/distribucion/portfolio" && "underline"
-                            } md:text-[#0000ff89]`}
+                            } text-[#0000ff89]`}
                           >
                             Portafolio
                           </p>

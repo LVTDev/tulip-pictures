@@ -12,8 +12,7 @@ import Link from "next/link";
 const Page = () => {
   const slides = [
     {
-      slideBG:
-        "https://cdn.sanity.io/images/yj63f9tw/production/c9b5ea9e7fdbdeff31d30174d8d5d339de70c4a2-1920x1080.jpg",
+      slideBG: "/distrBack.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
       textTop: "Bird, 2024",
