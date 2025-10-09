@@ -1,9 +1,10 @@
 // import Image from "next/image";
 "use client";
-import React from "react";
+import FooterForm from "@/components/general UI/FooterForm";
+import React, { useState } from "react";
 
 const Page = () => {
-  // const [openForm, setOpenForm] = useState(false);
+  const [openForm, setOpenForm] = useState(false);
   return (
     <div className="text-white ">
       <div className=" bg-[url('/Distribucion01.jpg')] bg-cover bg-no-repeat py-15 bg-center md:bg-left px-[5vw]">
@@ -38,7 +39,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className=" bg-[url('/Distribucion02.jpg')] bg-cover bg-no-repeat py-15 bg-center md:bg-left px-[5vw]">
+      <div className=" bg-[url('/Distribucion02.jpg')] bg-cover bg-no-repeat py-15 bg-center md:bg-left px-[5vw] relative">
         <div className="md:max-w-2/3">
           <p className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest font-poppins uppercase">
             servicios <br /> de Distribución
@@ -60,11 +61,24 @@ const Page = () => {
             </li>
           </ul>
         </div>
+        <div className="absolute top-[60px] right-[5vw] w-max ml-auto text-xs">
+          <p>
+            <span>HACHIKO</span>, 2024
+          </p>
+          <p className="uppercase">ANG XU</p>
+        </div>
+        <div
+          onClick={() => setOpenForm((prev) => !prev)}
+          className="bg-[#30383a] px-2 py-1 text-white w-max mx-auto uppercase rounded cursor-pointer"
+        >
+          Llena el formulario
+        </div>
+        <div className={`${openForm ? "block" : "hidden"}`}>
+          <FooterForm lang="es" />
+        </div>
       </div>
     </div>
   );
 };
 
 export default Page;
-
-

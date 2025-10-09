@@ -1,9 +1,10 @@
 // import Image from "next/image";
 "use client";
-import React from "react";
+import FooterForm from "@/components/general UI/FooterForm";
+import React, { useState } from "react";
 
 const Page = () => {
-  // const [openForm, setOpenForm] = useState(false);
+  const [openForm, setOpenForm] = useState(false);
   return (
     <div className="text-white ">
       <div className=" bg-[url('/Produccion1.jpg')] bg-cover bg-no-repeat py-15 bg-center md:bg-left px-[5vw]">
@@ -57,11 +58,18 @@ const Page = () => {
           </p>
           <p className="uppercase">Apichatpong Weerasethakul</p>
         </div>
+        <div
+          onClick={() => setOpenForm((prev) => !prev)}
+          className="bg-[#30383a] px-2 py-1 text-white w-max mx-auto uppercase rounded cursor-pointer"
+        >
+          Llena el formulario
+        </div>
+        <div className={`${openForm ? "block" : "hidden"}`}>
+          <FooterForm lang="es" />
+        </div>
       </div>
     </div>
   );
 };
 
 export default Page;
-
-

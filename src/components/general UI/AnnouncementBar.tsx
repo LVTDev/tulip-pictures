@@ -9,17 +9,11 @@ const AnnouncementBar = () => {
     <div className={`bg-black py-8 md:py-5 uppercase text-white flex relative `}>
       <div className="mx-auto text-center">
         <p>
-          La Vida Es{" "}
+          Flamenco & Useful Ghost{" "}
           <span className="text-xs block md:inline md:text-sm opacity-75 md:ml-2">
-            En Cines Pronto
+            Muy Pronto En Cines 
           </span>
         </p>
-        {/* <p>
-          bird{" "}
-          <span className="text-xs md:text-sm block md:inline opacity-75 md:ml-2">
-            ya en cines, consulta cartelera
-          </span>
-        </p> */}
       </div>
       <Link href="/" className="absolute right-3 top-1/2 -translate-y-1/2 ml-auto mr-4">
         <Image

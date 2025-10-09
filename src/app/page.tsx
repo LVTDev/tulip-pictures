@@ -26,6 +26,8 @@ const Page = () => {
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/2d0bf05a403bfcfc28684555a08579a959fc50c6-1916x227.png",
       link: "/produccion",
+      textTop: "El Jockey, 2024",
+      textBottom: "Luis Ortega",
     },
     {
       slideBG: "/rentaBG.jpg",
@@ -42,8 +44,8 @@ const Page = () => {
     },
   ];
   return (
-    <div className="bg-[#30383a]  ">
-      <div className="w-screen">
+    <div className="bg-[#30383a] h-[81vh] relative  overflow-hidden">
+      <div className="absolute w-full h-full">
         <Swiper
           modules={[Autoplay, A11y, Navigation]}
           navigation
@@ -63,8 +65,8 @@ const Page = () => {
         >
           {slides.map((slide, i) => (
             <SwiperSlide className="" key={i}>
-              <div className={` h-[80vh] bg-cover relative`}>
-                <div className="relative  h-[80vh]">
+              <div className={` h-[81vh] bg-cover relative`}>
+                <div className="relative  h-[81vh]">
                   <Link href={slide.link}>
                     <Image
                       src={slide.slideBG}
