@@ -22,7 +22,7 @@ const Page = () => {
     },
     {
       slideBG:
-        "https://cdn.sanity.io/images/yj63f9tw/production/e2969e2cadd2703ea04056bff02d778c50577dc8-1920x1080.jpg",
+        "/prodBack.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/2d0bf05a403bfcfc28684555a08579a959fc50c6-1916x227.png",
       link: "/produccion",
