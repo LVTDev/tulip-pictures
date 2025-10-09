@@ -126,7 +126,7 @@ const SideMenu = () => {
                               url === "/produccion" && "underline"
                             } md:text-[#0000ff89]`}
                           >
-                            Servicios de Producción
+                            Servicios
                           </p>
                         </div>
                       </Link>
@@ -138,7 +138,7 @@ const SideMenu = () => {
                               "underline"
                             } md:text-[#0000ff89]`}
                           >
-                            Portafolio de Producción
+                            Portafolio
                           </p>
                         </div>
                       </Link>
@@ -190,7 +190,7 @@ const SideMenu = () => {
                               url === "/distribucion" && "underline"
                             } md:text-[#0000ff89]`}
                           >
-                            Servicios de Distribución
+                            Servicios
                           </p>
                         </div>
                       </Link>
@@ -201,7 +201,7 @@ const SideMenu = () => {
                               url === "/distribucion/portfolio" && "underline"
                             } md:text-[#0000ff89]`}
                           >
-                            Portafolio de Distribución
+                            Portafolio
                           </p>
                         </div>
                       </Link>
