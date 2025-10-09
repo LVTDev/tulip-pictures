@@ -37,9 +37,9 @@ const HomeHero = () => {
           </div>
           <div className="md:w-1/2 px-14">
             <Image
-              src={"/Logotipo_negro.png"}
-              width={610}
-              height={244}
+              src={"https://cdn.sanity.io/images/yj63f9tw/production/556dbabd47db6a8f21b495c56c859a7002342ff1-1920x1080.gif"}
+              width={1920 / 3}
+              height={1080   / 3}
               alt={"Tulip Logo"}
             />
           </div>

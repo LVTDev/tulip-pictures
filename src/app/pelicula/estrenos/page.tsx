@@ -1,4 +1,5 @@
 "use client";
+import FooterForm from "@/components/general UI/FooterForm";
 import { urlFor } from "@/sanity/lib/image";
 import { fetchSanity } from "@/utils/sanityFetch";
 import { Movie } from "@/utils/types";
@@ -8,7 +9,6 @@ import React, { useEffect, useState } from "react";
 
 const Page = () => {
   const [fetchedMovies, setFetchedMovies] = useState<Movie[]>([]);
-  const [selectedProject, setSelectedProject] = useState<null | Movie>();
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -21,30 +21,49 @@ const Page = () => {
     };
     fetchMovies();
   }, []);
-  console.log(selectedProject);
   return (
     <div className="bg-[#ebf5e2]">
-      <h1 className="text-center uppercase text-lg md:text-7xl pt-5 mb-5">
-        Próximos Estrenos
-      </h1>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2   lg:grid-cols-3 xl:grid-cols-4 gap-5 max-w-[1440px] pt-8 mx-auto pb-5">
-        {fetchedMovies.map((movie) => {
-          return (
-            <Link href={`/pelicula/${movie.slug.current}`} key={movie._id} className=" h-[380px] mx-auto cursor-pointer">
-              <Image
-                src={urlFor(movie.poster).url()}
-                alt={`${movie.title} Poster`}
-                className="h-[380px] w-[280px] object-cover"
-                width={280}
-                height={380}
-                onClick={() => setSelectedProject(movie)}
-              />
-            </Link>
-          );
-        })}
+      <div className="max-w-[90vw] pt-8 mx-auto">
+        <div>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[4vmin]">
+            <div className=" pl-4 sm:col-span-2 ">
+           
+              <h4 className="text-3xl uppercase font-bold">
+                {" "}
+                Próximos Estrenos
+              </h4>
+              <p>
+                Si tienes un proyecto que desafíe, conmueva o inspire,{" "}
+                <span className="font-bold">queremos escucharlo.</span>
+              </p>
+              <p className="font-bold">¡Escríbenos!</p>
+            </div>
+            {fetchedMovies.map((movie) => {
+              return (
+                <Link
+                  href={`/pelicula/${movie.slug.current}`}
+                  key={movie._id}
+                  className="h-[387px] w-[290px] mx-auto"
+                >
+                  <Image
+                    src={urlFor(movie.poster).url()}
+                    alt={`${movie.title} Poster`}
+                    className="h-[380px] w-[280px] object-cover"
+                    width={290}
+                    height={387}
+                  />
+                </Link>
+              );
+            })}
+          </div>
+          <div className="mt-6 pb-6 px-3">
+            <div className="flex">
+              <FooterForm lang="es" />
+            </div>
+          </div>
+        </div>
       </div>
-     
+   
     </div>
   );
 };
