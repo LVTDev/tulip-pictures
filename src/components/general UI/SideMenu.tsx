@@ -66,7 +66,7 @@ const SideMenu = () => {
     <div className=" bg-blue-100 relative">
       <div
         ref={mainref}
-        className={`fixed left-0 bg-amber-200 h-[100vh] w-0 z-100 `}
+        className={`fixed left-0  h-[100vh] w-0 z-100 `}
         // className={`fixed left-0 bg-amber-200 h-[100vh]
         //    ${isOpen ? "w-60" : "hidden"}
         //      z-100`}

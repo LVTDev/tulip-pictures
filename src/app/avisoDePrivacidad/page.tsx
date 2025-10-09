@@ -2,8 +2,8 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="px-4 md:px-10">
-      <h1 className="my-15 text-4xl font-bold">Aviso de Privacidad</h1>
+    <div className="px-4 md:px-10 bg-[#ebf5e2]">
+      <h1 className="py-15 text-4xl font-bold">Aviso de Privacidad</h1>
       <p className="mb-2 text-sm">
         Última actualización: 8 de octubre de 2025
         <br />
