@@ -24,6 +24,14 @@ _createdAt: string
     enlaceTrailer?: string
     pressKitURL?: string
     imagenes?: []
+    produccionEmpresas?:{
+      name: string
+      role?: string
+    } []
+    reconocimientos?:{
+      festival: string
+      premio?: string
+    } []
 }
 
 type Category = {

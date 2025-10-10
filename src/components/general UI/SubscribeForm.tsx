@@ -33,17 +33,17 @@ const SubscribeForm = () => {
     }
   };
   return (
-    <div className="md:max-w-[600px] mx-auto text-white rounded-lg overflow-hidden">
-      <p className="uppercase bg-black text-white py-2 px-3 text-xl font-bold">SUSCRÍBETE</p>
+    <div className="w-4/5 mx-auto text-black bg-[#ededed]">
+      <p className="   py-2 px-3 text-2xl text-center font-bold">Suscríbete</p>
       <form onSubmit={handleSubmit} className="text-black  p-5 ">
-        <p className="">
+        <p className="text-center">
           Entérate de nuestros estrenos y nuevas producciones.
           <br />
           <br />
           Recibe ofertas especiales, invitaciones a premieres y nuestra
           cartelera directamente en tu correo.
         </p>
-        <div className="mt-8 mb-5 w-full md:flex border">
+        <div className="mt-8 mb-5 mx-auto md:w-[60%] md:flex ">
           <input
             className=" w-full p-3  placeholder:text-black"
             type="text"

@@ -127,7 +127,7 @@ const SideMenu = () => {
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
-                            Catálogo
+                            Películas
                           </p>
                         </div>
                       </Link>

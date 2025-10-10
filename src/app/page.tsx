@@ -70,7 +70,7 @@ const Page = () => {
                     <Image
                       src={slide.slideBG}
                       alt={`bg Poster`}
-                      className="object-cover"
+                      className="object-cover "
                       fill
                     />
                     <div className="absolute text-white bottom-0 ">

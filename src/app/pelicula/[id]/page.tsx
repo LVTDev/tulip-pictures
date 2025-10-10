@@ -18,9 +18,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     pelicula.imagenes && pelicula.imagenes.map((img) => urlFor(img).url());
   console.log(enlacesImagenes);
   if (result.length > 1)
-    return <p className="bg-[#ebf5e2] text-black">Loading</p>;
+    return <p className="bg-[#ebf5e2] text-black text-center">Loading</p>;
   return (
-    <div className="w-screen bg-[#ebf5e2]">
+    <div className="w-screen bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')]">
       <div className="w-[90vw] mx-auto pt-5">
         <div className="bg-[#30383a] text-white px-2 py-3 w-max mb-4">
           {pelicula.distribucionProduccion === "distribucion" ? (
@@ -72,7 +72,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               </a>
             )} */}
           </div>
-          <div className="pb-5 flex-1 flex flex-col">
+          <div className="pb-5 flex-1 flex flex-col text-sm md:text-base">
             <div className="flex justify-between ">
               {pelicula.director && (
                 <div className="">
@@ -80,18 +80,59 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   <p className="font-bold text-lg">{pelicula.director}</p>
                 </div>
               )}
+              {pelicula.produccionEmpresas &&
+                pelicula.produccionEmpresas?.length > 0 && (
+                  <div className="">
+                    <p className="uppercase opacity-60">Producción </p>
+                    <div>
+                      {pelicula.produccionEmpresas.map((empresa, i) => (
+                        <p key={i} className="font-bold">
+                          {empresa.name}
+                          <span className="lowercase font-normal ml-1 opacity-60">
+                            {empresa.role && empresa.role}
+                          </span>
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
               {pelicula.year && (
                 <div className="">
                   <p className="uppercase opacity-60">Año </p>
                   <p className="font-bold text-lg">{pelicula.year}</p>
                 </div>
               )}
+            </div>
+            <div className="flex justify-between my-8">
               {pelicula.movieLength && (
                 <div className="">
                   <p className="uppercase opacity-60">Duración </p>
                   <p className="font-bold text-lg">{pelicula.movieLength}</p>
                 </div>
               )}
+              {pelicula.pais && (
+                <div className="">
+                  <p className="uppercase opacity-60">País</p>
+                  <p className="font-bold text-lg">{pelicula.pais}</p>
+                </div>
+              )}
+              {pelicula.reconocimientos &&
+                pelicula.reconocimientos?.length > 0 && (
+                  <div className="">
+                    <p className="uppercase opacity-60">Producción </p>
+                    <div>
+                      {pelicula.reconocimientos.map((empresa, i) => (
+                        <p key={i} className="font-bold">
+                          {empresa.festival}
+                          <span className="block ml-4 font-normal ml-1 opacity-60">
+                            {empresa.premio && empresa.premio}
+                          </span>
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
             </div>
             {pelicula.description && (
               <div>
@@ -100,7 +141,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               </div>
             )}
             {pelicula.enlaceTrailer && (
-              <div className="bg-black py-2 mt-auto max-w-[220px]">
+              <div className="bg-black py-2 mt-5 max-w-[220px]">
                 <a
                   href={pelicula.enlaceTrailer}
                   target="_blank"

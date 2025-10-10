@@ -12,7 +12,7 @@ const SliderPeliculas = ({
   enlacesImagenes: string[];
 }) => {
   return (
-    <div className="md:max-w-[60%] mx-auto">
+    <div className="w-full mx-auto">
       {" "}
       <Swiper
         modules={[Autoplay, A11y, Navigation]}
@@ -33,8 +33,8 @@ const SliderPeliculas = ({
       >
         {enlacesImagenes.map((slide, i) => (
           <SwiperSlide className="" key={i}>
-            <div className={` max-h-[600px]  bg-cover relative`}>
-              <div className="relative  h-[300px]">
+            <div className={` max-h-[1000px]  bg-cover relative`}>
+              <div className="relative  ">
                 <img src={slide} alt={`bg Poster`} className="object-cover" />
               </div>
             </div>

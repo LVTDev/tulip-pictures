@@ -23,7 +23,7 @@ const PortfolioList = ({ title }: { title: string }) => {
 
   if (fetchedMovies.length < 1) return <p>Loading</p>;
   return (
-    <div className="bg-[#ebf5e2] w-full">
+    <div className="bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')] w-full">
       <div className="max-w-[90vw] pt-8 mx-auto">
         <div>
             <div className=" pl-4 ">

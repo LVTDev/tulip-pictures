@@ -5,7 +5,7 @@ import { Facebook, Instagram, Youtube } from "react-feather";
 
 function Footer() {
   return (
-    <footer className=" bg-black py-3 w-screen  text-white">
+    <footer className=" bg-black py-3  text-white">
       <div className="md:flex w-[90vw] mx-auto justify-between items-center">
         <div className="md:flex gap-2">
           {" "}
