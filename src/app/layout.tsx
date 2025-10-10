@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import {  Roboto} from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 // import SidebarMenu from "@/components/general UI/Sidebar";
 import Footer from "@/components/general UI/Footer";
 import SideMenu from "@/components/general UI/SideMenu";
-import AnnouncementBar from "@/components/general UI/AnnouncementBar";
+// import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 
 const robotoFont = Roboto({
   variable: "--font-roboto",
@@ -24,17 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${robotoFont.variable}  min-h-screen antialiased`}
-      >
-        <div className="flex ">
-          <SideMenu />
-          <div className="flex-1">
-            <AnnouncementBar />
-            {children}
+      <body className={`${robotoFont.variable}   antialiased`}>
+        <div className="">
+          <div className="flex min-h-[90vh]">
+            <SideMenu />
+            <div className="flex-1">{children}</div>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </body>
     </html>
   );

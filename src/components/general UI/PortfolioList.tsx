@@ -26,16 +26,11 @@ const PortfolioList = ({ title }: { title: string }) => {
     <div className="bg-[#ebf5e2] w-full">
       <div className="max-w-[90vw] pt-8 mx-auto">
         <div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[4vmin]">
-            <div className=" pl-4 sm:col-span-2 ">
-              <h3 className="text-3xl  uppercase font-bold">PORTAFOLIO DE PROYECTOS</h3>
-              <h4 className="text-3xl uppercase font-bold">{title == "distribucion" ?   "Distribución" :"Producción"}</h4>
-              <p className="my-8">
-                Si tienes un proyecto que desafíe, conmueva o inspire,{" "}
-                <span className="font-bold ">queremos escucharlo.</span>
-              </p>
-              <p className="font-bold">¡Escríbenos!</p>
+            <div className=" pl-4 ">
+              <h3 className="text-3xl md:text-6xl  uppercase font-bold tracking-widest mb-6">PORTAFOLIO DE PROYECTOS <span className="text-xl opacity-60 ml-2 tracking-normal">{title == "distribucion" ?   "Distribución" :"Producción"}</span></h3>
+       
             </div>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[4vmin]">
             {fetchedMovies.map((movie) => {
               return (
                 <Link

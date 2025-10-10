@@ -19,7 +19,7 @@ const Page = () => {
             <h1 className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest ">
               PRODUCCIÓN
             </h1>{" "}
-            <div className="pb-15 text-sm">
+            <div className="pb-15 text-sm text-justify">
               En{" "}
               <span className="font-bold">
                 Tulip Pictures hacemos cine porque creemos en el poder de contar

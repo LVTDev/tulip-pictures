@@ -33,7 +33,7 @@ const SliderPeliculas = ({
       >
         {enlacesImagenes.map((slide, i) => (
           <SwiperSlide className="" key={i}>
-            <div className={` h-[300px]  bg-cover relative`}>
+            <div className={` max-h-[600px]  bg-cover relative`}>
               <div className="relative  h-[300px]">
                 <img src={slide} alt={`bg Poster`} className="object-cover" />
               </div>

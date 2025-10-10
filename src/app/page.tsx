@@ -43,7 +43,7 @@ const Page = () => {
     },
   ];
   return (
-    <div className="bg-[#30383a] h-[81vh] relative  overflow-hidden">
+    <div className="bg-[#30383a] h-[93vh] relative  overflow-hidden">
       <div className="absolute w-full h-full">
         <Swiper
           modules={[Autoplay, A11y, Navigation]}
@@ -64,8 +64,8 @@ const Page = () => {
         >
           {slides.map((slide, i) => (
             <SwiperSlide className="" key={i}>
-              <div className={` h-[81vh] bg-cover relative`}>
-                <div className="relative  h-[81vh]">
+              <div className={` h-[93h] bg-cover relative`}>
+                <div className="relative  h-[93vh]">
                   <Link href={slide.link}>
                     <Image
                       src={slide.slideBG}

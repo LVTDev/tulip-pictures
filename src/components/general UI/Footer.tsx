@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
+// import Image from "next/image";
+// import Link from "next/link";
 import React from "react";
 import { Facebook, Instagram, Youtube } from "react-feather";
 
 function Footer() {
   return (
-    <footer className=" bg-black py-3  text-white">
+    <footer className=" bg-black py-3 w-screen  text-white">
       <div className="md:flex w-[90vw] mx-auto justify-between items-center">
         <div className="md:flex gap-2">
           {" "}
@@ -47,7 +47,7 @@ function Footer() {
           </div>
           <p className="font-bold text-sm w-max mx-auto md:mx-0">@TULIPPICTURESMX</p>
         </div>
-        <div className=" md:mx-0 w-max mx-auto">
+        {/* <div className=" md:mx-0 w-max mx-auto">
           <Link href="/" className=" relative">
             <Image
               src={"/TULIP_Isotipo.png"}
@@ -58,7 +58,7 @@ function Footer() {
               alt={"Tulip Logo"}
             />
           </Link>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

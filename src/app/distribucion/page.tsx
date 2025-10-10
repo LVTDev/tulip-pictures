@@ -19,7 +19,7 @@ const Page = () => {
             <h1 className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest">
               DISTRIBUCIÓN
             </h1>{" "}
-            <p className="pb-15 text-sm">
+            <p className="pb-15 text-sm text-justify">
               <span className="font-bold">
                 Desde 2018, Tulip Pictures se especializa en la adquisición y
                 distribución de películas

@@ -30,14 +30,15 @@ const HomeHero = () => {
               <br />
               <br />
               <span className="font-bold">
-                Somos un puente entre creadores, industria y audiencias. SOMOS
-                TULIP.
+                Somos un puente entre creadores, industria y audiencias.
               </span>
             </p>
           </div>
           <div className="md:w-1/2 px-14">
             <Image
-              src={"/Logotipo_negro.png"}
+              src={
+                "https://cdn.sanity.io/images/yj63f9tw/production/ef59f18e4980de001e92dfd6833c8be6e568066e-2048x858.gif"
+              }
               width={1920 / 3}
               height={1080 / 3}
               alt={"Tulip Logo"}
@@ -79,7 +80,7 @@ const HomeHero = () => {
                 </p>
 
                 <p className="text-sm mb-1">
-                  Gerente de Marketing y Comunicación
+                  Coordinador de Marketing y Comunicación
                 </p>
                 <p className="text-sm italic font-bold">
                   Javier Martinez Ramirez
