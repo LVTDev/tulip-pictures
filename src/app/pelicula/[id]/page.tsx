@@ -1,3 +1,4 @@
+import Loading from "@/components/general UI/Loading";
 import SliderPeliculas from "@/components/general UI/SliderPeliculas";
 import SubscribeForm from "@/components/general UI/SubscribeForm";
 import { urlFor } from "@/sanity/lib/image";
@@ -6,19 +7,21 @@ import { Movie } from "@/utils/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { ArrowLeft, PlayCircle } from "react-feather";
+import { ArrowLeft } from "react-feather";
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
 
   const result = await fetchSanityIndividualMovie("pelicula", id);
   const pelicula: Movie = result[0];
-  console.log(pelicula);
   const enlacesImagenes =
     pelicula.imagenes && pelicula.imagenes.map((img) => urlFor(img).url());
-  console.log(enlacesImagenes);
   if (result.length > 1)
-    return <p className="bg-[#ebf5e2] text-black text-center">Loading</p>;
+    return (
+      <p className="bg-[#ebf5e2] h-full text-black text-center">
+        <Loading />
+      </p>
+    );
   return (
     <div className="w-screen bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')]">
       <div className="w-[90vw] mx-auto pt-5">
@@ -147,12 +150,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   target="_blank"
                   className=" text-white uppercase font-bold text-center my-5"
                 >
-                  <div className="flex justify-center gap-3">
-                    Ver Trailer
-                    <span className="inline-block">
-                      <PlayCircle />
-                    </span>
-                  </div>
+                  <div className="flex justify-center gap-3">Ver Trailer</div>
                 </a>
               </div>
             )}

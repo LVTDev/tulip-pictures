@@ -56,7 +56,7 @@ const SubscribeForm = () => {
           </button>
         </div>
            {success && (
-            <p className="text-white font-medium">
+            <p className="text-black font-medium">
               Message Enviado!
             </p>
           )}
