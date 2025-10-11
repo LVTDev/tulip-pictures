@@ -41,7 +41,7 @@ const Page = () => {
       link: "/renta",
     },
     {
-      slideBG: "/BackFlamenco.png",
+      slideBG: "/BACKFlamenco.png",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
       textTop: "Flamenco, 2025",
@@ -49,7 +49,7 @@ const Page = () => {
       link: "/distribucion",
     },
     {
-      slideBG: "/BackSorda.jpg",
+      slideBG: "/BACKSorda.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
       textTop: "Sorda, 2025",
