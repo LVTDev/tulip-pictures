@@ -49,20 +49,32 @@ const Page = () => {
       link: "/distribucion",
     },
     {
-      slideBG: "/BACKSorda.jpg",
-      slideTitle:
-        "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
-      textTop: "Sorda, 2025",
-      textBottom: "Eva Libertad",
-      link: "/distribucion",
-    },
-    {
       slideBG: "/produccion4.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/2d0bf05a403bfcfc28684555a08579a959fc50c6-1916x227.png",
       textTop: "Annette, 2021",
       textBottom: "Leos Carax",
       link: "/produccion",
+    },
+    {
+      slideBG: "/BACKSorda.jpg",
+      slideTitle:
+        "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
+      textTop: "Sorda, 2025",
+      textBottom: "Eva Libertad",
+      link: "/distribucion",
+    },     {
+      slideBG: "/rentaBG.jpg",
+      slideTitle:
+        "https://cdn.sanity.io/images/yj63f9tw/production/8c45eb6634d2e942f4a723544a5d9edaa0099052-1712x153.png",
+      // textTop: "CÁMARA ALEXA 35",
+      // textBottom: (
+      //   <p className="italic">
+      //     + PRODUCTION SET <br />
+      //     nancy@letswoohoo.com
+      //   </p>
+      // ),
+      link: "/renta",
     },
     {
       slideBG: "/produccion3.jpg",
@@ -72,6 +84,36 @@ const Page = () => {
       textTop: "Silencio, 2018",
       textBottom: "Lorena Villarreal",
     },
+    // {
+    //   slideBG: "/BACKUsefulGhost.jpg",
+    //   slideTitle:
+    //     "https://cdn.sanity.io/images/yj63f9tw/production/a0f0756f438849f3d2c4a4b648adc28b05585c5d-1418x536.png",
+    //   link: "/estrenos",
+    //   textTop: "A Useful Ghost, 2025",
+    //   textBottom: "Ratchapoom Boonbunchachoke",
+    // },
+
+    // {
+    //   slideBG: "/BACKFlamenco.png",
+    //   slideTitle:
+    //     "https://cdn.sanity.io/images/yj63f9tw/production/a0f0756f438849f3d2c4a4b648adc28b05585c5d-1418x536.png",
+    //   link: "/pelicula/estrenos",
+    //   textTop: "Flamenco, 2025",
+    //   textBottom: "Diego Céspedes",
+    // },
+    //     {
+    //   slideBG: "/rentaBG.jpg",
+    //   slideTitle:
+    //     "https://cdn.sanity.io/images/yj63f9tw/production/8c45eb6634d2e942f4a723544a5d9edaa0099052-1712x153.png",
+    //   // textTop: "CÁMARA ALEXA 35",
+    //   // textBottom: (
+    //   //   <p className="italic">
+    //   //     + PRODUCTION SET <br />
+    //   //     nancy@letswoohoo.com
+    //   //   </p>
+    //   // ),
+    //   link: "/renta",
+    // },
   ];
   return (
     <div className="bg-[#30383a] h-[93vh] relative  overflow-hidden">
@@ -111,7 +153,7 @@ const Page = () => {
                       <div className="text-right font-bold text-xl opacity-90 mr-4">
                         {slide.textBottom}
                       </div>
-                      <img src={`${slide.slideTitle}`} alt="Header" />
+                      <img src={`${slide.slideTitle}`} className="" alt="Header" />
                     </div>
                   </Link>
                 </div>

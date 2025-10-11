@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import SubscribeForm from "./SubscribeForm";
 import Link from "next/link";
 const HomeHero = () => {
@@ -9,11 +8,11 @@ const HomeHero = () => {
         <h3 className="uppercase text-4xl md:text-7xl font-bold opacity-90 pt-3 md:pt-10">
           QUIÉNES SOMOS
         </h3>
-        <div className="md:flex items-center pt-6 md:pt-10 gap-10 ">
+        <div className="md:flex items-center pt-6 md:pt-10 ">
           <div className="md:w-1/2">
             <p className="mb-7 pr-4 text-justify">
-              <span className="font-bold">El cine está cambiando.</span>
-              El cine está cambiando. Cambian las formas de hacerlo, de verlo y
+              <span className="font-bold mr-1">El cine está cambiando.</span>
+              Cambian las formas de hacerlo, de verlo y
               de compartirlo. En Tulip Pictures respondemos a esa transformación
               con una visión amplia y contemporánea.
               <br />
@@ -34,13 +33,13 @@ const HomeHero = () => {
               </span>
             </p>
           </div>
-          <div className="md:w-1/2 px-14">
-            <Image
+          <div className="md:w-1/2 ">
+            <img
               src={
                 "https://cdn.sanity.io/images/yj63f9tw/production/4967549d1bf37f4ff2155b25bb934ee9ec4df7fd-1920x1080.gif"
               }
-              width={1920 / 3}
-              height={1080 / 3}
+              width={1920 }
+              height={1080}
               alt={"Tulip Logo"}
             />
           </div>

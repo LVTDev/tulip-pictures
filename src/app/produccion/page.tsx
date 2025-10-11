@@ -34,7 +34,6 @@ const Page = () => {
                 equipo y producción ejecutiva.
               </p>
               <br />
-              <br />
               También entendemos la coproducción como un espacio de encuentro
               creativo y estratégico. Nos interesan proyectos con una visión
               única, proyección internacional y la capacidad de conectar con
