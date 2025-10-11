@@ -4,6 +4,7 @@ import "./globals.css";
 // import SidebarMenu from "@/components/general UI/Sidebar";
 import Footer from "@/components/general UI/Footer";
 import SideMenu from "@/components/general UI/SideMenu";
+import HomeLogoBtn from "@/components/general UI/HomeLogoBtn";
 // import AnnouncementBar from "@/components/general UI/AnnouncementBar";
 
 const robotoFont = Roboto({
@@ -26,8 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoFont.variable}   antialiased`}>
-        <div className="">
+        <div className="relative">
           <div className="flex min-h-[90vh]">
+            <HomeLogoBtn />
             <SideMenu />
             <div className="flex-1">{children}</div>
           </div>

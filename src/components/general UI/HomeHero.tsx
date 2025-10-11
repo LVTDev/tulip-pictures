@@ -37,7 +37,7 @@ const HomeHero = () => {
           <div className="md:w-1/2 px-14">
             <Image
               src={
-                "https://cdn.sanity.io/images/yj63f9tw/production/ef59f18e4980de001e92dfd6833c8be6e568066e-2048x858.gif"
+                "https://cdn.sanity.io/images/yj63f9tw/production/4967549d1bf37f4ff2155b25bb934ee9ec4df7fd-1920x1080.gif"
               }
               width={1920 / 3}
               height={1080 / 3}
@@ -85,7 +85,12 @@ const HomeHero = () => {
                 <p className="text-sm italic font-bold">
                   Javier Martinez Ramirez
                 </p>
-                <p className="text-sm italic">javier@tulip-pictures.com</p>
+                <p className="text-sm italic mb-6">javier@tulip-pictures.com</p>
+
+
+                <p className="text-sm mb-1">Coordinadora de Programación</p>
+                <p className="text-sm italic font-bold">Jessica Rito Aguilar</p>
+                <p className="text-sm italic">jessica@tulip-pictures.com</p>
               </div>
               <div className="md:w-1/2 mt-10 md:mt-0 md:text-right">
                 <p className="uppercase font-bold mb-5">Producción</p>

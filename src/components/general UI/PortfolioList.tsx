@@ -2,7 +2,7 @@
 import { urlFor } from "@/sanity/lib/image";
 import { fetchSanity } from "@/utils/sanityFetch";
 import { Movie } from "@/utils/types";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import FooterForm from "./FooterForm";
@@ -46,14 +46,13 @@ const PortfolioList = ({ title }: { title: string }) => {
                 <Link
                   href={`/pelicula/${movie.slug.current}`}
                   key={movie._id}
-                  className="h-[387px] w-[290px] mx-auto"
+                  className=" mx-auto"
                 >
-                  <Image
+                  <img
                     src={urlFor(movie.poster).url()}
                     alt={`${movie.title} Poster`}
-                    className="h-[380px] w-[280px] object-cover"
-                    width={290}
-                    height={387}
+                    className="h-[350px]"
+                
                   />
                 </Link>
               );

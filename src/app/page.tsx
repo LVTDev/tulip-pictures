@@ -20,8 +20,7 @@ const Page = () => {
       link: "/distribucion",
     },
     {
-      slideBG:
-        "/prodBack.jpg",
+      slideBG: "/prodBack.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/2d0bf05a403bfcfc28684555a08579a959fc50c6-1916x227.png",
       link: "/produccion",
@@ -40,6 +39,38 @@ const Page = () => {
       //   </p>
       // ),
       link: "/renta",
+    },
+    {
+      slideBG: "/BackFlamenco.png",
+      slideTitle:
+        "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
+      textTop: "Flamenco, 2025",
+      textBottom: "Diego Céspedes",
+      link: "/distribucion",
+    },
+    {
+      slideBG: "/BackSorda.jpg",
+      slideTitle:
+        "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
+      textTop: "Sorda, 2025",
+      textBottom: "Eva Libertad",
+      link: "/distribucion",
+    },
+    {
+      slideBG: "/produccion4.jpg",
+      slideTitle:
+        "https://cdn.sanity.io/images/yj63f9tw/production/2d0bf05a403bfcfc28684555a08579a959fc50c6-1916x227.png",
+      textTop: "Annette, 2021",
+      textBottom: "Leos Carax",
+      link: "/produccion",
+    },
+    {
+      slideBG: "/produccion3.jpg",
+      slideTitle:
+        "https://cdn.sanity.io/images/yj63f9tw/production/2d0bf05a403bfcfc28684555a08579a959fc50c6-1916x227.png",
+      link: "/produccion",
+      textTop: "Silencio, 2018",
+      textBottom: "Lorena Villarreal",
     },
   ];
   return (

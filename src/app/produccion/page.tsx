@@ -42,7 +42,7 @@ const Page = () => {
               <br />
               <br />
               En nuestro portafolio se encuentran proyectos de alto perfil como:
-              The Intruder, Memoria, Blondi y Annette, Jockey
+              The Intruder, Memoria, Blondi y Annette, El Jockey
               <br />
               <br />
               Si tienes un proyecto que desafíe, conmueva o inspire, queremos

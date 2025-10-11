@@ -28,10 +28,7 @@ _createdAt: string
       name: string
       role?: string
     } []
-    reconocimientos?:{
-      festival: string
-      premio?: string
-    } []
+    reconocimientos?: []
 }
 
 type Category = {
