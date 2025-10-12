@@ -92,14 +92,14 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           <div className="pb-5 flex-1 flex flex-col text-sm md:text-base">
             <div className="flex justify-between ">
               {pelicula.director && (
-                <div className="">
+                <div className="w-1/3">
                   <p className="uppercase opacity-60">Dirección </p>
                   <p className="font-bold text-lg">{pelicula.director}</p>
                 </div>
               )}
               {pelicula.produccionEmpresas &&
                 pelicula.produccionEmpresas?.length > 0 && (
-                  <div className="">
+                  <div className="w-1/3">
                     <p className="uppercase opacity-60">Producción </p>
                     <div>
                       {pelicula.produccionEmpresas.map((empresa, i) => (
@@ -115,21 +115,22 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 )}
 
               {pelicula.year && (
-                <div className="">
+                <div className="w-1/3">
                   <p className="uppercase opacity-60">Año </p>
                   <p className="font-bold text-lg">{pelicula.year}</p>
                 </div>
               )}
             </div>
-            <div className="flex justify-between my-8">
+            <div className="flex justiy-between  my-8">
               {pelicula.movieLength && (
-                <div className="">
+                <div className="w-1/3">
                   <p className="uppercase opacity-60">Duración </p>
                   <p className="font-bold text-lg">{pelicula.movieLength}</p>
                 </div>
               )}
+              <div className="w-1/3"></div>
               {pelicula.pais && (
-                <div className="">
+                <div className="w-1/3">
                   <p className="uppercase opacity-60">País</p>
                   <p className="font-bold text-lg">{pelicula.pais}</p>
                 </div>
