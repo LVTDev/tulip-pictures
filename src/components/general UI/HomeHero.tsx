@@ -100,7 +100,12 @@ const HomeHero = () => {
                 <p className="text-sm mb-6 italic">paloma@grupolvt.com</p>
                 <p className="text-sm mb-1">Coordinadora de Producción</p>
                 <p className="text-sm italic font-bold">Aranza Miranda</p>
-                <p className="text-sm italic">aranza@letswoohoo.com</p>
+                <p className="text-sm italic mb-6">aranza@letswoohoo.com</p>
+
+                
+                <p className="text-sm mb-1">Coordinadora  de Postproducción</p>
+                <p className="text-sm italic font-bold">Lourdes Huerta</p>
+                <p className="text-sm italic">lulu@grupolvt.com</p>
               </div>
             </div>
           </div>
