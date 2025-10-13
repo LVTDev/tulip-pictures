@@ -17,7 +17,7 @@ const HomeHero = () => {
               con una visión amplia y contemporánea.
               <br />
               <br />
-              Aquí producimos y distribuimos cine con identidad. impacto y
+              Aquí producimos y distribuimos cine con identidad, impacto y
               alcance internacional. Desde 2018 hemos acompañado películas
               mexicanas e internacionales en salas, festivales y plataformas,
               diseñando estrategias a la medida de cada historia.
