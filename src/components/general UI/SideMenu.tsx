@@ -62,8 +62,41 @@ const SideMenu = () => {
     if (isOpen) handleTogglePlay();
   }, [url]);
 
+  // useEffect(() => {
+  //   const handleClickOutside = (event: MouseEvent) => {
+  //     const asideEl = asideRef.current;
+  //     const toggleEl = menuToggleRef.current;
+
+  //     if (!asideEl || !toggleEl) return;
+
+  //     // If menu is open and click is outside both menu and toggle button
+  //     if (
+  //       isOpen &&
+  //       !asideEl.contains(event.target as Node) &&
+  //       !toggleEl.contains(event.target as Node)
+  //     ) {
+  //       handleTogglePlay(); // Close the menu
+  //     }
+  //   };
+
+  //   // Attach listener when the menu is open
+  //   if (isOpen) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   }
+
+  //   // Cleanup
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [isOpen, handleTogglePlay]);
   return (
     <div className=" bg-blue-100 relative">
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-[#0000006b] z-[99]"
+          onClick={handleTogglePlay} // closes the menu
+        ></div>
+      )}
       <div
         ref={mainref}
         className={`fixed left-0  h-[100vh] w-0 z-100 `}
@@ -187,7 +220,8 @@ const SideMenu = () => {
                         <div className="mask overflow-hidden md:text-xs">
                           <p
                             className={`${
-                              url === "/distribucion/portfolio" && "text-[#e249a3]"
+                              url === "/distribucion/portfolio" &&
+                              "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             Catálogo
@@ -240,7 +274,10 @@ const SideMenu = () => {
                 <a href="https://www.instagram.com/tulippicturesmx/">
                   <Instagram width={16} color="black" />
                 </a>
-                <a href="https://x.com/TulipPicturesmx" className="w-[16px] my-auto">
+                <a
+                  href="https://x.com/TulipPicturesmx"
+                  className="w-[16px] my-auto"
+                >
                   <svg
                     color="white"
                     xmlns="http://www.w3.org/2000/svg"
