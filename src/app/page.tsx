@@ -12,13 +12,14 @@ import Link from "next/link";
 const Page = () => {
   const slides = [
     {
-      slideBG: "/distrBack.jpg",
+      slideBG: "/BACKSorda.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
-      textTop: "Bird, 2024",
-      textBottom: "Andrea Arnold",
+      textTop: "Sorda, 2025",
+      textBottom: "Eva Libertad",
       link: "/distribucion",
     },
+
     {
       slideBG: "/prodBack.jpg",
       slideTitle:
@@ -44,7 +45,7 @@ const Page = () => {
       slideBG: "/BACKFlamenco.png",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
-      textTop: "Flamenco, 2025",
+      textTop: "La misteriosa mirada del flamenco, 2025",
       textBottom: "Diego Céspedes",
       link: "/distribucion",
     },
@@ -57,13 +58,15 @@ const Page = () => {
       link: "/produccion",
     },
     {
-      slideBG: "/BACKSorda.jpg",
+      slideBG: "/distrBack.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
-      textTop: "Sorda, 2025",
-      textBottom: "Eva Libertad",
+      textTop: "Bird, 2024",
+      textBottom: "Andrea Arnold",
       link: "/distribucion",
-    },     {
+    },
+
+    {
       slideBG: "/rentaBG.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/8c45eb6634d2e942f4a723544a5d9edaa0099052-1712x153.png",
@@ -153,7 +156,11 @@ const Page = () => {
                       <div className="text-right font-bold text-xl opacity-90 mr-4">
                         {slide.textBottom}
                       </div>
-                      <img src={`${slide.slideTitle}`} className="" alt="Header" />
+                      <img
+                        src={`${slide.slideTitle}`}
+                        className=""
+                        alt="Header"
+                      />
                     </div>
                   </Link>
                 </div>
