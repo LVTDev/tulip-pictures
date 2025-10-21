@@ -133,6 +133,11 @@ export const movieType = defineType({
 
       // of: [{ type: "object", fields: [{name: "festival", title: "Festival", type: "string"}, {name: "premio", title: "Premio", type: "string"} ] }],
     }),
+     defineField({
+      name: "ligaDePrueba",
+      type: "boolean",
+      initialValue: false
+    }),
 
     // defineField({
     //   name: "body",
