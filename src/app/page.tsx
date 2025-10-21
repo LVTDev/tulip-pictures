@@ -14,6 +14,7 @@ const Page = () => {
     {
       slideBG: "/BACK_LA-VIDA-ES.jpg",
 
+      textTop: "La Vida Es, 2025",
       textBottom: "Lorena Villarreal",
       // slideTitle:
       //   "https://cdn.sanity.io/images/yj63f9tw/production/a0f0756f438849f3d2c4a4b648adc28b05585c5d-1418x536.png",
@@ -157,18 +158,20 @@ const Page = () => {
                       className="object-cover "
                       fill
                     />
-                    <div className="absolute text-white bottom-0 ">
+                    <div className="absolute text-white bottom-0 w-full">
                       <p className="text-right font-bold text-xl opacity-90 mr-4">
                         {slide.textTop}
                       </p>
                       <div className="text-right font-bold text-xl opacity-90 mr-4">
                         {slide.textBottom}
                       </div>
-                      <img
-                        src={`${slide.slideTitle}`}
-                        className=""
-                        alt="Header"
-                      />
+                      {slide.slideTitle && (
+                        <img
+                          src={`${slide.slideTitle}`}
+                          className=""
+                          alt="Header"
+                        />
+                      )}
                     </div>
                   </Link>
                 </div>
