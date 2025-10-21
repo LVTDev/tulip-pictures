@@ -12,6 +12,14 @@ import Link from "next/link";
 const Page = () => {
   const slides = [
     {
+      slideBG: "/BACK_LA-VIDA-ES.jpg",
+
+      textBottom: "Lorena Villarreal",
+      // slideTitle:
+      //   "https://cdn.sanity.io/images/yj63f9tw/production/a0f0756f438849f3d2c4a4b648adc28b05585c5d-1418x536.png",
+      link: "/pelicula/estrenos",
+    },
+    {
       slideBG: "/BACKSorda.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",

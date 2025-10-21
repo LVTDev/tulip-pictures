@@ -14,8 +14,9 @@ const PortfolioList = ({ title }: { title: string }) => {
   useEffect(() => {
     const fetchMovies = async () => {
       const moviesFetched = await fetchSanity("pelicula");
+      console.log(moviesFetched)
       const finalFilteredMovies = moviesFetched.filter(
-        (movie: Movie) => movie.distribucionProduccion === title
+        (movie: Movie) => movie.distribucionProduccion === title || movie.distribucionProduccion === "produccionDistribucion" 
       );
       setFetchedMovies(finalFilteredMovies);
     };

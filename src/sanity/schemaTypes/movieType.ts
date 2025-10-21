@@ -64,7 +64,7 @@ export const movieType = defineType({
       type: "string",
       title: "Distribucion / Produccion",
       options: {
-        list: ["distribucion", "produccion", "ninguno"],
+        list: ["distribucion", "produccion", "ninguno", "produccionDistribucion"],
       },
     }),
     defineField({
@@ -129,9 +129,9 @@ export const movieType = defineType({
       name: "reconocimientos",
       title: "Reconocimientos",
       type: "array",
-      of: [{ type: "image" }],
+      // of: [{ type: "image" }],
 
-      // of: [{ type: "object", fields: [{name: "festival", title: "Festival", type: "string"}, {name: "premio", title: "Premio", type: "string"} ] }],
+      of: [{ type: "object", fields: [{name: "festival", title: "Festival", type: "string"}, {name: "premio", title: "Premio", type: "string"} ] }],
     }),
      defineField({
       name: "ligaDePrueba",

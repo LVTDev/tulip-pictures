@@ -16,9 +16,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const pelicula: Movie = result[0];
   const enlacesImagenes =
     pelicula.imagenes && pelicula.imagenes.map((img) => urlFor(img).url());
-  const enlacesPremios =
-    pelicula.reconocimientos &&
-    pelicula.reconocimientos.map((img) => urlFor(img).url());
+  // const enlacesPremios =
+  //   pelicula.reconocimientos &&
+  //   pelicula.reconocimientos.map((img) => urlFor(img).url());
   if (result.length > 1)
     return (
       <p className="bg-[#ebf5e2] h-full text-black text-center">
@@ -97,7 +97,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   <p className="font-bold text-lg">{pelicula.director}</p>
                 </div>
               )}
-              {pelicula.produccionEmpresas &&
+              {/* {pelicula.produccionEmpresas &&
                 pelicula.produccionEmpresas?.length > 0 && (
                   <div className="w-1/3">
                     <p className="uppercase opacity-60">Producción </p>
@@ -112,7 +112,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                       ))}
                     </div>
                   </div>
-                )}
+                )} */}
 
               {pelicula.year && (
                 <div className="w-1/3">
@@ -121,26 +121,26 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 </div>
               )}
             </div>
-            <div className="flex justiy-between  my-8">
+            <div className="flex justiy-between gap-2 my-8">
               {pelicula.movieLength && (
                 <div className="w-1/3">
                   <p className="uppercase opacity-60">Duración </p>
                   <p className="font-bold text-lg">{pelicula.movieLength}</p>
                 </div>
               )}
-              <div className="w-1/3"></div>
+              {/* <div className="w-1/3"></div> */}
               {pelicula.pais && (
                 <div className="w-1/3">
                   <p className="uppercase opacity-60">País</p>
                   <p className="font-bold text-lg">{pelicula.pais}</p>
                 </div>
               )}
-              {/* {pelicula.reconocimientos &&
+              {pelicula.reconocimientos &&
                 pelicula.reconocimientos?.length > 0 && (
                   <div className="">
                     <p className="uppercase opacity-60">Reconocimientos</p>
                     <div>
-                      {pelicula.reconocimientos.map((empresa, i) => (
+                      {pelicula.reconocimientos && pelicula.reconocimientos.map((empresa, i) => (
                         <p key={i} className="font-bold">
                           {empresa.festival}
                           <span className="block ml-4 font-normal ml-1 opacity-60">
@@ -150,7 +150,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                       ))}
                     </div>
                   </div>
-                )} */}
+                )}
             </div>
             {pelicula.description && (
               <div>
@@ -158,7 +158,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 <p className="font-bold text-lg">{pelicula.description}</p>
               </div>
             )}
-            {enlacesPremios && enlacesPremios.length > 0 && (
+            {/* {enlacesPremios && enlacesPremios.length > 0 && (
               <div className="mt-8">
                 <p className="uppercase opacity-60">Reconocimientos</p>
                 <div className="flex justify-between">
@@ -172,7 +172,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   })}
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </div>
         <div className="mx-auto mt-7 pb-7">
