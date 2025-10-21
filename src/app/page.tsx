@@ -16,8 +16,8 @@ const Page = () => {
 
       textTop: "La Vida Es, 2025",
       textBottom: "Lorena Villarreal",
-      // slideTitle:
-      //   "https://cdn.sanity.io/images/yj63f9tw/production/a0f0756f438849f3d2c4a4b648adc28b05585c5d-1418x536.png",
+      slideTitle:
+        "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png",
       link: "/pelicula/estrenos",
     },
     {
@@ -168,7 +168,7 @@ const Page = () => {
                       {slide.slideTitle && (
                         <img
                           src={`${slide.slideTitle}`}
-                          className=""
+                          className="mx-auto"
                           alt="Header"
                         />
                       )}
