@@ -14,8 +14,9 @@ const PortfolioList = ({ title }: { title: string }) => {
   useEffect(() => {
     const fetchMovies = async () => {
       const moviesFetched = await fetchSanity("pelicula");
+      console.log(moviesFetched)
       const finalFilteredMovies = moviesFetched.filter(
-        (movie: Movie) => movie.distribucionProduccion === title
+        (movie: Movie) => movie.distribucionProduccion === title || movie.distribucionProduccion === "produccionDistribucion" 
       );
       setFetchedMovies(finalFilteredMovies);
     };
@@ -59,7 +60,7 @@ const PortfolioList = ({ title }: { title: string }) => {
             })}
           </div>
           <div className="mt-6 pb-6 px-3 md:w-[60%] mx-auto">
-            <FooterForm lang="es" />
+            <FooterForm renta={false} lang="es" />
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ const Contactanos = ({ lang }: { lang: string }) => {
         </p>
       </div>
       <div className="md:w-1/2">
-        <FooterForm lang={lang} />
+        <FooterForm renta={false} lang={lang} />
       </div>
     </div>
   );

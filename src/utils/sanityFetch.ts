@@ -2,7 +2,7 @@ import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 
 export const fetchSanity = async (fetchSection: string) => {
-  const query = groq`   *[_type=='${fetchSection}'  && ligaDePrueba != true] | order(sortPosition){
+  const query = groq`   *[_type=='${fetchSection}' ] | order(sortPosition){
         ...,
    categories[]->{
     _id,
@@ -17,7 +17,7 @@ export const fetchSanityIndividualMovie = async (
   fetchSection: string,
   id: string
 ) => {
-  const query = groq`   *[_type=='${fetchSection}'  && slug.current == '${id}'  && ligaDePrueba != true] | order(sortPosition){
+  const query = groq`   *[_type=='${fetchSection}'  && slug.current == '${id}' ] | order(sortPosition){
         ...,
    categories[]->{
     _id,

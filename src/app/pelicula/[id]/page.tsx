@@ -1,4 +1,5 @@
 import Loading from "@/components/general UI/Loading";
+import ReconocimentosList from "@/components/general UI/ReconocimentosList";
 import SliderPeliculas from "@/components/general UI/SliderPeliculas";
 import SubscribeForm from "@/components/general UI/SubscribeForm";
 import { urlFor } from "@/sanity/lib/image";
@@ -48,18 +49,20 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           )}
         </div>{" "}
         {pelicula.title && (
-          <h1 className="uppercase font-bold text-5xl mb-4">
+          <h1 className="uppercase font-bold text-5xl mb-4 text-center md:text-left">
             {pelicula.title}
           </h1>
         )}
-        <div className="mt-6">
+        <div className="mt-6 mx-auto">
           {enlacesImagenes && enlacesImagenes.length > 0 && (
-            <SliderPeliculas enlacesImagenes={enlacesImagenes} />
+            <div className="">
+              <SliderPeliculas enlacesImagenes={enlacesImagenes} />
+            </div>
           )}
         </div>
         <div className="bg-black w-full h-[1px] my-6" />
         <div className="md:flex gap-10">
-          <div className="w-max">
+          <div className="w-max mx-auto md:mx-0">
             <div className=" mx-auto">
               <Image
                 src={urlFor(pelicula.poster).url()}
@@ -70,13 +73,13 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               />
             </div>
             {pelicula.enlaceTrailer && (
-              <div className="bg-black py-2 mt-5 max-w-[220px]">
+              <div className="bg-black py-2 mt-5 max-w-[220px] mx-auto">
                 <a
                   href={pelicula.enlaceTrailer}
                   target="_blank"
                   className=" text-white uppercase font-bold text-center my-5"
                 >
-                  <div className="flex justify-center gap-3">Ver Trailer</div>
+                  <div className="flex justify-center gap-3">Ver Tráiler</div>
                 </a>
               </div>
             )}
@@ -89,15 +92,18 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               </a>
             )} */}
           </div>
-          <div className="pb-5 flex-1 flex flex-col text-sm md:text-base">
-            <div className="flex justify-between ">
+          {/* <div className="pb-5 flex-1 flex flex-col text-sm md:text-base"> */}
+          <div className="pb-5 pt-6 md:pt-0 grid md:grid-cols-3 grid-cols-1 md:w-2/3 gap-3 lg:gap-6 text-sm md:text-base">
+            {/* <div className="flex justify-between gap-2"> */}
+            <div>
               {pelicula.director && (
-                <div className="w-1/3">
+                <div className="">
                   <p className="uppercase opacity-60">Dirección </p>
-                  <p className="font-bold text-lg">{pelicula.director}</p>
+                  <p className="font-bold md:text-lg">{pelicula.director}</p>
                 </div>
               )}
-              {pelicula.produccionEmpresas &&
+            </div>
+            {/* {pelicula.produccionEmpresas &&
                 pelicula.produccionEmpresas?.length > 0 && (
                   <div className="w-1/3">
                     <p className="uppercase opacity-60">Producción </p>
@@ -112,52 +118,50 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                       ))}
                     </div>
                   </div>
-                )}
-
-              {pelicula.year && (
-                <div className="w-1/3">
-                  <p className="uppercase opacity-60">Año </p>
-                  <p className="font-bold text-lg">{pelicula.year}</p>
-                </div>
-              )}
-            </div>
-            <div className="flex justiy-between  my-8">
-              {pelicula.movieLength && (
-                <div className="w-1/3">
-                  <p className="uppercase opacity-60">Duración </p>
-                  <p className="font-bold text-lg">{pelicula.movieLength}</p>
-                </div>
-              )}
-              <div className="w-1/3"></div>
-              {pelicula.pais && (
-                <div className="w-1/3">
-                  <p className="uppercase opacity-60">País</p>
-                  <p className="font-bold text-lg">{pelicula.pais}</p>
-                </div>
-              )}
-              {/* {pelicula.reconocimientos &&
-                pelicula.reconocimientos?.length > 0 && (
-                  <div className="">
-                    <p className="uppercase opacity-60">Reconocimientos</p>
-                    <div>
-                      {pelicula.reconocimientos.map((empresa, i) => (
-                        <p key={i} className="font-bold">
-                          {empresa.festival}
-                          <span className="block ml-4 font-normal ml-1 opacity-60">
-                            {empresa.premio && empresa.premio}
-                          </span>
-                        </p>
-                      ))}
-                    </div>
-                  </div>
                 )} */}
+
+            <div>
+              {pelicula.year && (
+                <div className="">
+                  <p className="uppercase opacity-60">Año </p>
+                  <p className="font-bold md:text-lg">{pelicula.year}</p>
+                </div>
+              )}
             </div>
-            {pelicula.description && (
-              <div>
-                <p className="uppercase opacity-60 mt-4 ">Sinópsis</p>
-                <p className="font-bold text-lg">{pelicula.description}</p>
-              </div>
-            )}
+            <div>
+              {pelicula.movieLength && (
+                <div className="">
+                  <p className="uppercase opacity-60">Duración </p>
+                  <p className="font-bold md:text-lg">{pelicula.movieLength}</p>
+                </div>
+              )}
+            </div>
+            {/* </div> */}
+            {/* <div className="flex justiy-between gap-2 my-8"> */}
+            {/* <div className="w-1/3"></div> */}
+            <div>
+              {pelicula.pais && (
+                <div className="">
+                  <p className="uppercase opacity-60">País</p>
+                  <p className="font-bold md:text-lg">{pelicula.pais}</p>
+                </div>
+              )}
+            </div>
+            <div className="md:col-span-2">
+              {pelicula.reconocimientos &&
+                pelicula.reconocimientos?.length > 0 && (
+                  <ReconocimentosList list={pelicula.reconocimientos} />
+                )}
+            </div>
+            {/* </div> */}
+            <div className="md:col-span-3">
+              {pelicula.description && (
+                <div>
+                  <p className="uppercase opacity-60 mt-4 ">Sinópsis</p>
+                  <p className="font-bold md:text-lg">{pelicula.description}</p>
+                </div>
+              )}
+            </div>
             {/* {enlacesPremios && enlacesPremios.length > 0 && (
               <div className="mt-8">
                 <p className="uppercase opacity-60">Reconocimientos</p>

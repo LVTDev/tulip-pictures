@@ -99,7 +99,7 @@ const Page = () => {
           Llena el formulario
         </div>
         <div className={`${openForm ? "block" : "hidden"}`}>
-          <FooterForm lang="es" />
+          <FooterForm renta={false} lang="es" />
         </div>
       </div>
     </div>

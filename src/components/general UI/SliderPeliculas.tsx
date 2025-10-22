@@ -35,7 +35,7 @@ const SliderPeliculas = ({
           <SwiperSlide className="" key={i}>
             <div className={` max-h-[1000px]  bg-cover relative`}>
               <div className="relative  ">
-                <img src={slide} alt={`bg Poster`} className="object-cover" />
+                <img src={slide} alt={`bg Poster`} className="object-cover mx-auto" />
               </div>
             </div>
           </SwiperSlide>

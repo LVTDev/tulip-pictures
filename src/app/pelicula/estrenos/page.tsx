@@ -22,7 +22,7 @@ const Page = () => {
     fetchMovies();
   }, []);
   return (
-   <div className="bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')] w-full">
+   <div className="bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')] min-h-[95vh] w-full">
       <div className="max-w-[90vw] pt-8 mx-auto">
         <div>
             <div className=" pl-4 ">
@@ -49,7 +49,7 @@ const Page = () => {
             })}
           </div>
           <div className="mt-6 pb-6 px-3 md:w-[60%] mx-auto">
-              <FooterForm lang="es" />
+              <FooterForm renta={false} lang="es" />
           </div>
         </div>
       </div>

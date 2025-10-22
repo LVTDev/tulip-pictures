@@ -12,6 +12,15 @@ import Link from "next/link";
 const Page = () => {
   const slides = [
     {
+      slideBG: "/BACK_LA-VIDA-ES.jpg",
+
+      textTop: "La Vida Es, 2025",
+      textBottom: "Lorena Villarreal",
+      slideTitle:
+        "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png",
+      link: "/pelicula/estrenos",
+    },
+    {
       slideBG: "/BACKSorda.jpg",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
@@ -31,7 +40,7 @@ const Page = () => {
     {
       slideBG: "/rentaBG.jpg",
       slideTitle:
-        "https://cdn.sanity.io/images/yj63f9tw/production/8c45eb6634d2e942f4a723544a5d9edaa0099052-1712x153.png",
+        "/renta de equipo.png",
       // textTop: "CÁMARA ALEXA 35",
       // textBottom: (
       //   <p className="italic">
@@ -45,7 +54,7 @@ const Page = () => {
       slideBG: "/BACKFlamenco.png",
       slideTitle:
         "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
-      textTop: "La misteriosa mirada del flamenco, 2025",
+      textTop: "La Misteriosa Mirada del Flamenco, 2025",
       textBottom: "Diego Céspedes",
       link: "/distribucion",
     },
@@ -68,8 +77,8 @@ const Page = () => {
 
     {
       slideBG: "/rentaBG.jpg",
-      slideTitle:
-        "https://cdn.sanity.io/images/yj63f9tw/production/8c45eb6634d2e942f4a723544a5d9edaa0099052-1712x153.png",
+     slideTitle:
+        "/renta de equipo.png",
       // textTop: "CÁMARA ALEXA 35",
       // textBottom: (
       //   <p className="italic">
@@ -149,18 +158,20 @@ const Page = () => {
                       className="object-cover "
                       fill
                     />
-                    <div className="absolute text-white bottom-0 ">
+                    <div className="absolute text-white bottom-0 w-full">
                       <p className="text-right font-bold text-xl opacity-90 mr-4">
                         {slide.textTop}
                       </p>
                       <div className="text-right font-bold text-xl opacity-90 mr-4">
                         {slide.textBottom}
                       </div>
-                      <img
-                        src={`${slide.slideTitle}`}
-                        className=""
-                        alt="Header"
-                      />
+                      {slide.slideTitle && (
+                        <img
+                          src={`${slide.slideTitle}`}
+                          className="mx-auto"
+                          alt="Header"
+                        />
+                      )}
                     </div>
                   </Link>
                 </div>
