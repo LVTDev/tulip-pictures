@@ -16,9 +16,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const pelicula: Movie = result[0];
   const enlacesImagenes =
     pelicula.imagenes && pelicula.imagenes.map((img) => urlFor(img).url());
-  const enlacesPremios =
-    pelicula.reconocimientos &&
-    pelicula.reconocimientos.map((img) => urlFor(img).url());
+  // const enlacesPremios =
+  //   pelicula.reconocimientos &&
+  //   pelicula.reconocimientos.map((img) => urlFor(img).url());
   if (result.length > 1)
     return (
       <p className="bg-[#ebf5e2] h-full text-black text-center">
@@ -158,7 +158,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 <p className="font-bold text-lg">{pelicula.description}</p>
               </div>
             )}
-            {enlacesPremios && enlacesPremios.length > 0 && (
+            {/* {enlacesPremios && enlacesPremios.length > 0 && (
               <div className="mt-8">
                 <p className="uppercase opacity-60">Reconocimientos</p>
                 <div className="flex justify-between">
@@ -172,7 +172,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   })}
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </div>
         <div className="mx-auto mt-7 pb-7">
