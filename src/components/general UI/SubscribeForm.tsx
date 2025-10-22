@@ -33,7 +33,7 @@ const SubscribeForm = () => {
     }
   };
   return (
-    <div className="w-4/5 mx-auto text-black bg-[#ededed]">
+    <div className="w-3/5 max-w-[1200px] mx-auto text-black bg-[#ededed]">
       <p className="   py-2 px-3 text-2xl text-center font-bold">Suscríbete</p>
       <form onSubmit={handleSubmit} className="text-black  p-5 ">
         <p className="text-center">
@@ -45,7 +45,7 @@ const SubscribeForm = () => {
         </p>
         <div className="mt-8 mb-5 mx-auto md:w-[60%] md:flex ">
           <input
-            className=" w-full p-3  placeholder:text-black"
+            className=" w-full p-3  placeholder:text-black bg-white"
             type="text"
             placeholder="E-mail"
             value={email}

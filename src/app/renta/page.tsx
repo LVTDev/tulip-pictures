@@ -4,8 +4,8 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="">
-      <div className='bg-[url("/rentaBG.jpg")] bg-cover bg-no-repeat  w-full '>
+    <div className="  h-[95vh]">
+      <div className='bg-[url("/rentaBG.jpg")] bg-cover bg-no-repeat h-full  w-full '>
         <div className="w-[80%] md:w-[60%] mx-auto py-8">
           <h1 className="text-4xl md:text-7xl text-white mb-8 tracking-widest font-bold w-max">
             RENTA DE <br />
@@ -21,7 +21,7 @@ const Page = () => {
           </a>
           <div className="mt-8">
 
-          <FooterForm lang="es" />
+          <FooterForm renta={true} lang="es" />
           </div>
         </div>
       </div>

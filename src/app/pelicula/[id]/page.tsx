@@ -53,9 +53,11 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             {pelicula.title}
           </h1>
         )}
-        <div className="mt-6">
+        <div className="mt-6 mx-auto">
           {enlacesImagenes && enlacesImagenes.length > 0 && (
-            <SliderPeliculas enlacesImagenes={enlacesImagenes} />
+            <div className="">
+              <SliderPeliculas enlacesImagenes={enlacesImagenes} />
+            </div>
           )}
         </div>
         <div className="bg-black w-full h-[1px] my-6" />
