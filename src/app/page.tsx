@@ -77,8 +77,8 @@ const Page = () => {
 
     {
       slideBG: "/rentaBG.jpg",
-      slideTitle:
-        "https://cdn.sanity.io/images/yj63f9tw/production/8c45eb6634d2e942f4a723544a5d9edaa0099052-1712x153.png",
+     slideTitle:
+        "/renta de equipo.png",
       // textTop: "CÁMARA ALEXA 35",
       // textBottom: (
       //   <p className="italic">
