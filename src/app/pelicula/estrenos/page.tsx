@@ -49,7 +49,7 @@ const Page = () => {
             })}
           </div>
           <div className="mt-6 pb-6 px-3 md:w-[60%] mx-auto">
-              <FooterForm lang="es" />
+              <FooterForm renta={false} lang="es" />
           </div>
         </div>
       </div>
