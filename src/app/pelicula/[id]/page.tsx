@@ -70,13 +70,13 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               />
             </div>
             {pelicula.enlaceTrailer && (
-              <div className="bg-black py-2 mt-5 max-w-[220px]">
+              <div className="bg-black py-2 mt-5 max-w-[220px] mx-auto">
                 <a
                   href={pelicula.enlaceTrailer}
                   target="_blank"
                   className=" text-white uppercase font-bold text-center my-5"
                 >
-                  <div className="flex justify-center gap-3">Ver Trailer</div>
+                  <div className="flex justify-center gap-3">Ver Tráiler</div>
                 </a>
               </div>
             )}
