@@ -32,7 +32,7 @@ const ReconocimentosList = ({
                     return (
                       <p key={i} className="font-bold md:text-lg">
                         {empresa.festival}
-                        <span className="block ml-4 font-normal ml-1 opacity-60">
+                        <span className="block  font-normal ml-1 opacity-60">
                           {empresa.premio && empresa.premio}
                         </span>
                       </p>
@@ -45,7 +45,7 @@ const ReconocimentosList = ({
                     return (
                       <p key={i} className="font-bold">
                         {empresa.festival}
-                        <span className="block ml-4 font-normal ml-1 opacity-60">
+                        <span className="block  font-normal ml-1 opacity-60">
                           {empresa.premio && empresa.premio}
                         </span>
                       </p>

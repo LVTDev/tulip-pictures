@@ -1,3 +1,4 @@
+import FichaBackButton from "@/components/general UI/FichaBackButton";
 import Loading from "@/components/general UI/Loading";
 import ReconocimentosList from "@/components/general UI/ReconocimentosList";
 import SliderPeliculas from "@/components/general UI/SliderPeliculas";
@@ -6,9 +7,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { fetchSanityIndividualMovie } from "@/utils/sanityFetch";
 import { Movie } from "@/utils/types";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { ArrowLeft } from "react-feather";
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
@@ -30,7 +29,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     <div className="w-screen bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')]">
       <div className="w-[90vw] mx-auto pt-5">
         <div className="bg-[#30383a] text-white px-2 py-3 w-max mb-4">
-          {pelicula.distribucionProduccion === "distribucion" ? (
+          {/* {pelicula.distribucionProduccion === "distribucion" ? (
             <Link
               href="/distribucion/portfolio"
               className="flex items-center gap-3"
@@ -46,7 +45,8 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               <ArrowLeft />
               Regresar
             </Link>
-          )}
+          )} */}
+          <FichaBackButton />
         </div>{" "}
         {pelicula.title && (
           <h1 className="uppercase font-bold text-5xl mb-4 text-center md:text-left">
@@ -79,7 +79,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   target="_blank"
                   className=" text-white uppercase font-bold text-center my-5"
                 >
-                  <div className="flex justify-center gap-3">{pelicula.teaser ? "Ver Teaser" : "Ver Tráiler"}</div>
+                  <div className="flex justify-center gap-3">
+                    {pelicula.teaser ? "Ver Teaser" : "Ver Tráiler"}
+                  </div>
                 </a>
               </div>
             )}
