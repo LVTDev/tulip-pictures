@@ -20,6 +20,7 @@ export type Movie = {
   index?: number;
   distribucionProduccion: string;
   proximosEstrenos?: boolean;
+  teaser?: boolean;
   fechaEstreno?: Date;
   enlaceTrailer?: string;
   pressKitURL?: string;

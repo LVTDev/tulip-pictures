@@ -8,7 +8,6 @@ const ReconocimentosList = ({
     premio?: string;
   }[];
 }) => {
-  console.log(list);
   const end = list.length;
   return (
     <div className="">
@@ -17,7 +16,7 @@ const ReconocimentosList = ({
         {list &&
           end < 11 &&
           list.map((empresa, i) => (
-            <p key={i} className="font-bold">
+            <p key={i} className="font-bold md:text-lg">
               {empresa.festival}
               <span className="block ml-4 font-normal ml-1 opacity-60">
                 {empresa.premio && empresa.premio}
@@ -31,7 +30,7 @@ const ReconocimentosList = ({
                   {list.map((empresa, i) => {
                     if (i >= end / 2) return;
                     return (
-                      <p key={i} className="font-bold">
+                      <p key={i} className="font-bold md:text-lg">
                         {empresa.festival}
                         <span className="block ml-4 font-normal ml-1 opacity-60">
                           {empresa.premio && empresa.premio}

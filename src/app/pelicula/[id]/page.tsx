@@ -79,7 +79,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                   target="_blank"
                   className=" text-white uppercase font-bold text-center my-5"
                 >
-                  <div className="flex justify-center gap-3">Ver Tráiler</div>
+                  <div className="flex justify-center gap-3">{pelicula.teaser ? "Ver Teaser" : "Ver Tráiler"}</div>
                 </a>
               </div>
             )}
