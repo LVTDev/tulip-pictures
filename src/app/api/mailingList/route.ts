@@ -23,11 +23,11 @@ export async function POST(request: NextRequest) {
   try {
     const { email } = await request.json();
     await MailListEntry.create({ email });
-    // "tulip@grupolvt.com",
+    // "vbotoku@grupolvt.com",
     // "naomi@letswoohoo.com",
     const res = await sendMailMailingList(
       "Sitio Tulip: mailing list",
-      "vbotoku@grupolvt.com",
+      "tulip@grupolvt.com",
       `Correo: ${email}`
     );
     console.log(res);
