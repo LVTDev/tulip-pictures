@@ -1,6 +1,8 @@
 import { dbConnect } from "@/utils/dbConnect";
 import { NextRequest, NextResponse } from "next/server";
 import ContactEntry from "./model";
+import { sendMail } from "./mailService";
+
 
 export async function GET() {
   await dbConnect();
@@ -22,8 +24,17 @@ export async function POST(request:NextRequest) {
   try {
     const { name, email, message,company } = await request.json();
     await ContactEntry.create({ name, email, message, company });
+   const res = await sendMail(
+      "Sitio Tulip: Formulario Contactanos",
+         // "tulip@grupolvt.com",
+      "vbotoku@grupolvt.com",
+      `Client: ${name}
+     Correo: ${email}
+     Empresa:${company}
+     Mensaje: ${message}`
+    );
+    console.log(res)
 
-    console.log({ name, email, message,  company });
     return NextResponse.json({ message: "success" });
   } catch (error) {
     console.log(error);
