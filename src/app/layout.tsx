@@ -6,6 +6,8 @@ import Footer from "@/components/general UI/Footer";
 import SideMenu from "@/components/general UI/SideMenu";
 import HomeLogoBtn from "@/components/general UI/HomeLogoBtn";
 // import AnnouncementBar from "@/components/general UI/AnnouncementBar";
+import { Analytics } from "@vercel/analytics/next";
+
 
 const robotoFont = Roboto({
   variable: "--font-roboto",
@@ -27,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoFont.variable}   antialiased`}>
+        <Analytics />
         <div className="relative">
           <div className="flex min-h-[90vh]">
             <HomeLogoBtn />
