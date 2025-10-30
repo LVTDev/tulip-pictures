@@ -36,6 +36,8 @@ const Page = () => {
       "https://cdn.sanity.io/images/yj63f9tw/production/2d0bf05a403bfcfc28684555a08579a959fc50c6-1916x227.png",
       link: "/produccion",
       textTop: "El Jockey, 2024",
+      mobileBG:"/Movil_Jockey.jpg",
+
       textBottom: "Luis Ortega",
     },
     {
@@ -78,6 +80,8 @@ const Page = () => {
       textTop: "Bird, 2024",
       textBottom: "Andrea Arnold",
       link: "/distribucion",
+      mobileBG:"/Movil_Bird.jpg",
+
     },
 
     {
