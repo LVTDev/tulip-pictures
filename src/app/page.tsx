@@ -20,6 +20,13 @@ const Page = () => {
       link: "/pelicula/estrenos",
     },
     {
+      slideBG: "/SombraSol.jpg",
+      textTop: "La Sombra Del Sol, 2023",
+      textBottom: "Miguel A. Ferrer",
+      slideTitle:   "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
+      link: "/distribucion",
+    },
+    {
       slideBG: "/BACKSorda.jpg",
       mobileBG:"/Movil_Sorda.jpg",
       
