@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pt-16 max-w-[1200px] mx-auto px-4 bg-[#ebf5e2]">
+    <div className="pt-16  md:px-10 bg-[#ebf5e2]">
       <h1 className="text-4xl font-bold mb-8">Términos y Condiciones de Uso</h1>
       <div className="text-sm">
         <p className="mb-3">Última actualización: 8 de octubre de 2025</p>
