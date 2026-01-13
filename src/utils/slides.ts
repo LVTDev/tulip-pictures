@@ -11,7 +11,7 @@ export const slides = [
     slideBG: "/BACKUnFantasma.jpg",
     textTop: "A Useful Ghost, 2025",
     textBottom: "Ratchapoom Boonbunchachoke",
-    mobileBG: "/UNFANTASMA_Movil.jpg",
+    mobileBG: "/UNFANTASMA_NEW2.jpg",
 
     slideTitle:
       "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
