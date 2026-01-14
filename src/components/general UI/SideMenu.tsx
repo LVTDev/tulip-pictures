@@ -7,7 +7,7 @@ import { ChevronDown, Facebook, Instagram, Menu, Youtube } from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const SideMenu = () => {
+const SideMenu = ({ language }: { language: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuTL = useRef<GSAPTimeline | null>(null);
   const menuToggleRef = useRef<HTMLDivElement>(null);
@@ -62,33 +62,6 @@ const SideMenu = () => {
     if (isOpen) handleTogglePlay();
   }, [url]);
 
-  // useEffect(() => {
-  //   const handleClickOutside = (event: MouseEvent) => {
-  //     const asideEl = asideRef.current;
-  //     const toggleEl = menuToggleRef.current;
-
-  //     if (!asideEl || !toggleEl) return;
-
-  //     // If menu is open and click is outside both menu and toggle button
-  //     if (
-  //       isOpen &&
-  //       !asideEl.contains(event.target as Node) &&
-  //       !toggleEl.contains(event.target as Node)
-  //     ) {
-  //       handleTogglePlay(); // Close the menu
-  //     }
-  //   };
-
-  //   // Attach listener when the menu is open
-  //   if (isOpen) {
-  //     document.addEventListener("mousedown", handleClickOutside);
-  //   }
-
-  //   // Cleanup
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [isOpen, handleTogglePlay]);
   return (
     <div className=" bg-blue-100 relative">
       {isOpen && (

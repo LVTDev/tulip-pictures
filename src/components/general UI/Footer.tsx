@@ -1,11 +1,13 @@
 // import Image from "next/image";
 // import Link from "next/link";
+import Link from "next/link";
 import React from "react";
 import { Facebook, Instagram, Youtube } from "react-feather";
+import LanguageSwitch from "../EN/LanguageSwitch";
 
 function Footer() {
   return (
-    <footer className=" bg-black py-3 pt-4 text-white">
+    <footer className=" bg-black py-3 pt-4 text-white flex">
       <div className="md:flex w-[90vw] mx-auto justify-between items-center">
         <div className="md:flex gap-2">
           {" "}
@@ -60,6 +62,10 @@ function Footer() {
           </Link>
         </div> */}
       </div>
+      <div>
+        <LanguageSwitch />
+      </div>
+     
     </footer>
   );
 }

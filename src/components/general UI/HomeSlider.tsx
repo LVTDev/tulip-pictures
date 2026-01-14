@@ -1,94 +1,76 @@
-"use client";
-import React from "react";
+'use client'
+import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from "swiper/modules";
+import { Autoplay, A11y, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { urlFor } from "@/sanity/lib/image";
+import Image from "next/image";
+import Link from "next/link";
+import { slidesEn, slidesEs } from "@/utils/slides";
 
-export type SlideData = {
-  poster: string;
-  title: string;
-  director: string;
-  category?: string;
-  distribucionProduccion: string;
-};
+const HomeSlider = ({lang}:{lang: string}) => {
+  let slides
 
-const HomeSlider = ({
-  slideData,
-  category,
-}: {
-  slideData: SlideData[];
-  category: string;
-}) => {
-
-  const filterData = () => {
-    if (category === "distribution") {
-      return slideData.filter(
-        (elem) => elem.distribucionProduccion === "distribucion"
-      );
-    } else if (category === "production") {
-        return slideData.filter(
-        (elem) => elem.distribucionProduccion === "produccion"
-      );
-    }
-  };
-
-  const filteredData = filterData()
+  lang === "es" ? slides = slidesEs : slides = slidesEn
   return (
-    <Swiper
-      modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-      scrollbar={{ draggable: true }}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
-      breakpoints={{
-        0: {
-          slidesPerView: 1, // For mobile (0px and up)
-        },
-        640: {
-          slidesPerView: 2, // Small tablets
-        },
-        1024: {
-          slidesPerView: 3, // Desktops
-        },
-      }}
-      navigation
-      pagination={{ clickable: true, type: "progressbar" }}
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      {filteredData && filteredData.map((slide, i) => (
-        <SwiperSlide key={i}>
-          <div className="pb-3">
-            <div className="w-[250px] h-[380px] mx-auto">
-              <img
-                className="h-[380px]"
-                src={urlFor(slide.poster).url()}
-                alt={`${slide.title} Poster`}
-              />
-            </div>
-            <div className="mt-2 pl-4">
-              <p className="font-medium">{slide.title}</p>
-              <p className="text-sm text-verde">{slide.director}</p>
-              <p>{slide.category && slide.category}</p>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
-};
+     <Swiper
+          modules={[Autoplay, A11y, Navigation]}
+          navigation
+          loop
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          className="w-full"
+          slidesPerView={1}
+          //   onSlideChange={() => {
+          //     if (currentIndex > 13) setCurrentIndex(0);
+          //     else setCurrentIndex((prev) => prev + 1);
+          //     console.log("slide change");
+          //   }}
+          //   onSwiper={(swiper) => console.log(swiper)}
+        >
+          {slides.map((slide, i) => (
+            <SwiperSlide className="" key={i}>
+              <div className={` h-[95h] bg-cover relative`}>
+                <div className="relative  h-[95vh]">
+                  <Link href={slide.link}>
+                    <Image
+                      src={slide.slideBG}
+                      alt={`bg Poster`}
+                      className="object-cover hidden md:block"
+                      fill
+                    />
+                    <Image
+                      src={slide.mobileBG || slide.slideBG}
+                      alt={`bg Poster`}
+                      className="object-cover md:hidden"
+                      fill
+                    />
+                    <div className="absolute text-white bottom-0 w-full">
+                      <p className="text-right font-bold text-base md:text-xl opacity-90 mr-4">
+                        {slide.textTop}
+                      </p>
+                      <div className="text-right font-bold text-base md:text-xl opacity-90 mr-4">
+                        {slide.textBottom}
+                      </div>
+                      {slide.slideTitle && (
+                        <img
+                          src={`${slide.slideTitle}`}
+                          className="mx-auto"
+                          alt="Header"
+                        />
+                      )}
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+  )
+}
 
-export default HomeSlider;
+export default HomeSlider

@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
 
-const robotoFont = Roboto({
-  variable: "--font-roboto",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-});
+import Footer from "@/components/general UI/Footer";
+import SideMenu from "@/components/general UI/SideMenu";
+import HomeLogoBtn from "@/components/general UI/HomeLogoBtn";
 
 export const metadata: Metadata = {
   title: "Tulip Pictures",
@@ -21,12 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${robotoFont.variable}   antialiased`}>
-        <Analytics />
-
-        {children}
-      </body>
-    </html>
+    <div>
+      <div className="relative">
+        <div className="flex min-h-[90vh]">
+          <HomeLogoBtn />
+          <SideMenu language="en" />
+          <div className="flex-1">{children}</div>
+        </div>
+        <Footer />
+      </div>
+    </div>
   );
 }
