@@ -1,7 +1,7 @@
 import React from "react";
 import SubscribeForm from "./SubscribeForm";
 import Link from "next/link";
-const HomeHero = () => {
+const HomeHero = ({lang}: {lang: "es" | "en"}) => {
   return (
     <div className="text-black relative pb-10  bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')]">
       <div className=" w-[90vw] mx-auto">
