@@ -126,27 +126,31 @@ const SideMenu = ({ language }: { language: string }) => {
                         ${openDropdown === "produccion" ? "max-h-40" : "max-h-0"} 
                         md:max-h-none md:hidden md:group-hover:block`}
                     >
-                      <Link href="/produccion/portfolio">
+                      <Link
+                        href={`${isES() ? "/produccion/portfolio" : "/en/production/portfolio"}`}
+                      >
                         <div className="mask overflow-hidden md:text-xs">
-                          <p
+                          <div
                             className={`${
                               url.startsWith("/produccion/portfolio") &&
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             <p> {`${isES() ? "Películas" : "Films"}`}</p>
-                          </p>
+                          </div>
                         </div>
                       </Link>
-                      <Link href="/produccion">
+                      <Link
+                        href={`${isES() ? "/produccion" : "/en/production"}`}
+                      >
                         <div className="mask overflow-hidden md:text-xs my-2">
-                          <p
+                          <div
                             className={`${
                               url === "/produccion" && "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             <p> {`${isES() ? "Servicios" : "Services"}`}</p>
-                          </p>
+                          </div>
                         </div>
                       </Link>
                     </div>
@@ -190,60 +194,67 @@ const SideMenu = ({ language }: { language: string }) => {
                         ${openDropdown === "distribucion" ? "max-h-40" : "max-h-0"} 
                         md:max-h-none md:hidden md:group-hover:block`}
                     >
-                      <Link href="/distribucion/portfolio">
+                      <Link
+                        href={`${isES() ? "/distribucion/portfolio" : "/en/distribution/portfolio"}`}
+                      >
                         <div className="mask overflow-hidden md:text-xs">
-                          <p
+                          <div
                             className={`${
                               url === "/distribucion/portfolio" &&
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             <p> {`${isES() ? "Catálogo" : "Catalog"}`}</p>
-                          </p>
+                          </div>
                         </div>
                       </Link>
-                      <Link href="/distribucion">
+                      <Link
+                        href={`${isES() ? "/distribucion" : "/en/distribution"}`}
+                      >
                         <div className="mask overflow-hidden md:text-xs my-2">
-                          <p
+                          <div
                             className={`${
                               url === "/distribucion" && "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             <p> {`${isES() ? "Servicios" : "Services"}`}</p>
-                          </p>
+                          </div>
                         </div>
                       </Link>
                     </div>
                   </div>
-                  <Link href="/pelicula/estrenos">
+                  <Link
+                    href={`${isES() ? "/pelicula/estrenos" : "/en/films/premieres"}`}
+                  >
                     <div className="mask overflow-hidden">
-                      <p
+                      <div
                         className={`${url === "/pelicula/estrenos" && "text-[#e249a3]"}`}
                       >
                         <p>
                           {" "}
                           {`${isES() ? "Próximos Estrenos" : "Premieres"}`}
                         </p>
-                      </p>
+                      </div>
                     </div>
                   </Link>
-                  <Link href="/renta">
+                  <Link href={`${isES() ? "/renta" : "/en/rentals"}`}>
                     <div className="mask overflow-hidden">
-                      <p
+                      <div
                         className={`${url.startsWith("/renta") && "text-[#e249a3]"}`}
                       >
                         <p>
                           {" "}
                           {`${isES() ? "RENTA DE EQUIPO" : "Equipment Rental"}`}
                         </p>
-                      </p>
+                      </div>
                     </div>
                   </Link>
                 </ul>
               </nav>
             </div>
             <div className="flex flex-col gap-2 my-10 p-3 text-xs">
-              <Link className="text-[#8aaf69]" href={"/avisoDePrivacidad"}>
+              <Link className="text-[#8aaf69]"
+              href={`${isES() ? "/avisoDePrivacidad" : "/en/privacyPolicy"}`}>
                 <p> {`${isES() ? "Aviso de Privacidad" : "Privacy Policy"}`}</p>
               </Link>
               <Link className="text-[#8aaf69]" href={"/terminos"}>
