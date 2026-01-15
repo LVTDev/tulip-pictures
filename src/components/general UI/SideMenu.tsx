@@ -6,6 +6,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { ChevronDown, Facebook, Instagram, Menu, Youtube } from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { checkES } from "@/utils/pageLang";
 
 const SideMenu = ({ language }: { language: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,8 +64,7 @@ const SideMenu = ({ language }: { language: string }) => {
   }, [url]);
 
   const isES = () => {
-    if (language === "es") return true;
-    else return false;
+    return checkES(language);
   };
 
   return (
@@ -132,7 +132,8 @@ const SideMenu = ({ language }: { language: string }) => {
                         <div className="mask overflow-hidden md:text-xs">
                           <div
                             className={`${
-                              (url.startsWith("/produccion/portfolio")||url.startsWith("/en/production/portfolio")) &&
+                              (url.startsWith("/produccion/portfolio") ||
+                                url.startsWith("/en/production/portfolio")) &&
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
@@ -146,7 +147,9 @@ const SideMenu = ({ language }: { language: string }) => {
                         <div className="mask overflow-hidden md:text-xs my-2">
                           <div
                             className={`${
-                              (url === "/produccion" || url === "/en/production") && "text-[#e249a3]"
+                              (url === "/produccion" ||
+                                url === "/en/production") &&
+                              "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             <p> {`${isES() ? "Servicios" : "Services"}`}</p>
@@ -180,7 +183,8 @@ const SideMenu = ({ language }: { language: string }) => {
                         <div className="mask overflow-hidden md:text-xs">
                           <div
                             className={`${
-                              (url === "/distribucion/portfolio"|| url === "/en/distribution/portfolio") &&
+                              (url === "/distribucion/portfolio" ||
+                                url === "/en/distribution/portfolio") &&
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
@@ -194,7 +198,9 @@ const SideMenu = ({ language }: { language: string }) => {
                         <div className="mask overflow-hidden md:text-xs my-2">
                           <div
                             className={`${
-                              (url === "/distribucion" || url === "/en/distribution") && "text-[#e249a3]"
+                              (url === "/distribucion" ||
+                                url === "/en/distribution") &&
+                              "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             <p> {`${isES() ? "Servicios" : "Services"}`}</p>
@@ -220,7 +226,7 @@ const SideMenu = ({ language }: { language: string }) => {
                   <Link href={`${isES() ? "/renta" : "/en/rentals"}`}>
                     <div className="mask overflow-hidden">
                       <div
-                        className={`${url.startsWith("/renta") || url.startsWith("/en/rentals") && "text-[#e249a3]"}`}
+                        className={`${url.startsWith("/renta") || (url.startsWith("/en/rentals") && "text-[#e249a3]")}`}
                       >
                         <p>
                           {" "}
