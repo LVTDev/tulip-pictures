@@ -99,7 +99,7 @@ const SideMenu = ({ language }: { language: string }) => {
                 >
                   <Link
                     href={`${isES() ? "/about-us" : "/en/about-us"}`}
-                    className={`${url === "/about-us" || (url === "/en/about-us" && "text-[#e249a2db]")}`}
+                    className={`${(url === "/about-us" || url === "/en/about-us") && "text-[#e249a2db]"}`}
                   >
                     {/* // href={`${isES()}`}  */}
                     <div className="mask overflow-hidden">
@@ -132,7 +132,7 @@ const SideMenu = ({ language }: { language: string }) => {
                         <div className="mask overflow-hidden md:text-xs">
                           <div
                             className={`${
-                              url.startsWith("/produccion/portfolio") &&
+                              (url.startsWith("/produccion/portfolio")||url.startsWith("/en/production/portfolio")) &&
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
@@ -146,7 +146,7 @@ const SideMenu = ({ language }: { language: string }) => {
                         <div className="mask overflow-hidden md:text-xs my-2">
                           <div
                             className={`${
-                              url === "/produccion" && "text-[#e249a3]"
+                              (url === "/produccion" || url === "/en/production") && "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             <p> {`${isES() ? "Servicios" : "Services"}`}</p>
@@ -154,26 +154,6 @@ const SideMenu = ({ language }: { language: string }) => {
                         </div>
                       </Link>
                     </div>
-                    {/* <div className="md:hidden md:group-hover:block">
-                      <Link href="/produccion">
-                      <div className="mask overflow-hidden md:text-xs my-2">
-                      <p
-                      className={`${url === "/produccion" && "text-[#e249a3]"} md:text-[#0000ff89] `}
-                      >
-                      Servicios de Producción
-                      </p>
-                      </div>
-                      </Link>
-                      <Link href="/produccion/portfolio">
-                      <div className="mask overflow-hidden md:text-xs">
-                      <p
-                      className={`${url.startsWith("/produccion/portfolio") && "text-[#e249a3]"} md:text-[#0000ff89]`}
-                      >
-                      Portafolio de Producción
-                      </p>
-                      </div>
-                      </Link>
-                      </div> */}
                   </div>
                   <div className="group">
                     <div
@@ -200,7 +180,7 @@ const SideMenu = ({ language }: { language: string }) => {
                         <div className="mask overflow-hidden md:text-xs">
                           <div
                             className={`${
-                              url === "/distribucion/portfolio" &&
+                              (url === "/distribucion/portfolio"|| url === "/en/distribution/portfolio") &&
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
@@ -214,7 +194,7 @@ const SideMenu = ({ language }: { language: string }) => {
                         <div className="mask overflow-hidden md:text-xs my-2">
                           <div
                             className={`${
-                              url === "/distribucion" && "text-[#e249a3]"
+                              (url === "/distribucion" || url === "/en/distribution") && "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
                             <p> {`${isES() ? "Servicios" : "Services"}`}</p>
@@ -228,7 +208,7 @@ const SideMenu = ({ language }: { language: string }) => {
                   >
                     <div className="mask overflow-hidden">
                       <div
-                        className={`${url === "/pelicula/estrenos" && "text-[#e249a3]"}`}
+                        className={`${(url === "/pelicula/estrenos" || url === "/en/films/premieres") && "text-[#e249a3]"}`}
                       >
                         <p>
                           {" "}
@@ -240,7 +220,7 @@ const SideMenu = ({ language }: { language: string }) => {
                   <Link href={`${isES() ? "/renta" : "/en/rentals"}`}>
                     <div className="mask overflow-hidden">
                       <div
-                        className={`${url.startsWith("/renta") && "text-[#e249a3]"}`}
+                        className={`${url.startsWith("/renta") || url.startsWith("/en/rentals") && "text-[#e249a3]"}`}
                       >
                         <p>
                           {" "}
@@ -253,8 +233,10 @@ const SideMenu = ({ language }: { language: string }) => {
               </nav>
             </div>
             <div className="flex flex-col gap-2 my-10 p-3 text-xs">
-              <Link className="text-[#8aaf69]"
-              href={`${isES() ? "/avisoDePrivacidad" : "/en/privacyPolicy"}`}>
+              <Link
+                className="text-[#8aaf69]"
+                href={`${isES() ? "/avisoDePrivacidad" : "/en/privacyPolicy"}`}
+              >
                 <p> {`${isES() ? "Aviso de Privacidad" : "Privacy Policy"}`}</p>
               </Link>
               <Link className="text-[#8aaf69]" href={"/terminos"}>
