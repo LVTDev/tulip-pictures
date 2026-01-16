@@ -4,7 +4,7 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <PortfolioList title="distribucion" />
+      <PortfolioList lang="es" title="distribucion" />
 
     </div>
   )

@@ -1,9 +1,12 @@
-import React from 'react'
+import PortfolioList from "@/components/general UI/PortfolioList";
+import React from "react";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div className="">
+      <PortfolioList lang="en" title="produccion" />
+    </div>
+  );
+};
 
-export default page
+export default page;

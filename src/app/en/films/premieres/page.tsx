@@ -1,9 +1,12 @@
-import React from 'react'
+import Estrenos from "@/components/general UI/Estrenos";
+import React from "react";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div>
+      <Estrenos lang="en" />
+    </div>
+  );
+};
 
-export default page
+export default page;

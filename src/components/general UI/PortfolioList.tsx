@@ -7,15 +7,19 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import FooterForm from "./FooterForm";
 import Loading from "./Loading";
+import { checkES } from "@/utils/pageLang";
 
-const PortfolioList = ({ title }: { title: string }) => {
+const PortfolioList = ({ title, lang }: { title: string; lang: string }) => {
   const [fetchedMovies, setFetchedMovies] = useState<Movie[]>([]);
+  const isES = checkES(lang)
 
   useEffect(() => {
     const fetchMovies = async () => {
       const moviesFetched = await fetchSanity("pelicula");
       const finalFilteredMovies = moviesFetched.filter(
-        (movie: Movie) => movie.distribucionProduccion === title || movie.distribucionProduccion === "produccionDistribucion" 
+        (movie: Movie) =>
+          movie.distribucionProduccion === title ||
+          movie.distribucionProduccion === "produccionDistribucion"
       );
       setFetchedMovies(finalFilteredMovies);
     };
@@ -34,10 +38,13 @@ const PortfolioList = ({ title }: { title: string }) => {
         <div>
           <div className=" pl-4 ">
             <h3 className="text-3xl md:text-6xl  uppercase font-bold tracking-widest mb-6">
-              CATÁLOGO DE PROYECTOS{" "}
-              <span className="text-xl opacity-60 ml-2 tracking-normal">
+              {isES ? "CATÁLOGO DE PROYECTOS" : "Catalog of projects" }
+              {" "}
+              {isES ? <span className="text-xl opacity-60 ml-2 tracking-normal">
                 {title == "distribucion" ? "Distribución" : "Producción"}
-              </span>
+              </span> : <span className="text-xl opacity-60 ml-2 tracking-normal">
+                {title == "distribucion" ? "Distribution" : "Production"}
+              </span>}
             </h3>
           </div>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[4vmin]">
@@ -52,14 +59,13 @@ const PortfolioList = ({ title }: { title: string }) => {
                     src={urlFor(movie.poster).url()}
                     alt={`${movie.title} Poster`}
                     className="h-[350px]"
-                
                   />
                 </Link>
               );
             })}
           </div>
           <div className="mt-6 pb-6 px-3 md:w-[60%] mx-auto">
-            <FooterForm renta={false} lang="es" />
+            <FooterForm renta={false} lang={lang} />
           </div>
         </div>
       </div>
