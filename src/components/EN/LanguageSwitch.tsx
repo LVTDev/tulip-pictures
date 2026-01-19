@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 const LanguageSwitch = () => {
   const [pageLang, setPageLang] = useState<Lang>("es");
   const [expanded, setExpanded] = useState(false);
+  const [urlToUse, setUrlToUse] = useState("");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -16,6 +17,26 @@ const LanguageSwitch = () => {
       setPageLang("es");
     }
   }, [pathname]);
+
+  const links: Record<string, string> = {
+    "/": "/en",
+    "/about-us": "/en/about-us",
+    "/produccion": "/en/production",
+    "/produccion/portfolio": "/en/production/portfolio",
+    "/distribucion": "/en/distribution",
+    "/distribucion/portfolio": "/en/distribution/portfolio",
+    "/pelicula/estrenos": "/en/films/premieres",
+    "/renta": "/en/rentals",
+    // ENglish to spanish
+    "/en": "/",
+    "/en/about-us": "/about-us",
+    "/en/production": "/produccion",
+    "/en/production/portfolio": "/produccion/portfolio",
+    "/en/distribution": "/distribucion",
+    "/en/distribution/portfolio": "/distribucion/portfolio",
+    "/en/films/premieres": "/pelicula/estrenos",
+    "/en/rentals": "/renta",
+  };
 
   // Get the opposite language and its info
   const otherLang = pageLang === "es" ? "en" : "es";
@@ -43,7 +64,7 @@ const LanguageSwitch = () => {
     >
       {/* Active Language */}
       <div className={`${expanded && "mb-5"}`}>
-        <Link className="flex gap-2 " href={langInfo[pageLang].href}>
+        <Link className="flex gap-2 " href={links[pathname] || "/"}>
           <Image
             src={langInfo[pageLang].flag}
             width={18}
@@ -57,14 +78,17 @@ const LanguageSwitch = () => {
       {/* Show other language only when expanded */}
       {expanded && (
         <div className=" mt-2">
-          <Link className="flex gap-2" href={langInfo[otherLang].href}>
+          {/* <Link className="flex gap-2" href={langInfo[otherLang].href}> */}
+          <Link className="flex gap-2" href={links[pathname] || "/"}>
             <Image
               src={langInfo[otherLang].flag}
-               width={18}
-            height={12}
+              width={18}
+              height={12}
               alt={`flag ${otherLang}`}
             />
-            <p className="text-[10px] opacity-80">{langInfo[otherLang].label}</p>
+            <p className="text-[10px] opacity-80">
+              {langInfo[otherLang].label}
+            </p>
           </Link>
         </div>
       )}
