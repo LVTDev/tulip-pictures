@@ -13,10 +13,9 @@ import React from "react";
 type Fichaprops = { id: string; lang: string };
 const Ficha = async ({ id, lang }: Fichaprops) => {
   const isES = checkES(lang);
-  
 
   const result = await fetchSanityIndividualMovie("pelicula", id);
-  
+
   const pelicula: Movie = result[0];
   const enlacesImagenes =
     pelicula.imagenes && pelicula.imagenes.map((img) => urlFor(img).url());
@@ -34,7 +33,7 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
         </div>{" "}
         {pelicula.title && (
           <h1 className="uppercase font-bold text-5xl mb-4 text-center md:text-left">
-            {pelicula.title}
+            {isES ? pelicula.title : pelicula.titleENG || pelicula.title}
           </h1>
         )}
         <div className="mt-6 mx-auto">
@@ -63,9 +62,15 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
                   target="_blank"
                   className=" text-white uppercase font-bold text-center my-5"
                 >
-                  <div className="flex justify-center gap-3">
-                    {pelicula.teaser ? "Ver Teaser" : "Ver Tráiler"}
-                  </div>
+                  {isES ? (
+                    <div className="flex justify-center gap-3">
+                      {pelicula.teaser ? "Ver Teaser" : "Ver Tráiler"}
+                    </div>
+                  ) : (
+                    <div className="flex justify-center gap-3">
+                      {pelicula.teaser ? "Watch Teaser" : "Watch Trailer"}
+                    </div>
+                  )}
                 </a>
               </div>
             )}
@@ -84,7 +89,9 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
             <div>
               {pelicula.director && (
                 <div className="">
-                  <p className="uppercase opacity-60">Dirección </p>
+                  <p className="uppercase opacity-60">
+                    {isES ? "Dirección" : "Director"}{" "}
+                  </p>
                   <p className="font-bold md:text-lg">{pelicula.director}</p>
                 </div>
               )}
@@ -109,7 +116,10 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
             <div>
               {pelicula.year && (
                 <div className="">
-                  <p className="uppercase opacity-60">Año </p>
+                  <p className="uppercase opacity-60">
+                    {" "}
+                    {isES ? "Año" : "Year"}
+                  </p>
                   <p className="font-bold md:text-lg">{pelicula.year}</p>
                 </div>
               )}
@@ -117,7 +127,9 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
             <div>
               {pelicula.movieLength && (
                 <div className="">
-                  <p className="uppercase opacity-60">Duración </p>
+                  <p className="uppercase opacity-60">
+                    {isES ? "Duración" : "Duration"}{" "}
+                  </p>
                   <p className="font-bold md:text-lg">{pelicula.movieLength}</p>
                 </div>
               )}
@@ -128,7 +140,9 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
             <div>
               {pelicula.pais && (
                 <div className="">
-                  <p className="uppercase opacity-60">País</p>
+                  <p className="uppercase opacity-60">
+                    {isES ? "País" : "Country"}
+                  </p>
                   <p className="font-bold md:text-lg">{pelicula.pais}</p>
                 </div>
               )}
@@ -136,15 +150,24 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
             <div className="md:col-span-2">
               {pelicula.reconocimientos &&
                 pelicula.reconocimientos?.length > 0 && (
-                  <ReconocimentosList list={pelicula.reconocimientos} />
+                  <ReconocimentosList
+                    list={pelicula.reconocimientos}
+                    lang={lang}
+                  />
                 )}
             </div>
             {/* </div> */}
             <div className="md:col-span-3">
               {pelicula.description && (
                 <div>
-                  <p className="uppercase opacity-60 mt-4 ">Sinópsis</p>
-                  <p className="font-bold md:text-lg">{pelicula.description}</p>
+                  <p className="uppercase opacity-60 mt-4 ">
+                    {isES ? "Sinópsis" : "Synopsis"}
+                  </p>
+                  <p className="font-bold md:text-lg">
+                    {isES
+                      ? pelicula.description
+                      : pelicula.descriptionENG || pelicula.description}
+                  </p>
                 </div>
               )}
             </div>
@@ -166,7 +189,7 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
           </div>
         </div>
         <div className="mx-auto mt-7 pb-7">
-          <SubscribeForm lang="es" />
+          <SubscribeForm lang={lang} />
         </div>
       </div>
     </div>
