@@ -20,10 +20,8 @@ export async function generateMetadata(
 }
 export default async function PeliculaLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { id: string };
 }>) {
 
   return <div>{children}</div>;
