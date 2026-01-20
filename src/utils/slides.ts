@@ -1,6 +1,7 @@
 export const slidesEn = [
   {
-    slideBG: "/BACK_LA-VIDA-ES.jpg",
+    slideBG: "/lifeIs.jpg",
+    mobileBG:"/lifeIsMobile.jpg",
     textTop: "Life Is, 2025",
     textBottom: "Lorena Villarreal",
     slideTitle:
@@ -117,7 +118,8 @@ export const slidesEn = [
 ];
 export const slidesEs = [
   {
-    slideBG: "/BACK_LA-VIDA-ES.jpg",
+    slideBG: "/lifeIs.jpg",
+    mobileBG:"/lifeIsMobile.jpg",
     textTop: "La Vida Es, 2025",
     textBottom: "Lorena Villarreal",
     slideTitle:
