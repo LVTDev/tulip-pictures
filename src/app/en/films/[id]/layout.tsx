@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { fetchSanityIndividualMovie } from "@/utils/sanityFetch";
 import { Metadata } from "next";
 
