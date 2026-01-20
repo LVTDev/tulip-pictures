@@ -5,17 +5,14 @@ type Props = {
   params: { id: string };
 };
 
-export async function generateMetadata(
-  { params }: Props
-): Promise<Metadata> {
-    const {id} =   params
-  const result = await fetchSanityIndividualMovie("pelicula", id);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = params;
+  const idValue = id
+  const result = await fetchSanityIndividualMovie("pelicula", idValue);
 
   return {
-    title:`Pelicula | ${result[0].title}` ,
-    keywords: `${result[0].title} + ${result[0].director}`
-
-  
+    title: `Pelicula | ${result[0].title}`,
+    keywords: `${result[0].title} + ${result[0].director}`,
   };
 }
 export default async function PeliculaLayout({
@@ -23,6 +20,5 @@ export default async function PeliculaLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return <div>{children}</div>;
 }
