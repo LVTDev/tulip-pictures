@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Tulip Pictures",
   description:
     "Producimos y distribuimos cine con identidad. Desde 2018 hemos acompañado películas mexicanas e internacionales en salas, festivales y plataformas, diseñando estrategias a la medida de cada historia",
+  keywords: "Distribuidora de cine independiente en México",
 };
 
 export default function RootLayout({
