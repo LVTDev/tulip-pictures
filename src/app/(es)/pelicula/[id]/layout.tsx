@@ -8,7 +8,7 @@ type Props = {
 export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
-    const {id} =  await params
+    const {id} =   params
   const result = await fetchSanityIndividualMovie("pelicula", id);
 
   return {
