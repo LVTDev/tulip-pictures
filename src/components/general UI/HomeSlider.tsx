@@ -134,7 +134,7 @@ const slidesEn: Slides[] = [
     slideBG: "/rentaBG.jpg",
     mobileBG: "/Movil_RentaEQUIPO.jpg",
     slideTitle:
-      "https://cdn.sanity.io/images/yj63f9tw/production/2213c0e14fd2ac45bdb743fedd4824e27a137d1e-1829x134.png",
+      "https://cdn.sanity.io/images/yj63f9tw/production/a99211c0f9c5f0150534c9ca859be40704ce1190-1829x123.png",
     // textTop: "CÁMARA ALEXA 35",
     textBottom: (
       <div>
@@ -181,7 +181,7 @@ const slidesEn: Slides[] = [
      slideBG: "/rentaBG.jpg",
     mobileBG: "/Movil_RentaEQUIPO.jpg",
     slideTitle:
-      "https://cdn.sanity.io/images/yj63f9tw/production/2213c0e14fd2ac45bdb743fedd4824e27a137d1e-1829x134.png",
+      "https://cdn.sanity.io/images/yj63f9tw/production/a99211c0f9c5f0150534c9ca859be40704ce1190-1829x123.png",
     // textTop: "CÁMARA ALEXA 35",
     textBottom: (
       <div>
