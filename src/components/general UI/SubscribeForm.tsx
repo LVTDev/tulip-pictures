@@ -36,7 +36,7 @@ const SubscribeForm = ({ lang }: { lang: string }) => {
   const isES = checkES(lang);
   return (
     <div className=" max-w-[1200px] mx-auto text-black">
-      <p className="border-b border-black  py-2   text-xl md:text-3xl font-bold">
+      <p className="border-b border-black  pb-2   text-xl md:text-3xl font-bold">
         {" "}
         {isES ? "Suscríbete" : "Subscribe"}
       </p>

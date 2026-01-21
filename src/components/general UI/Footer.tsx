@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer className=" bg-black py-3 pt-4 text-white flex">
       <div className="md:flex w-[90vw] mx-auto justify-between items-center">
-        <div className="md:flex gap-2">
+        <div className="md:flex gap-2 max-md:w-3/4">
           {" "}
           <div className="text-black flex justify-between gap-2">
             <a href="https://www.instagram.com/tulippicturesmx/">
@@ -62,7 +62,7 @@ function Footer() {
           </Link>
         </div> */}
       </div>
-      <div>
+      <div className="max-md:w-1/4">
         <LanguageSwitch location="footer" />
       </div>
      

@@ -17,6 +17,36 @@ const LanguageSwitch = ({ location }: { location: "sidebar" | "footer" }) => {
       setPageLang("es");
     }
   }, [pathname]);
+   // Function to get the translated URL
+  const getTranslatedUrl = (currentPath: string): string => {
+    // Check if exact match exists in links
+    if (links[currentPath]) {
+      return links[currentPath];
+    }
+
+    // Handle dynamic routes for /pelicula/[slug]
+    if (currentPath.startsWith("/pelicula/") && !currentPath.includes("/en")) {
+      const slug = currentPath.replace("/pelicula/", "");
+      return `/en/films/${slug}`;
+    }
+
+    // Handle dynamic routes for /en/films/[slug]
+    if (currentPath.startsWith("/en/films/") && currentPath.includes("/en")) {
+      const slug = currentPath.replace("/en/films/", "");
+      return `/pelicula/${slug}`;
+    }
+
+    // Fallback: toggle /en prefix
+    if (currentPath.startsWith("/en")) {
+      return currentPath.replace("/en", "") || "/";
+    } else {
+      return `/en${currentPath}`;
+    }
+  };
+
+  useEffect(() => {
+    setUrlToUse(getTranslatedUrl(pathname));
+  }, [pathname]);
 
   const links: Record<string, string> = {
     "/": "/en",
@@ -54,7 +84,7 @@ const LanguageSwitch = ({ location }: { location: "sidebar" | "footer" }) => {
     <div>
       {location === "footer" && (
         <div className="mr-3">
-          <Link className="flex gap-2 " href={links[pathname] || "/"}>
+          <Link className="flex gap-2 " href={urlToUse}>
             <p className={`${pageLang === "en" ? "opacity-70" : "font-bold"}`}>
               ES
             </p>{" "}
@@ -66,7 +96,7 @@ const LanguageSwitch = ({ location }: { location: "sidebar" | "footer" }) => {
         </div>
       )}
       {location === "sidebar" &&    <div className="text-[12px] mt-4">
-          <Link className="" href={links[pathname] || "/"}>
+          <Link className="" href={urlToUse}>
             <p className={`${pageLang === "en" ? "opacity-90" : "text-[#e249a3]"} mb-2`}>
               Español
             </p>
