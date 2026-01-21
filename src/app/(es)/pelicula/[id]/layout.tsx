@@ -3,13 +3,13 @@ import { fetchSanityIndividualMovie } from "@/utils/sanityFetch";
 import { Metadata } from "next";
 
 type Props = {
-  params: { id: string };
+   params: Promise<{ id: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = params;
-  const idValue = id
-  const result = await fetchSanityIndividualMovie("pelicula", idValue);
+  const { id } = await params;
+  
+  const result = await fetchSanityIndividualMovie("pelicula", id);
 
   return {
     title: `Pelicula | ${result[0].title}`,
