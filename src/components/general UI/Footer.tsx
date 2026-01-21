@@ -63,7 +63,7 @@ function Footer() {
         </div> */}
       </div>
       <div>
-        <LanguageSwitch />
+        <LanguageSwitch location="footer" />
       </div>
      
     </footer>

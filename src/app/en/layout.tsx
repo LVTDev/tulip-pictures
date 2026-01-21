@@ -19,7 +19,7 @@ export default function RootLayout({
     <div>
       <div className="relative">
         <div className="flex min-h-[90vh]">
-          <HomeLogoBtn />
+          <HomeLogoBtn lang="en" />
           <SideMenu language="en" />
           <div className="flex-1">{children}</div>
         </div>

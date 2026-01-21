@@ -7,6 +7,7 @@ import { ChevronDown, Facebook, Instagram, Menu, Youtube } from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { checkES } from "@/utils/pageLang";
+import LanguageSwitch from "../EN/LanguageSwitch";
 
 const SideMenu = ({ language }: { language: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -237,6 +238,7 @@ const SideMenu = ({ language }: { language: string }) => {
                   </Link>
                 </ul>
               </nav>
+              <LanguageSwitch location="sidebar" />
             </div>
             <div className="flex flex-col gap-2 my-10 p-3 text-xs">
               <Link

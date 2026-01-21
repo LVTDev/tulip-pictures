@@ -35,23 +35,24 @@ const SubscribeForm = ({ lang }: { lang: string }) => {
   };
   const isES = checkES(lang);
   return (
-    <div className=" max-w-[1200px] mx-auto text-black bg-[#ededed]">
-      <p className="   py-2 px-3 text-2xl text-center font-bold">
+    <div className=" max-w-[1200px] mx-auto text-black">
+      <p className="border-b border-black  py-2   text-xl md:text-3xl font-bold">
         {" "}
         {isES ? "Suscríbete" : "Subscribe"}
       </p>
-      <form onSubmit={handleSubmit} className="text-black  p-5 ">
-        <p className="text-center">
-          {isES
-            ? "Entérate de nuestros estrenos y nuevas producciones."
-            : "Stay up-to-date on our premieres and new productions."}
-          <br />
+      <form onSubmit={handleSubmit} className="text-black  py-3 px-2 bg-[#ededed] mt-3">
+        <p className="text-sm">
+          <span className="font-bold pb-2 text-base">
+            {isES
+              ? "Entérate de nuestros estrenos y nuevas producciones."
+              : "Stay up-to-date on our premieres and new productions."}
+          </span>
           <br />
           {isES
             ? " Recibe ofertas especiales, invitaciones a premieres y nuestra cartelera directamente en tu correo."
             : "Receive special offers, premiere invitations, and our showtimes directly to your inbox."}
         </p>
-        <div className="mt-8 mb-5 mx-auto md:w-[60%] md:flex ">
+        <div className="mt-4 mb-2 md:w-[80%] md:flex ">
           <input
             className=" w-full p-3  placeholder:text-black bg-white"
             type="text"

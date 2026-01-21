@@ -15,7 +15,7 @@ const DistributionServices = ({ lang }: { lang: string }) => {
           <div className="md:max-w-[40%] md:ml-auto">
             <div className="mb-26 w-max ml-auto text-xs">
               <p>
-                <span>{isES ? "SORDA" : "DEAF"} </span>, 2025
+                <span>{isES ? "SORDA" : "DEAF"}</span>, 2025
               </p>
               <p>EVA LIBRTAD</p>
             </div>

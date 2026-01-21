@@ -78,85 +78,77 @@ const HomeHero = ({ lang }: { lang: string }) => {
 
       <div className="w-[90vw] mx-auto mt-20">
         <div className="md:flex gap-10">
-          <div className="md:w-2/5">
+          <div className="md:w-1/2">
             <SubscribeForm lang={lang} />
-            <div className="flex flex-col gap-2 mt-10 uppercase">
-              <Link className=" font-bold" href={"/avisoDePrivacidad"}>
-                {isES ? "AVISO DE PRIVACIDAD" : "PRIVACY POLICY"}
-              </Link>
-              <Link className="font-bold" href={"/terminos"}>
-                {isES ? "TÉRMINOS Y CONDICIONES" : "TERMS AND CONDITIONS"}
-              </Link>
-              <p className=" text-xs opacity-70">&copy; 2025 TULIP PICTURES</p>
-            </div>
+        
           </div>
-          <div className="mt-15 md:mt-0 md:w-3/5 ">
-            <p className="mb-4 uppercase text-center text-xl md:text-3xl font-bold">
+          <div className="mt-15 md:mt-0 md:w-1/2 ">
+            <p className="mb-6 text-xl md:text-3xl font-bold border-b border-black pb-2">
                 {isES ? "Los Ángeles - CDMX" : "Los Angeles - Mexico City"}
               
             </p>
             <div className="md:flex justify-between">
               <div className="md:w-1/2">
-                <p className="uppercase font-bold mb-5">
+                <p className=" font-bold mb-3">
                   {isES ? "Distribución" : "Distribution"}
                 </p>
 
-                <p className="text-sm mb-1">
+                <p className="text-[12px] lg:text-sm">
                   {isES
                     ? "Director de Distribución y Adquisiciones"
                     : "Director of Distribution and Acquisitions"}
                 </p>
-                <p className="text-sm mb-1 italic font-bold">
+                <p className="text-[12px] lg:text-sm italic font-bold">
                   Abraham González Ruiz
                 </p>
-                <p className="text-sm mb-6 italic">
+                <p className="text-[12px] lg:text-sm mb-3 italic">
                   abraham@tulip-pictures.com
                 </p>
 
-                <p className="text-sm mb-1">
+                <p className="text-[12px] lg:text-sm">
                   {isES
                     ? "Coordinador de Marketing y Comunicación"
                     : "Marketing and Communications Coordinator"}
                 </p>
-                <p className="text-sm italic font-bold">
+                <p className="text-[12px] lg:text-sm italic font-bold">
                   Javier Martinez Ramirez
                 </p>
-                <p className="text-sm italic mb-6">javier@tulip-pictures.com</p>
+                <p className="text-[12px] lg:text-sm italic mb-3">javier@tulip-pictures.com</p>
 
-                <p className="text-sm mb-1">
+                <p className="text-[12px] lg:text-sm">
                   {isES
                     ? "Coordinadora de Programación"
                     : "Programming Coordinator"}
                 </p>
-                <p className="text-sm italic font-bold">Jessica Rito Aguilar</p>
-                <p className="text-sm italic">jessica@tulip-pictures.com</p>
+                <p className="text-[12px] lg:text-sm italic font-bold">Jessica Rito Aguilar</p>
+                <p className="text-[12px] lg:text-sm italic">jessica@tulip-pictures.com</p>
               </div>
               <div className="md:w-1/2 mt-10 md:mt-0 md:text-right">
-                <p className="uppercase font-bold mb-5">
+                <p className=" font-bold mb-3">
                   {isES ? "Producción" : "Production"}
                 </p>
-                <p className="text-sm mb-1">
+                <p className="text-[12px] lg:text-sm">
                   {isES
                     ? "Directora de Producción y Desarrollo"
                     : "Director of Production and Development"}
                 </p>
-                <p className="text-sm mb-1 italic font-bold">Paloma Cabrera</p>
-                <p className="text-sm mb-6 italic">paloma@grupolvt.com</p>
-                <p className="text-sm mb-1">
+                <p className="text-[12px] lg:text-sm italic font-bold">Paloma Cabrera</p>
+                <p className="text-[12px] lg:text-sm mb-3 italic">paloma@grupolvt.com</p>
+                <p className="text-[12px] lg:text-sm">
                   {isES
                     ? "Coordinadora de Producción"
                     : "Production Coordinator"}
                 </p>
-                <p className="text-sm italic font-bold">Aranza Miranda</p>
-                <p className="text-sm italic mb-6">aranza@letswoohoo.com</p>
+                <p className="text-[12px] lg:text-sm italic font-bold">Aranza Miranda</p>
+                <p className="text-[12px] lg:text-sm italic mb-3">aranza@letswoohoo.com</p>
 
-                <p className="text-sm mb-1">
+                <p className="text-[12px] lg:text-sm">
                   {isES
                     ? "Coordinadora de Postproducción"
                     : "Post-Production Coordinator"}
                 </p>
-                <p className="text-sm italic font-bold">Lourdes Huerta</p>
-                <p className="text-sm italic">lulu@grupolvt.com</p>
+                <p className="text-[12px] lg:text-sm italic font-bold">Lourdes Huerta</p>
+                <p className="text-[12px] lg:text-sm italic">lulu@grupolvt.com</p>
               </div>
             </div>
           </div>

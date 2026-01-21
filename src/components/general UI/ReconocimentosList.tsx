@@ -13,7 +13,7 @@ const ReconocimentosList = ({
   const end = list.length;
   return (
     <div className="">
-      <p className="uppercase opacity-60">{lang === "es" ? "Reconocimientos" : "Awards"}</p>
+      <p className="uppercase opacity-60">{lang === "es" ? "Reconocimientos" : "Festivals & Awards"}</p>
       <div>
         {list &&
           end < 11 &&
