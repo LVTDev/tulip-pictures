@@ -27,7 +27,7 @@ const isES = checkES(lang)
       <div className="max-w-[90vw] pt-8 mx-auto">
         <div>
             <div className=" pl-4 ">
-              <h3 className="text-3xl md:text-6xl  uppercase font-bold tracking-widest mb-6">{isES ? "Próximos Estrenos" : "New Releases"}</h3>
+              <h3 className="text-3xl md:text-6xl  uppercase font-bold tracking-widest mb-6">{isES ? "Próximos Estrenos" : "Releases"}</h3>
        
             </div>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[4vmin]">

@@ -188,7 +188,7 @@ const SideMenu = ({ language }: { language: string }) => {
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
-                            <p> {`${isES() ? "Catálogo" : "Catalog"}`}</p>
+                            <p> {`${isES() ? "Catálogo" : "Films"}`}</p>
                           </div>
                         </div>
                       </Link>
