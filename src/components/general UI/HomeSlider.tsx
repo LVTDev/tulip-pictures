@@ -259,12 +259,15 @@ const slidesEs = [
     mobileBG: "/Movil_RentaEQUIPO.jpg",
     slideTitle: "/renta de equipo.png",
     // textTop: "CÁMARA ALEXA 35",
-    // textBottom: (
-    //   <p className="italic">
-    //     + PRODUCTION SET <br />
-    //     nancy@letswoohoo.com
-    //   </p>
-    // ),
+   textBottom: (
+      <div>
+        <p className="">
+          <ArrowRight className="ml-auto  mb-1 inline"  size={18}/>Contáctanos en <strong>nancy@letswoohoo.com</strong>{" "}
+          <br />
+          o completa el formulario.
+        </p>
+      </div>
+    ),
     link: "/renta",
   },
   {
@@ -298,9 +301,19 @@ const slidesEs = [
   },
 
   {
-    slideBG: "/rentaBG.jpg",
-    slideTitle: "/renta de equipo.png",
+   slideBG: "/rentaBG.jpg",
     mobileBG: "/Movil_RentaEQUIPO.jpg",
+    slideTitle: "/renta de equipo.png",
+    // textTop: "CÁMARA ALEXA 35",
+   textBottom: (
+      <div>
+        <p className="">
+          <ArrowRight className="ml-auto  mb-1 inline"  size={18}/>Contáctanos en <strong>nancy@letswoohoo.com</strong>{" "}
+          <br />
+          o completa el formulario.
+        </p>
+      </div>
+    ),
     link: "/renta",
   },
   {
