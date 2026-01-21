@@ -47,7 +47,7 @@ function Footer() {
           <div className="hidden md:block">
             |
           </div>
-          <p className="font-bold text-sm w-max mx-auto md:mx-0">@TULIPPICTURESMX</p>
+          <p className="font-bold text-sm w-max mt-2 md:mt-0 md:mx-0">@TULIPPICTURESMX</p>
         </div>
         {/* <div className=" md:mx-0 w-max mx-auto">
           <Link href="/" className=" relative">
