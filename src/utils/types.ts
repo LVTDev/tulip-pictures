@@ -12,6 +12,7 @@ export type Movie = {
   director: string;
   movieLength: string;
   pais: string;
+  paisENG?: string;
   poster: { _type: string; alt: string; asset: [] };
   publishedAt: string;
   slug: { _type: "slug"; current: "bird" };

@@ -64,6 +64,10 @@ export const movieType = defineType({
       type: "string",
     }),
     defineField({
+      name: "paisENG",
+      type: "string",
+    }),
+    defineField({
       name: "movieLength",
       type: "string",
     }),

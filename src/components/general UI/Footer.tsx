@@ -9,9 +9,9 @@ function Footer() {
   return (
     <footer className=" bg-black py-3 pt-4 text-white flex">
       <div className="md:flex w-[90vw] mx-auto justify-between items-center">
-        <div className="md:flex gap-2 max-md:w-3/4">
+        <div className="md:flex gap-2 max-md:w-3/4 pl-2 md:pl-0">
           {" "}
-          <div className="text-black flex justify-between gap-2">
+          <div className="text-black flex justify-between gap-2 ">
             <a href="https://www.instagram.com/tulippicturesmx/">
               <Instagram color="white" />
             </a>

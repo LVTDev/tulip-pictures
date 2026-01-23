@@ -64,6 +64,12 @@ const HomeSlider = ({ lang }: { lang: string }) => {
                     />
                   )}
                 </div>
+                {
+                  slide.laurel1 && <Image alt="premio" width={763 / 2} height={546 / 2} src={slide.laurel1} className="absolute w-30 hidden md:block right-5 top-[30%]"/>
+                }
+                {
+                  slide.laurel2 && <Image alt="premio" width={763 / 2} height={546 / 2} src={slide.laurel2} className="absolute w-30 hidden md:block right-5 bottom-[35%]"/>
+                }
               </Link>
             </div>
           </div>
@@ -80,16 +86,20 @@ type Slides = {
   textBottom?: string | React.ReactNode;
   link: string;
   mobileBG?: string;
+  laurel1?: string;
+  laurel2?: string;
 };
 const slidesEn: Slides[] = [
   {
-    slideBG: "/lifeIs.jpg",
+    slideBG: "/lifeISS.jpg",
     mobileBG: "/lifeIsMobile.jpg",
     textTop: "Life Is, 2025",
     textBottom: "Lorena Villarreal",
     slideTitle:
       "https://cdn.sanity.io/images/yj63f9tw/production/2b0c3af3343736884611535a3d287fcf9d9cf9a7-1417x135.png",
     link: "en/films/premieres",
+    laurel1: "/goteborg.png",
+    laurel2: "/palma.png",
   },
   {
     slideBG: "/BACKUnFantasma.jpg",
@@ -139,8 +149,8 @@ const slidesEn: Slides[] = [
     textBottom: (
       <div>
         <p className="">
-          <ArrowRight className="ml-auto  mb-1 inline"  size={18}/> Contact us at <strong>nancy@letswoohoo.com</strong>{" "}
-          <br />
+          <ArrowRight className="ml-auto  mb-1 inline" size={18} /> Contact us
+          at <strong>nancy@letswoohoo.com</strong> <br />
           or complete the inquiry form
         </p>
       </div>
@@ -178,7 +188,7 @@ const slidesEn: Slides[] = [
   },
 
   {
-     slideBG: "/rentaBG.jpg",
+    slideBG: "/rentaBG.jpg",
     mobileBG: "/Movil_RentaEQUIPO.jpg",
     slideTitle:
       "https://cdn.sanity.io/images/yj63f9tw/production/a99211c0f9c5f0150534c9ca859be40704ce1190-1829x123.png",
@@ -186,8 +196,8 @@ const slidesEn: Slides[] = [
     textBottom: (
       <div>
         <p className="">
-          <ArrowRight className="ml-auto  mb-1 inline"  size={18}/> Contact us at <strong>nancy@letswoohoo.com</strong>{" "}
-          <br />
+          <ArrowRight className="ml-auto  mb-1 inline" size={18} /> Contact us
+          at <strong>nancy@letswoohoo.com</strong> <br />
           or complete the inquiry form
         </p>
       </div>
@@ -207,13 +217,15 @@ const slidesEn: Slides[] = [
 ];
 const slidesEs = [
   {
-    slideBG: "/lifeIs.jpg",
+    slideBG: "/lifeISS.jpg",
     mobileBG: "/lifeIsMobile.jpg",
     textTop: "La Vida Es, 2025",
     textBottom: "Lorena Villarreal",
     slideTitle:
       "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png",
     link: "/pelicula/estrenos",
+    laurel1: "/goteborg.png",
+    laurel2: "/palma.png",
   },
   {
     slideBG: "/BACKUnFantasma.jpg",
@@ -259,12 +271,12 @@ const slidesEs = [
     mobileBG: "/Movil_RentaEQUIPO.jpg",
     slideTitle: "/renta de equipo.png",
     // textTop: "CÁMARA ALEXA 35",
-   textBottom: (
+    textBottom: (
       <div>
         <p className="">
-          <ArrowRight className="ml-auto  mb-1 inline"  size={18}/>Contáctanos en <strong>nancy@letswoohoo.com</strong>{" "}
-          <br />
-          o completa el formulario.
+          <ArrowRight className="ml-auto  mb-1 inline" size={18} />
+          Contáctanos en <strong>nancy@letswoohoo.com</strong> <br />o completa
+          el formulario.
         </p>
       </div>
     ),
@@ -301,16 +313,16 @@ const slidesEs = [
   },
 
   {
-   slideBG: "/rentaBG.jpg",
+    slideBG: "/rentaBG.jpg",
     mobileBG: "/Movil_RentaEQUIPO.jpg",
     slideTitle: "/renta de equipo.png",
     // textTop: "CÁMARA ALEXA 35",
-   textBottom: (
+    textBottom: (
       <div>
         <p className="">
-          <ArrowRight className="ml-auto  mb-1 inline"  size={18}/>Contáctanos en <strong>nancy@letswoohoo.com</strong>{" "}
-          <br />
-          o completa el formulario.
+          <ArrowRight className="ml-auto  mb-1 inline" size={18} />
+          Contáctanos en <strong>nancy@letswoohoo.com</strong> <br />o completa
+          el formulario.
         </p>
       </div>
     ),

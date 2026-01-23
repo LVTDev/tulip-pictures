@@ -26,7 +26,7 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
     return <Loading />;
   }
   return (
-    <div className="w-screen bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')]">
+    <div className="w-screen h-full bg-no-repeat bg-cover bg-left bg-[url('/quienesSomosBack2.png')]">
       <div className="w-[90vw] mx-auto pt-5">
         <div className="bg-[#30383a] text-white px-2 py-3 w-max mb-4">
           <FichaBackButton lang={lang} />
@@ -143,7 +143,7 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
                   <p className="uppercase opacity-60">
                     {isES ? "País" : "Country"}
                   </p>
-                  <p className="font-bold md:text-lg">{pelicula.pais}</p>
+                  <p className="font-bold md:text-lg">{isES ? pelicula.pais : pelicula.paisENG || pelicula.pais}</p>
                 </div>
               )}
             </div>
@@ -151,7 +151,8 @@ const Ficha = async ({ id, lang }: Fichaprops) => {
               {pelicula.reconocimientos &&
                 pelicula.reconocimientos?.length > 0 && (
                   <ReconocimentosList
-                    list={pelicula.reconocimientos}
+                    list={lang === "es" ? pelicula.reconocimientos : pelicula.reconocimientosENG || pelicula.reconocimientos}
+                    
                     lang={lang}
                   />
                 )}
