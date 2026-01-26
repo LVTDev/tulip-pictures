@@ -247,7 +247,7 @@ const SideMenu = ({ language }: { language: string }) => {
               >
                 <p> {`${isES() ? "Aviso de Privacidad" : "Privacy Policy"}`}</p>
               </Link>
-              <Link className="text-[#8aaf69]" href={"/terminos"}>
+              <Link className="text-[#8aaf69]" href={`${isES() ? "/terminos" : "/en/termsAndConditions"}`}>
                 <p>
                   {" "}
                   {`${isES() ? "Términos y Condiciones de Uso" : "Terms and Conditions"}`}

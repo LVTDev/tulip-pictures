@@ -57,6 +57,8 @@ const LanguageSwitch = ({ location }: { location: "sidebar" | "footer" }) => {
     "/distribucion/portfolio": "/en/distribution/portfolio",
     "/pelicula/estrenos": "/en/films/premieres",
     "/renta": "/en/rentals",
+    "/terminos":"/en/termsAndConditions",
+    "/avisoDePrivacidad": "/en/privacyPolicy",
     // ENglish to spanish
     "/en": "/",
     "/en/about-us": "/about-us",
@@ -66,6 +68,7 @@ const LanguageSwitch = ({ location }: { location: "sidebar" | "footer" }) => {
     "/en/distribution/portfolio": "/distribucion/portfolio",
     "/en/films/premieres": "/pelicula/estrenos",
     "/en/rentals": "/renta",
+    "/en/termsAndConditions":"/terminos"
   };
 
   // Get the opposite language and its info
