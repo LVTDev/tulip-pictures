@@ -53,13 +53,13 @@ const HomeSlider = ({ lang }: { lang: string }) => {
                   <p className="text-right font-bold text-base md:text-xl opacity-90 mr-4">
                     {slide.textTop}
                   </p>
-                  <div className="text-right font-bold text-base md:text-xl opacity-90 mr-4">
+                  <div className="text-right font-bold text-base md:text-xl opacity-90 mr-4 mb-5">
                     {slide.textBottom}
                   </div>
                   {slide.slideTitle && (
                     <img
                       src={`${slide.slideTitle}`}
-                      className="mx-auto"
+                      className="mx-auto md:mx-0"
                       alt="Header"
                     />
                   )}
@@ -150,7 +150,7 @@ const slidesEn: Slides[] = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} /> Contact us
-          at <strong>nancy@letswoohoo.com</strong> <br />
+          at <strong>hello@letswoohoo.com</strong> <br />
           or complete the inquiry form
         </p>
       </div>
@@ -197,7 +197,7 @@ const slidesEn: Slides[] = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} /> Contact us
-          at <strong>nancy@letswoohoo.com</strong> <br />
+          at <strong>hello@letswoohoo.com</strong> <br />
           or complete the inquiry form
         </p>
       </div>
@@ -275,8 +275,8 @@ const slidesEs = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} />
-          Contáctanos en <strong>nancy@letswoohoo.com</strong> <br />o completa
-          el formulario.
+          Contáctanos en <strong>hello@letswoohoo.com</strong> <br />o completa
+          el formulario
         </p>
       </div>
     ),
@@ -321,8 +321,8 @@ const slidesEs = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} />
-          Contáctanos en <strong>nancy@letswoohoo.com</strong> <br />o completa
-          el formulario.
+          Contáctanos en <strong>hello@letswoohoo.com</strong> <br />o completa
+          el formulario
         </p>
       </div>
     ),

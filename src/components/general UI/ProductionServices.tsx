@@ -14,9 +14,9 @@ const ProductionServices = ({ lang }: { lang: string }) => {
           <div className="md:max-w-[40%] md:ml-auto">
             <div className="mb-26 w-max ml-auto text-xs">
               <p>
-                <span>{isES ? "EL PRÓFUGO" : "THE INTRUDER"} </span>, 2020
+                <span>{isES ? "El Prófugo" : "The Intruder"} </span>, 2020
               </p>
-              <p>NATALIA META</p>
+              <p>Natalia Meta</p>
             </div>
             <h1 className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest ">
               {isES ? "PRODUCCIÓN" : "PRODUCTION"}
@@ -140,9 +140,9 @@ const ProductionServices = ({ lang }: { lang: string }) => {
         </div>
         <div className="absolute top-[20px] md:top-[60px] right-[5vw] w-max ml-auto text-xs">
           <p>
-            <span>MEMORIA</span>, 2021
+            <span>Memoria</span>, 2021
           </p>
-          <p className="uppercase">Apichatpong Weerasethakul</p>
+          <p className="">Apichatpong Weerasethakul</p>
         </div>
         <div
           onClick={() => setOpenForm((prev) => !prev)}

@@ -15,9 +15,9 @@ const DistributionServices = ({ lang }: { lang: string }) => {
           <div className="md:max-w-[40%] md:ml-auto">
             <div className="mb-26 w-max ml-auto text-xs">
               <p>
-                <span>{isES ? "SORDA" : "DEAF"}</span>, 2025
+                <span>{isES ? "Sorda" : "Dead"}</span>, 2025
               </p>
-              <p>EVA LIBRTAD</p>
+              <p>Eva Libertad</p>
             </div>
             <h1 className="text-3xl  md:text-5xl mb-8 font-bold tracking-widest">
               {isES ? "DISTRIBUCIÓN" : "DISTRIBUTION"}
@@ -126,9 +126,9 @@ const DistributionServices = ({ lang }: { lang: string }) => {
         )}
         <div className="absolute top-[20px] md:top-[60px] right-[5vw] w-max ml-auto text-xs">
           <p>
-            <span>HACHIKO</span>, 2024
+            <span>Hachiko</span>, 2024
           </p>
-          <p className="uppercase">ANG XU</p>
+          <p className="uppercase">Ang Xu</p>
         </div>
         <div
           onClick={() => setOpenForm((prev) => !prev)}

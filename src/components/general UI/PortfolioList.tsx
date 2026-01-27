@@ -38,7 +38,7 @@ const PortfolioList = ({ title, lang }: { title: string; lang: string }) => {
         <div>
           <div className=" pl-4 ">
             <h3 className="text-3xl md:text-6xl  uppercase font-bold tracking-widest mb-6">
-              {isES ? "CATÁLOGO DE PROYECTOS" : "Catalog of projects"}{" "}
+              {isES ? "CATÁLOGO DE PROYECTOS" : "projects"}{" "}
               {isES ? (
                 <span className="text-xl opacity-60 ml-2 tracking-normal">
                   {title == "distribucion" ? "Distribución" : "Producción"}

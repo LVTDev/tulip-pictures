@@ -93,10 +93,10 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   {isES ? "Distribución" : "Distribution"}
                 </p>
 
-                <p className="text-[12px] lg:text-sm">
+                <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
-                    ? "Director de Distribución y Adquisiciones"
-                    : "Director of Distribution and Acquisitions"}
+                    ? "Director de Distribución \n y Adquisiciones"
+                    : "Director of Distribution \n and Acquisitions"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">
                   Abraham González Ruiz
@@ -127,10 +127,10 @@ const HomeHero = ({ lang }: { lang: string }) => {
                 <p className=" font-bold mb-3">
                   {isES ? "Producción" : "Production"}
                 </p>
-                <p className="text-[12px] lg:text-sm">
+                <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
-                    ? "Directora de Producción y Desarrollo"
-                    : "Director of Production and Development"}
+                    ? "Directora de Producción \n y Desarrollo"
+                    : "Director of Production \n and Development"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">Paloma Cabrera</p>
                 <p className="text-[12px] lg:text-sm mb-3 italic">paloma@grupolvt.com</p>
