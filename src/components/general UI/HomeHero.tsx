@@ -105,9 +105,9 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   abraham@tulip-pictures.com
                 </p>
 
-                <p className="text-[12px] lg:text-sm">
+                <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
-                    ? "Coordinador de Marketing y Comunicación"
+                    ? "Coordinador de Marketing \ny Comunicación"
                     : "Marketing and Communications Coordinator"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">
@@ -134,12 +134,12 @@ const HomeHero = ({ lang }: { lang: string }) => {
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">Paloma Cabrera</p>
                 <p className="text-[12px] lg:text-sm mb-3 italic">paloma@grupolvt.com</p>
-                <p className="text-[12px] lg:text-sm">
+                <p className="text-[12px] lg:text-sm min-h-10">
                   {isES
                     ? "Coordinadora de Producción"
                     : "Production Coordinator"}
                 </p>
-                <p className="text-[12px] lg:text-sm italic font-bold">Aranza Miranda</p>
+                <p className="text-[12px] lg:text-sm italic font-bold ">Aranza Miranda</p>
                 <p className="text-[12px] lg:text-sm italic mb-3">aranza@letswoohoo.com</p>
 
                 <p className="text-[12px] lg:text-sm">
