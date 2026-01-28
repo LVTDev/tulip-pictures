@@ -108,14 +108,14 @@ const HomeHero = ({ lang }: { lang: string }) => {
                 <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
                     ? "Coordinador de Marketing \ny Comunicación"
-                    : "Marketing and Communications Coordinator"}
+                    : "Marketing and Communications \nCoordinator"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">
                   Javier Martinez Ramirez
                 </p>
                 <p className="text-[12px] lg:text-sm italic mb-3">javier@tulip-pictures.com</p>
 
-                <p className="text-[12px] lg:text-sm">
+                <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
                     ? "Coordinadora de Programación"
                     : "Programming Coordinator"}
@@ -134,10 +134,10 @@ const HomeHero = ({ lang }: { lang: string }) => {
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">Paloma Cabrera</p>
                 <p className="text-[12px] lg:text-sm mb-3 italic">paloma@grupolvt.com</p>
-                <p className="text-[12px] lg:text-sm min-h-10">
+                <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
-                    ? "Coordinadora de Producción"
-                    : "Production Coordinator"}
+                    ? "Coordinadora \nde Producción"
+                    : "Production \nCoordinator"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold ">Aranza Miranda</p>
                 <p className="text-[12px] lg:text-sm italic mb-3">aranza@letswoohoo.com</p>
