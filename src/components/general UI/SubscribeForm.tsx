@@ -1,7 +1,8 @@
 "use client";
+import { checkES } from "@/utils/pageLang";
 import React, { useState } from "react";
 
-const SubscribeForm = () => {
+const SubscribeForm = ({ lang }: { lang: string }) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -17,7 +18,7 @@ const SubscribeForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({email}),
+        body: JSON.stringify({ email }),
       });
 
       if (res.ok) {
@@ -32,34 +33,46 @@ const SubscribeForm = () => {
       setLoading(false);
     }
   };
+  const isES = checkES(lang);
   return (
-    <div className="w-3/5 max-w-[1200px] mx-auto text-black bg-[#ededed]">
-      <p className="   py-2 px-3 text-2xl text-center font-bold">Suscríbete</p>
-      <form onSubmit={handleSubmit} className="text-black  p-5 ">
-        <p className="text-center">
-          Entérate de nuestros estrenos y nuevas producciones.
+    <div className=" max-w-[1200px] mx-auto text-black">
+      <p className="border-b border-black  pb-2   text-xl md:text-3xl font-bold">
+        {" "}
+        {isES ? "Suscríbete" : "Subscribe"}
+      </p>
+      <form onSubmit={handleSubmit} className="text-black  py-3 px-2 bg-[#ededed] mt-3">
+        <p className="text-sm">
+          <span className="font-bold pb-2 text-base">
+            {isES
+              ? "Entérate de nuestros estrenos y nuevas producciones."
+              : "Stay up-to-date on our premieres and new productions."}
+          </span>
           <br />
-          <br />
-          Recibe ofertas especiales, invitaciones a premieres y nuestra
-          cartelera directamente en tu correo.
+          {isES
+            ? " Recibe ofertas especiales, invitaciones a premieres y nuestra cartelera directamente en tu correo."
+            : "Receive special offers, premiere invitations, and our showtimes directly to your inbox."}
         </p>
-        <div className="mt-8 mb-5 mx-auto md:w-[60%] md:flex ">
+        <div className="mt-4 mb-2 md:w-[80%] md:flex ">
           <input
             className=" w-full p-3  placeholder:text-black bg-white"
             type="text"
             placeholder="E-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-          />
-          <button type="submit" disabled={loading || success} className="bg-black py-2 px-4 text-white cursor-pointer disabled:cursor-not-allowed">
-             {loading ? "Enviando..." : "Enviar"}
+            />
+          <button
+            type="submit"
+            disabled={loading || success}
+            className="bg-black py-2 px-4 text-white cursor-pointer disabled:cursor-not-allowed"
+            >
+            {loading && isES && "Enviando..."}
+            {loading && !isES && "Sending..."}
+            {!loading && isES && "Enviar"}
+            {!loading && !isES && "Send"}
+            
           </button>
         </div>
-           {success && (
-            <p className="text-black font-medium">
-              Message Enviado!
-            </p>
-          )}
+        {success && <p className="text-black font-medium">Message Enviado!</p>}
       </form>
     </div>
   );

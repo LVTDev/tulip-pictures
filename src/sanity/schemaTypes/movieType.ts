@@ -12,6 +12,10 @@ export const movieType = defineType({
       type: "string",
     }),
     defineField({
+      name: "titleENG",
+      type: "string",
+    }),
+    defineField({
       name: "slug",
       type: "slug",
       options: {
@@ -38,6 +42,10 @@ export const movieType = defineType({
       type: "string",
     }),
     defineField({
+      name: "descriptionENG",
+      type: "string",
+    }),
+    defineField({
       name: "director",
       type: "string",
     }),
@@ -53,6 +61,10 @@ export const movieType = defineType({
     }),
     defineField({
       name: "pais",
+      type: "string",
+    }),
+    defineField({
+      name: "paisENG",
       type: "string",
     }),
     defineField({
@@ -133,6 +145,22 @@ export const movieType = defineType({
     defineField({
       name: "reconocimientos",
       title: "Reconocimientos",
+      type: "array",
+      // of: [{ type: "image" }],
+
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "festival", title: "Festival", type: "string" },
+            { name: "premio", title: "Premio", type: "string" },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "reconocimientosENG",
+      title: "ReconocimientosENG",
       type: "array",
       // of: [{ type: "image" }],
 

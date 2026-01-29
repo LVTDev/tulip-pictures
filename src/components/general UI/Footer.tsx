@@ -1,15 +1,17 @@
 // import Image from "next/image";
 // import Link from "next/link";
+import Link from "next/link";
 import React from "react";
 import { Facebook, Instagram, Youtube } from "react-feather";
+import LanguageSwitch from "../EN/LanguageSwitch";
 
 function Footer() {
   return (
-    <footer className=" bg-black py-3 pt-4 text-white">
+    <footer className=" bg-black py-3 pt-4 text-white flex">
       <div className="md:flex w-[90vw] mx-auto justify-between items-center">
-        <div className="md:flex gap-2">
+        <div className="md:flex gap-2 max-md:w-3/4 pl-2 md:pl-0">
           {" "}
-          <div className="text-black flex justify-between gap-2">
+          <div className="text-black flex justify-between gap-2 ">
             <a href="https://www.instagram.com/tulippicturesmx/">
               <Instagram color="white" />
             </a>
@@ -45,7 +47,7 @@ function Footer() {
           <div className="hidden md:block">
             |
           </div>
-          <p className="font-bold text-sm w-max mx-auto md:mx-0">@TULIPPICTURESMX</p>
+          <p className="font-bold text-sm w-max mt-2 md:mt-0 md:mx-0">@TULIPPICTURESMX</p>
         </div>
         {/* <div className=" md:mx-0 w-max mx-auto">
           <Link href="/" className=" relative">
@@ -60,6 +62,10 @@ function Footer() {
           </Link>
         </div> */}
       </div>
+      <div className="max-md:w-1/4">
+        <LanguageSwitch location="footer" />
+      </div>
+     
     </footer>
   );
 }

@@ -3,17 +3,19 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import React from "react";
 import { ArrowLeft } from "react-feather";
+import { checkES } from "@/utils/pageLang";
 
-const FichaBackButton = () => {
+const FichaBackButton = ({lang}:{lang: string}) => {
+  const isES = checkES(lang)
   const router = useRouter();
   return (
     <Link
-      href="/produccion/portfolio"
+      href="#"
       className="flex items-center gap-3"
       onClick={() => router.back()}
     >
       <ArrowLeft />
-      Regresar
+      {isES ? "Regresar" : "Return"}
     </Link>
   );
 };

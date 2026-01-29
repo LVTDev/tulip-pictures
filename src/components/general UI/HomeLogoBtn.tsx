@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const HomeLogoBtn = () => {
+const HomeLogoBtn = ({lang}: {lang: string}) => {
   return (
     <div className="">
-        <div className=" md:mx-0 w-max mx-auto z-1000 absolute top-4 right-4">
-          <Link href={"/"} className=" relative">
+        <div className=" md:mx-0 w-max mx-auto z-1000 fixed top-6 right-4">
+          <Link href={lang === "es" ? "/" : "/en"} className=" relative">
             <Image
               src={"/TULIP_Isotipo.png"}
               height={385 / 13}

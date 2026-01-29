@@ -4,9 +4,10 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-const LanguageSwitch = () => {
+const LanguageSwitch = ({ location }: { location: "sidebar" | "footer" }) => {
   const [pageLang, setPageLang] = useState<Lang>("es");
   const [expanded, setExpanded] = useState(false);
+  const [urlToUse, setUrlToUse] = useState("");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -16,60 +17,116 @@ const LanguageSwitch = () => {
       setPageLang("es");
     }
   }, [pathname]);
+   // Function to get the translated URL
+  const getTranslatedUrl = (currentPath: string): string => {
+    // Check if exact match exists in links
+    if (links[currentPath]) {
+      return links[currentPath];
+    }
+
+    // Handle dynamic routes for /pelicula/[slug]
+    if (currentPath.startsWith("/pelicula/") && !currentPath.includes("/en")) {
+      const slug = currentPath.replace("/pelicula/", "");
+      return `/en/films/${slug}`;
+    }
+
+    // Handle dynamic routes for /en/films/[slug]
+    if (currentPath.startsWith("/en/films/") && currentPath.includes("/en")) {
+      const slug = currentPath.replace("/en/films/", "");
+      return `/pelicula/${slug}`;
+    }
+
+    // Fallback: toggle /en prefix
+    if (currentPath.startsWith("/en")) {
+      return currentPath.replace("/en", "") || "/";
+    } else {
+      return `/en${currentPath}`;
+    }
+  };
+
+  useEffect(() => {
+    setUrlToUse(getTranslatedUrl(pathname));
+  }, [pathname]);
+
+  const links: Record<string, string> = {
+    "/": "/en",
+    "/about-us": "/en/about-us",
+    "/produccion": "/en/production",
+    "/produccion/portfolio": "/en/production/portfolio",
+    "/distribucion": "/en/distribution",
+    "/distribucion/portfolio": "/en/distribution/portfolio",
+    "/pelicula/estrenos": "/en/films/premieres",
+    "/renta": "/en/rentals",
+    "/terminos":"/en/termsAndConditions",
+    "/avisoDePrivacidad": "/en/privacyPolicy",
+    // ENglish to spanish
+    "/en": "/",
+    "/en/about-us": "/about-us",
+    "/en/production": "/produccion",
+    "/en/production/portfolio": "/produccion/portfolio",
+    "/en/distribution": "/distribucion",
+    "/en/distribution/portfolio": "/distribucion/portfolio",
+    "/en/films/premieres": "/pelicula/estrenos",
+    "/en/rentals": "/renta",
+    "/en/termsAndConditions":"/terminos"
+  };
 
   // Get the opposite language and its info
   const otherLang = pageLang === "es" ? "en" : "es";
   const langInfo: LangInfo = {
-    es: { label: "ES_MX", flag: "/es_MX.png", href: "/" },
-    en: { label: "EN_US", flag: "/en_US.png", href: "/en" },
+    es: { label: "Español", flag: "/es_MX.png", href: "/" },
+    en: { label: "English", flag: "/en_US.png", href: "/en" },
   };
   type LangInfo = {
     es: { label: string; flag: string; href: string };
     en: { label: string; flag: string; href: string };
   };
   type Lang = "es" | "en";
-  const toggleExpand = () => {
-    setExpanded((prev) => !prev);
-  };
 
   return (
-    <div
-      className={`fixed bottom-0 right-[10%] bg-[#1E1E1E] rounded-t-[8px] z-[999] w-[80px] h-14 pt-[6px] px-[9px] pb-[9px] flex flex-col items-center justify-center transition-all duration-300 ${
-        expanded ? "h-28" : "h-14"
-      }`}
-      onClick={toggleExpand} // for mobile/touch toggle
-      onMouseEnter={() => setExpanded(true)} // desktop hover
-      onMouseLeave={() => setExpanded(false)}
-    >
-      {/* Active Language */}
-      <div className={`${expanded && "mb-5"}`}>
-        <Link className="flex gap-2 " href={langInfo[pageLang].href}>
-          <Image
-            src={langInfo[pageLang].flag}
-            width={18}
-            height={12}
-            alt={`flag ${pageLang}`}
-          />
-          <p className="text-[10px] opacity-80">{langInfo[pageLang].label}</p>
-        </Link>
-      </div>
-
-      {/* Show other language only when expanded */}
-      {expanded && (
-        <div className=" mt-2">
-          <Link className="flex gap-2" href={langInfo[otherLang].href}>
-            <Image
-              src={langInfo[otherLang].flag}
-               width={18}
-            height={12}
-              alt={`flag ${otherLang}`}
-            />
-            <p className="text-[10px] opacity-80">{langInfo[otherLang].label}</p>
+    <div>
+      {location === "footer" && (
+        <div className="mr-3">
+          <Link className="flex gap-2 " href={urlToUse}>
+            <p className={`${pageLang === "en" ? "opacity-70" : "font-bold"}`}>
+              ES
+            </p>{" "}
+            |{" "}
+            <p className={`${pageLang === "es" ? "opacity-70" : "font-bold"}`}>
+              EN
+            </p>
           </Link>
         </div>
       )}
+      {location === "sidebar" &&    <div className="text-[12px] mt-4">
+          <Link className="" href={urlToUse}>
+            <p className={`${pageLang === "en" ? "opacity-90" : "text-[#e249a3]"} mb-2`}>
+              Español
+            </p>
+         
+            <p className={`${pageLang === "es" ? "opacity-90" : "text-[#e249a3]"}`}>
+              English
+            </p>
+          </Link>
+        </div>}
     </div>
   );
+  // return (
+  //   <div>
+  //     <div>
+  //       <Link className="flex gap-2 " href={links[pathname] || "/"}>
+  //         <p className=" opacity-80">{langInfo[pageLang].label}</p>
+  //       </Link>
+  //     </div>
+
+  //     <div className=" mt-2">
+  //       {/* <Link className="flex gap-2" href={langInfo[otherLang].href}> */}
+  //       <Link className="flex gap-2" href={links[pathname] || "/"}>
+  //         <p className="">{langInfo[otherLang].label}</p>
+  //       </Link>
+  //     </div>
+  //   </div>
+  // );
 };
 
 export default LanguageSwitch;

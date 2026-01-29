@@ -46,7 +46,7 @@ const FooterForm = ({ lang, renta }: { lang: string; renta: boolean }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="  space-y-4 ">
+    <form onSubmit={handleSubmit} className="mt-3 space-y-4 ">
       {lang === "es" && (
         <div className="overflow-hidden bg-[#ededed]">
           <p className="text-center text-black py-2 px-3 text-xl font-bold">
@@ -93,7 +93,7 @@ const FooterForm = ({ lang, renta }: { lang: string; renta: boolean }) => {
                   />
                 </div>
                 <div className="mb-3 md:w-1/3">
-                  <label className="hidden" htmlFor="email">
+                  <label className="hidden" htmlFor="company">
                     Empresa
                   </label>
                   <input
@@ -134,7 +134,7 @@ const FooterForm = ({ lang, renta }: { lang: string; renta: boolean }) => {
               </div>
               {success && (
                 <p className="text-green-600 font-medium">
-                  Message sent successfully!
+                  Message Enviado!
                 </p>
               )}
             </div>
@@ -142,55 +142,96 @@ const FooterForm = ({ lang, renta }: { lang: string; renta: boolean }) => {
         </div>
       )}
       {lang === "en" && (
-        <div>
-          <div>
-            <label htmlFor="name">Your Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border border-black rounded-lg"
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Your Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border border-black rounded-lg"
-            />
-          </div>
-          <div>
-            <label htmlFor="message">Your Message</label>
-            <textarea
-              name="message"
-              id="message"
-              rows={5}
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg"
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={loading}
-            className="bg-verde text-white px-6 py-3 cursor-pointer transition uppercase text-xs font-bold"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-          {success && (
-            <p className="text-green-600 font-medium">
-              Message sent successfully!
+        <div className="overflow-hidden bg-[#ededed]">
+          <p className="text-center text-black py-2 px-3 text-xl font-bold">
+            Contact Us
+          </p>
+          {renta === true && (
+            <p className="text-center text-sm md:text-base">
+              Write to us at{" "}
+              <span className="font-bold">nancy@letswoohoo.com</span> or fill the following form.
             </p>
           )}
+          <div className=" px-10 mt-4 pb-7 w-full">
+            <div className="">
+              <div className="md:flex w-full gap-2 justiy-between">
+                <div className="mb-3 md:w-1/3">
+                  <label className="hidden" htmlFor="name">
+                    Name
+                  </label>
+                  <input
+                    placeholder="Name"
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-1 placeholder:text-black bg-white "
+                  />
+                </div>
+                <div className="mb-3 md:w-1/3">
+                  <label className="hidden" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-1 bg-white placeholder:text-black"
+                  />
+                </div>
+                <div className="mb-3 md:w-1/3">
+                  <label className="hidden" htmlFor="company">
+                    Company
+                  </label>
+                  <input
+                    placeholder="Company"
+                    type="company"
+                    name="company"
+                    id="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-1 bg-white placeholder:text-black"
+                  />
+                </div>
+              </div>
+              <div className="flex w-full gap-2 items-center">
+                <div className="w-[90%] pt-2">
+                  <label className="hidden" htmlFor="message">
+                    Message
+                  </label>
+                  <textarea
+                    placeholder="Message"
+                    name="message"
+                    id="message"
+                    rows={1}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-1 placeholder:text-black bg-white"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="bg-black text-white px-6 py-2 cursor-pointer transition uppercase text-xs font-bold "
+                >
+                  {loading ? "Sending" : "Send"}
+                </button>
+              </div>
+              {success && (
+                <p className="text-green-600 font-medium">
+                  Message sent successfully!
+                </p>
+              )}
+            </div>
+          </div>
         </div>
       )}
     </form>

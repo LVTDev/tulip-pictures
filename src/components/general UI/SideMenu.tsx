@@ -6,8 +6,10 @@ import React, { useEffect, useState, useRef } from "react";
 import { ChevronDown, Facebook, Instagram, Menu, Youtube } from "react-feather";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { checkES } from "@/utils/pageLang";
+import LanguageSwitch from "../EN/LanguageSwitch";
 
-const SideMenu = () => {
+const SideMenu = ({ language }: { language: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuTL = useRef<GSAPTimeline | null>(null);
   const menuToggleRef = useRef<HTMLDivElement>(null);
@@ -62,33 +64,10 @@ const SideMenu = () => {
     if (isOpen) handleTogglePlay();
   }, [url]);
 
-  // useEffect(() => {
-  //   const handleClickOutside = (event: MouseEvent) => {
-  //     const asideEl = asideRef.current;
-  //     const toggleEl = menuToggleRef.current;
+  const isES = () => {
+    return checkES(language);
+  };
 
-  //     if (!asideEl || !toggleEl) return;
-
-  //     // If menu is open and click is outside both menu and toggle button
-  //     if (
-  //       isOpen &&
-  //       !asideEl.contains(event.target as Node) &&
-  //       !toggleEl.contains(event.target as Node)
-  //     ) {
-  //       handleTogglePlay(); // Close the menu
-  //     }
-  //   };
-
-  //   // Attach listener when the menu is open
-  //   if (isOpen) {
-  //     document.addEventListener("mousedown", handleClickOutside);
-  //   }
-
-  //   // Cleanup
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [isOpen, handleTogglePlay]);
   return (
     <div className=" bg-blue-100 relative">
       {isOpen && (
@@ -97,13 +76,7 @@ const SideMenu = () => {
           onClick={handleTogglePlay} // closes the menu
         ></div>
       )}
-      <div
-        ref={mainref}
-        className={`fixed left-0  h-[100vh] w-0 z-100 `}
-        // className={`fixed left-0 bg-amber-200 h-[100vh]
-        //    ${isOpen ? "w-60" : "hidden"}
-        //      z-100`}
-      >
+      <div ref={mainref} className={`fixed left-0  h-[100vh] w-0 z-100 `}>
         <div className="h-full">
           <aside
             ref={asideRef}
@@ -111,7 +84,7 @@ const SideMenu = () => {
           >
             <div className="m-6">
               <div className="mx-auto w-max">
-                <Link href="/" className="">
+                <Link href={`${isES() ? "/" : "/en"}`} className="">
                   <Image
                     src="https://cdn.sanity.io/images/yj63f9tw/production/3603d8ee1bb8cd86cb0bffa5caf14d4ec7ea8433-170x67.png"
                     width={170 / 2}
@@ -126,11 +99,12 @@ const SideMenu = () => {
                   className="w-0 text-black flex flex-col gap-3 uppercase text-[12px] font-medium"
                 >
                   <Link
-                    href="/about-us"
-                    className={`${url === "/about-us" && "text-[#e249a2db]"}`}
+                    href={`${isES() ? "/about-us" : "/en/about-us"}`}
+                    className={`${(url === "/about-us" || url === "/en/about-us") && "text-[#e249a2db]"}`}
                   >
+                    {/* // href={`${isES()}`}  */}
                     <div className="mask overflow-hidden">
-                      <p>Quiénes Somos</p>
+                      <p> {`${isES() ? "Quiénes Somos" : "Who we are"}`}</p>
                     </div>
                   </Link>
                   <div className="group">
@@ -138,7 +112,8 @@ const SideMenu = () => {
                       onClick={() => toggleDropdown("produccion")}
                       className="flex justify-between items-center"
                     >
-                      Producción{" "}
+                      <p> {`${isES() ? "Producción" : "Production"}`}</p>
+
                       <div
                         className={`inline-block transition-transform ${
                           openDropdown === "produccion" ? "rotate-180" : ""
@@ -149,60 +124,47 @@ const SideMenu = () => {
                     </div>
                     <div
                       className={`overflow-hidden transition-all duration-300 
-          ${openDropdown === "produccion" ? "max-h-40" : "max-h-0"} 
-          md:max-h-none md:hidden md:group-hover:block`}
+                        ${openDropdown === "produccion" ? "max-h-40" : "max-h-0"} 
+                        md:max-h-none md:hidden md:group-hover:block`}
                     >
-                      <Link href="/produccion/portfolio">
+                      <Link
+                        href={`${isES() ? "/produccion/portfolio" : "/en/production/portfolio"}`}
+                      >
                         <div className="mask overflow-hidden md:text-xs">
-                          <p
+                          <div
                             className={`${
-                              url.startsWith("/produccion/portfolio") &&
+                              (url.startsWith("/produccion/portfolio") ||
+                                url.startsWith("/en/production/portfolio")) &&
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
-                            Películas
-                          </p>
+                            <p> {`${isES() ? "Películas" : "Films"}`}</p>
+                          </div>
                         </div>
                       </Link>
-                      <Link href="/produccion">
+                      <Link
+                        href={`${isES() ? "/produccion" : "/en/production"}`}
+                      >
                         <div className="mask overflow-hidden md:text-xs my-2">
-                          <p
+                          <div
                             className={`${
-                              url === "/produccion" && "text-[#e249a3]"
+                              (url === "/produccion" ||
+                                url === "/en/production") &&
+                              "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
-                            Servicios
-                          </p>
+                            <p> {`${isES() ? "Servicios" : "Services"}`}</p>
+                          </div>
                         </div>
                       </Link>
                     </div>
-                    {/* <div className="md:hidden md:group-hover:block">
-                      <Link href="/produccion">
-                        <div className="mask overflow-hidden md:text-xs my-2">
-                          <p
-                            className={`${url === "/produccion" && "text-[#e249a3]"} md:text-[#0000ff89] `}
-                          >
-                            Servicios de Producción
-                          </p>
-                        </div>
-                      </Link>
-                      <Link href="/produccion/portfolio">
-                        <div className="mask overflow-hidden md:text-xs">
-                          <p
-                            className={`${url.startsWith("/produccion/portfolio") && "text-[#e249a3]"} md:text-[#0000ff89]`}
-                          >
-                            Portafolio de Producción
-                          </p>
-                        </div>
-                      </Link>
-                    </div> */}
                   </div>
                   <div className="group">
                     <div
                       onClick={() => toggleDropdown("distribucion")}
                       className="flex justify-between items-center"
                     >
-                      Distribución{" "}
+                      <p> {`${isES() ? "Distribución" : "Distribution"}`}</p>
                       <div
                         className={`inline-block transition-transform ${
                           openDropdown === "distribucion" ? "rotate-180" : ""
@@ -213,61 +175,83 @@ const SideMenu = () => {
                     </div>
                     <div
                       className={`overflow-hidden transition-all duration-300 
-          ${openDropdown === "distribucion" ? "max-h-40" : "max-h-0"} 
-          md:max-h-none md:hidden md:group-hover:block`}
+                        ${openDropdown === "distribucion" ? "max-h-40" : "max-h-0"} 
+                        md:max-h-none md:hidden md:group-hover:block`}
                     >
-                      <Link href="/distribucion/portfolio">
+                      <Link
+                        href={`${isES() ? "/distribucion/portfolio" : "/en/distribution/portfolio"}`}
+                      >
                         <div className="mask overflow-hidden md:text-xs">
-                          <p
+                          <div
                             className={`${
-                              url === "/distribucion/portfolio" &&
+                              (url === "/distribucion/portfolio" ||
+                                url === "/en/distribution/portfolio") &&
                               "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
-                            Catálogo
-                          </p>
+                            <p> {`${isES() ? "Catálogo" : "Films"}`}</p>
+                          </div>
                         </div>
                       </Link>
-                      <Link href="/distribucion">
+                      <Link
+                        href={`${isES() ? "/distribucion" : "/en/distribution"}`}
+                      >
                         <div className="mask overflow-hidden md:text-xs my-2">
-                          <p
+                          <div
                             className={`${
-                              url === "/distribucion" && "text-[#e249a3]"
+                              (url === "/distribucion" ||
+                                url === "/en/distribution") &&
+                              "text-[#e249a3]"
                             } text-[#0000ff89]`}
                           >
-                            Servicios
-                          </p>
+                            <p> {`${isES() ? "Servicios" : "Services"}`}</p>
+                          </div>
                         </div>
                       </Link>
                     </div>
                   </div>
-                  <Link href="/pelicula/estrenos">
+                  <Link
+                    href={`${isES() ? "/pelicula/estrenos" : "/en/films/premieres"}`}
+                  >
                     <div className="mask overflow-hidden">
-                      <p
-                        className={`${url === "/pelicula/estrenos" && "text-[#e249a3]"}`}
+                      <div
+                        className={`${(url === "/pelicula/estrenos" || url === "/en/films/premieres") && "text-[#e249a3]"}`}
                       >
-                        Próximos Estrenos
-                      </p>
+                        <p>
+                          {" "}
+                          {`${isES() ? "Próximos Estrenos" : "Premieres"}`}
+                        </p>
+                      </div>
                     </div>
                   </Link>
-                  <Link href="/renta">
+                  <Link href={`${isES() ? "/renta" : "/en/rentals"}`}>
                     <div className="mask overflow-hidden">
-                      <p
-                        className={`${url.startsWith("/renta") && "text-[#e249a3]"}`}
+                      <div
+                        className={`${url.startsWith("/renta") || (url.startsWith("/en/rentals") && "text-[#e249a3]")}`}
                       >
-                        RENTA DE EQUIPO
-                      </p>
+                        <p>
+                          {" "}
+                          {`${isES() ? "RENTA DE EQUIPO" : "Equipment Rental"}`}
+                        </p>
+                      </div>
                     </div>
                   </Link>
                 </ul>
               </nav>
+              <LanguageSwitch location="sidebar" />
             </div>
             <div className="flex flex-col gap-2 my-10 p-3 text-xs">
-              <Link className="text-[#8aaf69]" href={"/avisoDePrivacidad"}>
-                Aviso de Privacidad
+              <Link
+                className="text-[#8aaf69]"
+                href={`${isES() ? "/avisoDePrivacidad" : "/en/privacyPolicy"}`}
+              >
+                <p> {`${isES() ? "Aviso de Privacidad" : "Privacy Policy"}`}</p>
               </Link>
-              <Link className="text-[#8aaf69]" href={"/terminos"}>
-                Términos y Condiciones de Uso
+              <Link className="text-[#8aaf69]" href={`${isES() ? "/terminos" : "/en/termsAndConditions"}`}>
+                <p>
+                  {" "}
+                  {`${isES() ? "Términos y Condiciones de Uso" : "Terms and Conditions"}`}
+                </p>
               </Link>
               <p className="text-black">&copy; 2025 TULIP PICTURES</p>
               <div className="text-black flex justify-between">

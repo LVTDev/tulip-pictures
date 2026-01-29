@@ -8,14 +8,17 @@ export type Movie = {
   _updatedAt: string;
   categories: Category[];
   description: string;
+  descriptionENG?: string;
   director: string;
   movieLength: string;
   pais: string;
+  paisENG?: string;
   poster: { _type: string; alt: string; asset: [] };
   publishedAt: string;
   slug: { _type: "slug"; current: "bird" };
   sortPosition: number;
   title: string;
+  titleENG?: string;
   year: number;
   index?: number;
   distribucionProduccion: string;
@@ -30,6 +33,7 @@ export type Movie = {
     role?: string;
   }[];
   reconocimientos?: { premio: string; festival?: string }[];
+  reconocimientosENG?: { premio: string; festival?: string }[];
 };
 
 type Category = {
