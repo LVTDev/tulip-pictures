@@ -241,7 +241,7 @@ const slidesEn: Slides[] = [
 const slidesEs = [
   {
     slideBG: "/lifeISS.jpg",
-    mobileBG: "/lifeIsMobileChicagoImage.jpg",
+    mobileBG: "/LifeIsMobileChicagoImage.jpg",
 
     textTop: "La Vida Es, 2025",
     textBottom: "Lorena Villarreal",
