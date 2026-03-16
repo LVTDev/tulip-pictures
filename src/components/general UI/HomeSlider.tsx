@@ -70,7 +70,7 @@ const HomeSlider = ({ lang }: { lang: string }) => {
                     width={763 / 5}
                     height={546 / 5}
                     src={slide.laurel1}
-                    className="absolute w-16 2xl:w-24 hidden md:block right-5 top-[15%]"
+                    className="absolute w-18 2xl:w-24 hidden md:block right-12 top-[12%]"
                   />
                 )}
                 {slide.laurel2 && (
@@ -79,7 +79,7 @@ const HomeSlider = ({ lang }: { lang: string }) => {
                     width={763 / 5}
                     height={546 / 5}
                     src={slide.laurel2}
-                    className="absolute w-16 2xl:w-24 hidden md:block right-5 top-[35%]"
+                    className="absolute w-18 2xl:w-24 hidden md:block right-12 top-[27%]"
                   />
                 )}
                 {slide.laurel3 && (
@@ -88,7 +88,7 @@ const HomeSlider = ({ lang }: { lang: string }) => {
                     width={763 / 5}
                     height={546 / 5}
                     src={slide.laurel3}
-                    className="absolute w-16 2xl:w-24 hidden md:block right-5 top-[55%]"
+                    className="absolute w-18 2xl:w-24 hidden md:block right-12 top-[42%]"
                   />
                 )}
               </Link>
