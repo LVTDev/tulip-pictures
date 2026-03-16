@@ -64,12 +64,33 @@ const HomeSlider = ({ lang }: { lang: string }) => {
                     />
                   )}
                 </div>
-                {
-                  slide.laurel1 && <Image alt="premio" width={763 / 2} height={546 / 2} src={slide.laurel1} className="absolute w-30 hidden md:block right-5 top-[30%]"/>
-                }
-                {
-                  slide.laurel2 && <Image alt="premio" width={763 / 2} height={546 / 2} src={slide.laurel2} className="absolute w-30 hidden md:block right-5 bottom-[35%]"/>
-                }
+                {slide.laurel1 && (
+                  <Image
+                    alt="premio"
+                    width={763 / 5}
+                    height={546 / 5}
+                    src={slide.laurel1}
+                    className="absolute w-16 2xl:w-24 hidden md:block right-5 top-[15%]"
+                  />
+                )}
+                {slide.laurel2 && (
+                  <Image
+                    alt="premio"
+                    width={763 / 5}
+                    height={546 / 5}
+                    src={slide.laurel2}
+                    className="absolute w-16 2xl:w-24 hidden md:block right-5 top-[35%]"
+                  />
+                )}
+                {slide.laurel3 && (
+                  <Image
+                    alt="premio"
+                    width={763 / 5}
+                    height={546 / 5}
+                    src={slide.laurel3}
+                    className="absolute w-16 2xl:w-24 hidden md:block right-5 top-[55%]"
+                  />
+                )}
               </Link>
             </div>
           </div>
@@ -88,11 +109,12 @@ type Slides = {
   mobileBG?: string;
   laurel1?: string;
   laurel2?: string;
+  laurel3?: string;
 };
 const slidesEn: Slides[] = [
   {
     slideBG: "/lifeISS.jpg",
-    mobileBG: "/lifeIsMobile.jpg",
+    mobileBG: "/lifeIsMobileChicago.jpg",
     textTop: "Life Is, 2025",
     textBottom: "Lorena Villarreal",
     slideTitle:
@@ -100,6 +122,7 @@ const slidesEn: Slides[] = [
     link: "en/films/premieres",
     laurel1: "/goteborg.png",
     laurel2: "/palma.png",
+    laurel3: "/chicagoLaurel.png",
   },
   {
     slideBG: "/BACKUnFantasma.jpg",
@@ -218,7 +241,8 @@ const slidesEn: Slides[] = [
 const slidesEs = [
   {
     slideBG: "/lifeISS.jpg",
-    mobileBG: "/lifeIsMobile.jpg",
+    mobileBG: "/lifeIsMobileChicago.jpg",
+
     textTop: "La Vida Es, 2025",
     textBottom: "Lorena Villarreal",
     slideTitle:
@@ -226,6 +250,7 @@ const slidesEs = [
     link: "/pelicula/estrenos",
     laurel1: "/goteborg.png",
     laurel2: "/palma.png",
+    laurel3: "/chicagoLaurel.png",
   },
   {
     slideBG: "/BACKUnFantasma.jpg",
