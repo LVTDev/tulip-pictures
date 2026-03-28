@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
+import { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, A11y, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -10,31 +11,52 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "react-feather";
 import TrailerSlide from "./TrailerSlider";
+import TrailerSlideAudio from "./TrailerSlideAudio";
 
 const HomeSlider = ({ lang }: { lang: string }) => {
   let slides;
-
+  const swiperRef = useRef<SwiperType | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   lang === "es" ? (slides = slidesEs) : (slides = slidesEn);
+
   return (
     <Swiper
       modules={[Autoplay, A11y, Navigation]}
       navigation
       loop
+      onSwiper={(swiper) => (swiperRef.current = swiper)}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
       }}
       className="w-full"
       slidesPerView={1}
-      //   onSlideChange={() => {
-      //     if (currentIndex > 13) setCurrentIndex(0);
-      //     else setCurrentIndex((prev) => prev + 1);
-      //     console.log("slide change");
-      //   }}
+      onSlideChange={() => {
+        if (videoRef.current) {
+          videoRef.current.pause();
+          videoRef.current.currentTime = 0;
+        }
+      }}
       //   onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide>
-        <TrailerSlide url="https://cdn.sanity.io/files/yj63f9tw/production/1191d176a7972c9c0101827435421f272e6621e9.mp4" />
+      <SwiperSlide
+        onMouseEnter={() => {
+          // Stop autoplay while user is hovering the video slide
+          swiperRef.current?.autoplay.stop();
+          videoRef.current?.play();
+        }}
+        onMouseLeave={() => {
+          // Resume autoplay when they leave
+          swiperRef.current?.autoplay.start();
+        }}
+      >
+        <TrailerSlideAudio
+          src={
+            "https://cdn.sanity.io/files/yj63f9tw/production/1191d176a7972c9c0101827435421f272e6621e9.mp4"
+          }
+          swiperRef={swiperRef}
+          videoRef={videoRef}
+        />
       </SwiperSlide>
       {slides.map((slide, i) => (
         <SwiperSlide className="" key={i}>

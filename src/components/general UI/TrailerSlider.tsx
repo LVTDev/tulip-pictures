@@ -1,0 +1,49 @@
+// import { headers } from "next/headers";
+
+// async function isMobileDevice(){
+//   const headersList = await headers()
+//   const userAgent = headersList.get('user-agent') || ''
+//     return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(userAgent)
+// }
+const TrailerSlide =  ({
+  url,
+  urlVertical,
+}: {
+  url: string;
+  urlVertical?: string;
+}) => {
+  //   const isMobile = await isMobileDevice()
+  //   const videoUrl = isMobile ? urlVertical : url
+  const videoUrl = url;
+  return (
+    // <div className="relative w-full pb-[75.25%] md:pb-[45.25%] max-h-[55vh] flex justify-center">
+    <div className="relative min-h-screen">
+      <video
+        data-testid="video"
+        className="w-full  h-full absolute top-0 left-1/2 -translate-x-1/2 object-cover object-center"
+        width="100%"
+        height="1000%"
+        muted={true}
+        autoPlay={true}
+        loop
+        playsInline
+      >
+        <source src={videoUrl} type="video/mp4" />
+      </video>
+      {/* <video
+        data-testid="video"
+        className="w-full  h-full absolute top-0 left-0 object-cover md:hidden"
+        width="100%"
+        height="80%"
+        muted={true}
+        autoPlay={true}
+        loop
+        playsInline
+      >
+        <source src={urlVertical} type="video/mp4" />
+      </video> */}
+    </div>
+  );
+};
+
+export default TrailerSlide;
