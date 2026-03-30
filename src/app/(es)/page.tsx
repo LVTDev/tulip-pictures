@@ -1,4 +1,4 @@
-// import HomeSlider from "@/components/general UI/HomeSlider";
+import HomeSlider from "@/components/general UI/HomeSlider";
 import HomeSliderTailerAudio from "@/components/general UI/HomeSliderTrailerAudio";
 import React from "react";
 

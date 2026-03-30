@@ -33,6 +33,15 @@ const TrailerSlideAudio = ({ src, swiperRef, videoRef }: VideoSlideProps) => {
       >
         <source src={src} type="video/mp4" />
       </video>
+      <div className="absolute pointer-events-none text-white bottom-10 w-full z-200">
+        <img
+          src={
+            "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png"
+          }
+          className="mx-auto md:mx-0"
+          alt="Header"
+        />
+      </div>
     </div>
   );
 };
