@@ -93,7 +93,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   {isES ? "Distribución" : "Distribution"}
                 </p>
 
-                <p className="text-[12px] lg:text-sm whitespace-pre-line">
+                {/* <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
                     ? "Director de Distribución \n y Adquisiciones"
                     : "Director of Distribution \n and Acquisitions"}
@@ -103,7 +103,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                 </p>
                 <p className="text-[12px] lg:text-sm mb-3 italic">
                   abraham@tulip-pictures.com
-                </p>
+                </p> */}
 
                 <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
