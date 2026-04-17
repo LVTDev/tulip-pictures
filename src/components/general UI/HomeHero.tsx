@@ -121,7 +121,17 @@ const HomeHero = ({ lang }: { lang: string }) => {
                     : "Programming Coordinator"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">Jessica Rito Aguilar</p>
-                <p className="text-[12px] lg:text-sm italic">jessica@tulip-pictures.com</p>
+                <p className="text-[12px] lg:text-sm italic mb-3">jessica@tulip-pictures.com</p>
+             
+             
+             
+                <p className="text-[12px] lg:text-sm whitespace-pre-line">
+                  {isES
+                    ? "Coordinadora de Programación"
+                    : "Programming Coordinator"}
+                </p>
+                <p className="text-[12px] lg:text-sm italic font-bold">Dalia Rosa Peña</p>
+                <p className="text-[12px] lg:text-sm italic">dalia@tulip-pictures.com</p>
               </div>
               <div className="md:w-1/2 mt-10 md:mt-0 md:text-right">
                 <p className=" font-bold mb-3">
@@ -144,11 +154,37 @@ const HomeHero = ({ lang }: { lang: string }) => {
 
                 <p className="text-[12px] lg:text-sm">
                   {isES
-                    ? "Coordinadora de Postproducción"
-                    : "Post-Production Coordinator"}
+                    ? "Coordinadora \n de Postproducción"
+                    : "Post-Production\n Coordinator"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">Lourdes Huerta</p>
-                <p className="text-[12px] lg:text-sm italic">lulu@grupolvt.com</p>
+                <p className="text-[12px] lg:text-sm italic mb-3">lulu@grupolvt.com</p>
+              
+              
+              
+                <p className="text-[12px] lg:text-sm">
+                  {isES
+                    ? "Productora Ejecutiva"
+                    : "Executive Producer"}
+                </p>
+                <p className="text-[12px] lg:text-sm italic font-bold">Livi Herrera Pelayo</p>
+                <p className="text-[12px] lg:text-sm italic mb-3">liviherrera@tulip-pictures.com</p>
+               
+               
+                <p className="text-[12px] lg:text-sm">
+                  {isES
+                    ? "Productora Ejecutiva y Estrategia Internacional"
+                    : "Executive Producer & International Strategy"}
+                </p>
+                <p className="text-[12px] lg:text-sm italic font-bold">Mariana Monroy</p>
+                <p className="text-[12px] lg:text-sm italic mb-3">mmonroy@tulip-pictures.com</p>
+                <p className="text-[12px] lg:text-sm">
+                  {isES
+                    ? "Productora de Línea"
+                    : "Line Producer"}
+                </p>
+                <p className="text-[12px] lg:text-sm italic font-bold">Brenda Medina</p>
+                <p className="text-[12px] lg:text-sm italic ">bmedina@tulip-pictures.com</p>
               </div>
             </div>
           </div>
