@@ -173,7 +173,7 @@ const slidesEn: Slides[] = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} /> Contact us
-          at <strong>hello@letswoohoo.com</strong> <br />
+          at <strong>cotizaciones@tulip-pictures.com</strong> <br />
           or complete the inquiry form
         </p>
       </div>
@@ -220,7 +220,7 @@ const slidesEn: Slides[] = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} /> Contact us
-          at <strong>hello@letswoohoo.com</strong> <br />
+          at <strong>cotizaciones@tulip-pictures.com</strong> <br />
           or complete the inquiry form
         </p>
       </div>
@@ -300,7 +300,7 @@ const slidesEs = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} />
-          Contáctanos en <strong>hello@letswoohoo.com</strong> <br />o completa
+          Contáctanos en <strong>cotizaciones@tulip-pictures.com</strong> <br />o completa
           el formulario
         </p>
       </div>
@@ -346,7 +346,7 @@ const slidesEs = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} />
-          Contáctanos en <strong>hello@letswoohoo.com</strong> <br />o completa
+          Contáctanos en <strong>cotizaciones@tulip-pictures.com</strong> <br />o completa
           el formulario
         </p>
       </div>

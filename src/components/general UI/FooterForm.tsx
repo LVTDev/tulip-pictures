@@ -55,7 +55,7 @@ const FooterForm = ({ lang, renta }: { lang: string; renta: boolean }) => {
           {renta === true && (
             <p className="text-center text-sm md:text-base">
               Escríbenos a{" "}
-              <span className="font-bold">hello@letswoohoo.com</span> o completa
+              <span className="font-bold">cotizaciones@tulip-pictures.com</span> o completa
               el siguente formulario.
             </p>
           )}
@@ -149,7 +149,7 @@ const FooterForm = ({ lang, renta }: { lang: string; renta: boolean }) => {
           {renta === true && (
             <p className="text-center text-sm md:text-base">
               Write to us at{" "}
-              <span className="font-bold">hello@letswoohoo.com</span> or fill the following form.
+              <span className="font-bold">cotizaciones@tulip-pictures.com</span> or fill the following form.
             </p>
           )}
           <div className=" px-10 mt-4 pb-7 w-full">
