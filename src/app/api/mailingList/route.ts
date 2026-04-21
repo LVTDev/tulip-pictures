@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     // "naomi@letswoohoo.com",
     const res = await sendMailMailingList(
       "Sitio Tulip: mailing list",
-      "tulip@grupolvt.com",
+      "cotizaciones@tulip-pictures.com",
       `Correo: ${email}`
     );
     console.log(res);

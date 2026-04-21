@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     await ContactEntry.create({ name, email, message, company });
     const res = await sendMail(
       "Sitio Tulip: Formulario Contactanos",
-      "tulip@grupolvt.com",
+      "cotizaciones@tulip-pictures.com",
       `Client: ${name}
        Correo: ${email}
        Empresa:${company}
