@@ -166,7 +166,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   {isES ? "Productora Ejecutiva" : "Executive Producer"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">
-                  Livi Herrera Pelayo
+                  Livi Herrera
                 </p>
                 <p className="text-[12px] lg:text-sm italic mb-3">
                   liviherrera@tulip-pictures.com
