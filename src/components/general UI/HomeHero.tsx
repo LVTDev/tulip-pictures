@@ -181,7 +181,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   Aranza Miranda
                 </p>
                 <p className="text-[12px] lg:text-sm italic mb-3">
-                  aranza@letswoohoo.com
+                  aranza@tulip-pictures.com
                 </p>
 
                 <p className="text-[12px] lg:text-sm">
@@ -203,7 +203,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   Lourdes Huerta
                 </p>
                 <p className="text-[12px] lg:text-sm italic mb-3">
-                  lulu@grupolvt.com
+                  lulu@tulip-pictures.com
                 </p>
               </div>
             </div>
