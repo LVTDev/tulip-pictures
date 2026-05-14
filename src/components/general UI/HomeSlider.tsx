@@ -116,7 +116,7 @@ const slidesEn: Slides[] = [
     // slideBG: "/lifeISS.jpg",
     // mobileBG: "/lifeIsMobileChicago.jpg",
      slideBG: "https://cdn.sanity.io/images/yj63f9tw/production/e48b6564f857210b2b635bdad611a11473929ce7-1920x1080.jpg",
-    mobileBG: "https://cdn.sanity.io/images/yj63f9tw/production/f274fc3e19ba12e6dfd3bd1687c46fae53fd1951-1152x2048.jpg",
+    mobileBG: "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
     textTop: "Life Is, 2025",
     textBottom: "Lorena Villarreal",
     slideTitle:
@@ -245,7 +245,7 @@ const slidesEs = [
     // slideBG: "/lifeISS.jpg",
     // mobileBG: "/LifeIsMobileChicagoImage.jpg",
     slideBG: "https://cdn.sanity.io/images/yj63f9tw/production/e48b6564f857210b2b635bdad611a11473929ce7-1920x1080.jpg",
-    mobileBG: "https://cdn.sanity.io/images/yj63f9tw/production/f274fc3e19ba12e6dfd3bd1687c46fae53fd1951-1152x2048.jpg",
+    mobileBG: "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
 
     textTop: "La Vida Es, 2025",
     textBottom: "Lorena Villarreal",
