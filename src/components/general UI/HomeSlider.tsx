@@ -102,7 +102,7 @@ const HomeSlider = ({ lang }: { lang: string }) => {
 
 type Slides = {
   slideBG: string;
-  slideTitle: string;
+  slideTitle?: string;
   textTop?: string; // Add the ? here
   textBottom?: string | React.ReactNode;
   link: string;
@@ -113,12 +113,16 @@ type Slides = {
 };
 const slidesEn: Slides[] = [
   {
-    slideBG: "/lifeISS.jpg",
-    mobileBG: "/lifeIsMobileChicago.jpg",
-    textTop: "Life Is, 2025",
-    textBottom: "Lorena Villarreal",
-    slideTitle:
-      "https://cdn.sanity.io/images/yj63f9tw/production/2b0c3af3343736884611535a3d287fcf9d9cf9a7-1417x135.png",
+    // slideBG: "/lifeISS.jpg",
+    // mobileBG: "/lifeIsMobileChicago.jpg",
+    slideBG:
+      "https://cdn.sanity.io/images/yj63f9tw/production/24b1ae73a23eb63c623b7498cf9c1ddee9e8da57-1920x1080.jpg",
+    mobileBG:
+      "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
+    // textTop: "Life Is, 2025",
+    // textBottom: "Lorena Villarreal",
+    // slideTitle:
+    //   "https://cdn.sanity.io/images/yj63f9tw/production/2b0c3af3343736884611535a3d287fcf9d9cf9a7-1417x135.png",
     link: "en/films/premieres",
     laurel1: "/goteborg.png",
     laurel2: "/palma.png",
@@ -240,13 +244,17 @@ const slidesEn: Slides[] = [
 ];
 const slidesEs = [
   {
-    slideBG: "/lifeISS.jpg",
-    mobileBG: "/LifeIsMobileChicagoImage.jpg",
+    // slideBG: "/lifeISS.jpg",
+    // mobileBG: "/LifeIsMobileChicagoImage.jpg",
+      slideBG:
+      "https://cdn.sanity.io/images/yj63f9tw/production/24b1ae73a23eb63c623b7498cf9c1ddee9e8da57-1920x1080.jpg",
+    mobileBG:
+      "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
 
-    textTop: "La Vida Es, 2025",
-    textBottom: "Lorena Villarreal",
-    slideTitle:
-      "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png",
+    // textTop: "La Vida Es, 2025",
+    // textBottom: "Lorena Villarreal",
+    // slideTitle:
+    //   "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png",
     link: "/pelicula/estrenos",
     laurel1: "/goteborg.png",
     laurel2: "/palma.png",
@@ -300,8 +308,8 @@ const slidesEs = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} />
-          Contáctanos en <strong>cotizaciones@tulip-pictures.com</strong> <br />o completa
-          el formulario
+          Contáctanos en <strong>cotizaciones@tulip-pictures.com</strong> <br />
+          o completa el formulario
         </p>
       </div>
     ),
@@ -346,8 +354,8 @@ const slidesEs = [
       <div>
         <p className="">
           <ArrowRight className="ml-auto  mb-1 inline" size={18} />
-          Contáctanos en <strong>cotizaciones@tulip-pictures.com</strong> <br />o completa
-          el formulario
+          Contáctanos en <strong>cotizaciones@tulip-pictures.com</strong> <br />
+          o completa el formulario
         </p>
       </div>
     ),
