@@ -116,7 +116,7 @@ const slidesEn: Slides[] = [
     // slideBG: "/lifeISS.jpg",
     // mobileBG: "/lifeIsMobileChicago.jpg",
     slideBG:
-      "https://cdn.sanity.io/images/yj63f9tw/production/24b1ae73a23eb63c623b7498cf9c1ddee9e8da57-1920x1080.jpg",
+      "https://cdn.sanity.io/images/yj63f9tw/production/a264702f0defb2670ee4de8bcc68364a66801f8e-1920x1080.jpg",
     mobileBG:
       "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
     // textTop: "Life Is, 2025",
@@ -247,7 +247,7 @@ const slidesEs = [
     // slideBG: "/lifeISS.jpg",
     // mobileBG: "/LifeIsMobileChicagoImage.jpg",
       slideBG:
-      "https://cdn.sanity.io/images/yj63f9tw/production/24b1ae73a23eb63c623b7498cf9c1ddee9e8da57-1920x1080.jpg",
+      "https://cdn.sanity.io/images/yj63f9tw/production/a264702f0defb2670ee4de8bcc68364a66801f8e-1920x1080.jpg",
     mobileBG:
       "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
 
