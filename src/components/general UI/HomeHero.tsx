@@ -150,7 +150,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   </p>
                   <p className="text-[12px] lg:text-sm italic font-bold">Paloma Cabrera</p>
                   <p className="text-[12px] lg:text-sm mb-3 italic">paloma@grupolvt.com</p> */}
-                <p className="text-[12px] lg:text-sm whitespace-pre-line">
+                {/* <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES
                     ? "Productora Ejecutiva \n y Estrategia Internacional"
                     : "Executive Producer \n & International Strategy"}
@@ -160,7 +160,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                 </p>
                 <p className="text-[12px] lg:text-sm italic mb-3">
                   mmonroy@tulip-pictures.com
-                </p>
+                </p> */}
 
                 <p className="text-[12px] lg:text-sm">
                   {isES ? "Productora Ejecutiva" : "Executive Producer"}
@@ -184,7 +184,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   aranza@tulip-pictures.com
                 </p>
 
-                <p className="text-[12px] lg:text-sm">
+                {/* <p className="text-[12px] lg:text-sm">
                   {isES ? "Productora de Línea" : "Line Producer"}
                 </p>
                 <p className="text-[12px] lg:text-sm italic font-bold">
@@ -192,7 +192,7 @@ const HomeHero = ({ lang }: { lang: string }) => {
                 </p>
                 <p className="text-[12px] lg:text-sm italic mb-3">
                   bmedina@tulip-pictures.com
-                </p>
+                </p> */}
 
                 <p className="text-[12px] lg:text-sm">
                   {isES
