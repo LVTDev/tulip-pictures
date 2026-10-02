@@ -115,17 +115,6 @@ const HomeHero = ({ lang }: { lang: string }) => {
                   javier@tulip-pictures.com
                 </p>
 
-                <p className="text-[12px] lg:text-sm whitespace-pre-line">
-                  {isES
-                    ? "Coordinadora de Programación"
-                    : "Programming Coordinator"}
-                </p>
-                <p className="text-[12px] lg:text-sm italic font-bold">
-                  Jessica Rito Aguilar
-                </p>
-                <p className="text-[12px] lg:text-sm italic mb-3">
-                  jessica@tulip-pictures.com
-                </p>
 
                 <p className="text-[12px] lg:text-sm whitespace-pre-line">
                   {isES

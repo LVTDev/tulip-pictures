@@ -116,18 +116,35 @@ const slidesEn: Slides[] = [
     // slideBG: "/lifeISS.jpg",
     // mobileBG: "/lifeIsMobileChicago.jpg",
     slideBG:
-      "https://cdn.sanity.io/images/yj63f9tw/production/a264702f0defb2670ee4de8bcc68364a66801f8e-1920x1080.jpg",
+      "https://cdn.sanity.io/images/yj63f9tw/production/c392eb8514f3586aa6b789ae4cf40188ed012e6c-1920x1080.png",
     mobileBG:
-      "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
+      "https://cdn.sanity.io/images/yj63f9tw/production/c392eb8514f3586aa6b789ae4cf40188ed012e6c-1920x1080.png",
     // textTop: "Life Is, 2025",
     // textBottom: "Lorena Villarreal",
-    // slideTitle:
-    //   "https://cdn.sanity.io/images/yj63f9tw/production/2b0c3af3343736884611535a3d287fcf9d9cf9a7-1417x135.png",
-    link: "en/films/premieres",
-    laurel1: "/goteborg.png",
-    laurel2: "/palma.png",
-    laurel3: "/chicagoLaurel.png",
+    slideTitle:
+      "https://cdn.sanity.io/images/yj63f9tw/production/cae4dc55dd4a7c3f0e9b333e9d83965e29b3648e-1373x135.png",
+
+    link: "/en/distribution/portfolio",
+        textTop: "Diplodocus",
+    textBottom: "Wojtek Wawszczyk",
+
   },
+  // {
+  //   // slideBG: "/lifeISS.jpg",
+  //   // mobileBG: "/lifeIsMobileChicago.jpg",
+  //   slideBG:
+  //     "https://cdn.sanity.io/images/yj63f9tw/production/a264702f0defb2670ee4de8bcc68364a66801f8e-1920x1080.jpg",
+  //   mobileBG:
+  //     "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
+  //   // textTop: "Life Is, 2025",
+  //   // textBottom: "Lorena Villarreal",
+  //   // slideTitle:
+  //   //   "https://cdn.sanity.io/images/yj63f9tw/production/2b0c3af3343736884611535a3d287fcf9d9cf9a7-1417x135.png",
+  //   link: "en/films/premieres",
+  //   laurel1: "/goteborg.png",
+  //   laurel2: "/palma.png",
+  //   laurel3: "/chicagoLaurel.png",
+  // },
   {
     slideBG: "/BACKUnFantasma.jpg",
     textTop: "A Useful Ghost, 2025",
@@ -247,19 +264,35 @@ const slidesEs = [
     // slideBG: "/lifeISS.jpg",
     // mobileBG: "/LifeIsMobileChicagoImage.jpg",
       slideBG:
-      "https://cdn.sanity.io/images/yj63f9tw/production/a264702f0defb2670ee4de8bcc68364a66801f8e-1920x1080.jpg",
-    mobileBG:
-      "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
+      "https://cdn.sanity.io/images/yj63f9tw/production/c392eb8514f3586aa6b789ae4cf40188ed012e6c-1920x1080.png",
+      mobileBG:
+      "https://cdn.sanity.io/images/yj63f9tw/production/c392eb8514f3586aa6b789ae4cf40188ed012e6c-1920x1080.png",
 
-    // textTop: "La Vida Es, 2025",
-    // textBottom: "Lorena Villarreal",
-    // slideTitle:
-    //   "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png",
-    link: "/pelicula/estrenos",
-    laurel1: "/goteborg.png",
-    laurel2: "/palma.png",
-    laurel3: "/chicagoLaurel.png",
+    textTop: "Diplodocus",
+    textBottom: "Wojtek Wawszczyk",
+    link: "/distribucion/portfolio",
+  
+    slideTitle:
+      "https://cdn.sanity.io/images/yj63f9tw/production/270d21e9993bbfd86fd16e8cbbc9e641326c59e5-1916x227.png",
+
   },
+  // {
+  //   // slideBG: "/lifeISS.jpg",
+  //   // mobileBG: "/LifeIsMobileChicagoImage.jpg",
+  //     slideBG:
+  //     "https://cdn.sanity.io/images/yj63f9tw/production/a264702f0defb2670ee4de8bcc68364a66801f8e-1920x1080.jpg",
+  //   mobileBG:
+  //     "https://cdn.sanity.io/images/yj63f9tw/production/c99f0272ea94086a79f7c18466282025db195647-1080x1920.jpg",
+
+  //   // textTop: "La Vida Es, 2025",
+  //   // textBottom: "Lorena Villarreal",
+  //   // slideTitle:
+  //   //   "https://cdn.sanity.io/images/yj63f9tw/production/c16b940093e06f810cd5a603315ba98fe5683b49-1520x174.png",
+  //   link: "/pelicula/estrenos",
+  //   laurel1: "/goteborg.png",
+  //   laurel2: "/palma.png",
+  //   laurel3: "/chicagoLaurel.png",
+  // },
   {
     slideBG: "/BACKUnFantasma.jpg",
     textTop: "A Useful Ghost, 2025",
