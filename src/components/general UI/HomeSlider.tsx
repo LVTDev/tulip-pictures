@@ -2,9 +2,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, A11y, Navigation } from "swiper/modules";
+//@ts-ignore
 import "swiper/css";
+//@ts-ignore
 import "swiper/css/navigation";
+//@ts-ignore
 import "swiper/css/pagination";
+//@ts-ignore
 import "swiper/css/scrollbar";
 import Image from "next/image";
 import Link from "next/link";
@@ -259,7 +263,7 @@ const slidesEn: Slides[] = [
     textBottom: "Lorena Villarreal",
   },
 ];
-const slidesEs = [
+const slidesEs: Slides[] = [
   {
     // slideBG: "/lifeISS.jpg",
     // mobileBG: "/LifeIsMobileChicagoImage.jpg",
